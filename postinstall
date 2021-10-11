@@ -14,7 +14,6 @@ wget
 xautolock
 google-chrome
 lxappearance-gtk3
-termite
 polybar
 gnome-font-viewer
 spotify
@@ -29,3 +28,5 @@ gedit
 github-cli
 i3-gaps-rounded
 rofi
+xclip
+maim
