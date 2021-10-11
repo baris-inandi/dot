@@ -1,4 +1,4 @@
-fish
+zsh
 git
 maim
 nano
@@ -25,3 +25,5 @@ trash-cli
 hollywood
 speedtest-cli
 kitty
+gedit
+github-cli
