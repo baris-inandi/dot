@@ -1,14 +1,19 @@
-sudo pacman -S paru
 # install paru helper
+sudo pacman -Sy
+sudo pacman -S paru
 
-paru -S --noreview --noconfirm < font
-paru -S --noreview --noconfirm < postinstall
 # download and install all fonts + postinstall packages
+paru -S --noreview --noconfirm < ./pkg/font
+paru -S --noreview --noconfirm < ./pkg/postinstall
 
-# chsh zsh here
-# chsh where zsh
+# zsh as deafult shell
+chsh --shell /usr/bin/zsh
 
-# symlinks here
+# symlinks
+ln -f -s ~/dot/i3config ~/.config/i3/config
+ln -f -s ~/dot/kitty.conf ~/.config/kitty/kitty.conf
+ln -f -s ~/dot/.gitconfig ~/.gitconfig
+ln -f -s ~/dot/.zshrc ~/.zshrc
 
-paru
 # update everything
+paru
