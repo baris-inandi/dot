@@ -1,3 +1,4 @@
+source ~/zsh-snap/znap.zsh
 # Set up the prompt
 
 autoload -Uz promptinit
@@ -5,9 +6,6 @@ promptinit
 prompt adam1
 
 setopt histignorealldups sharehistory
-
-# Use emacs keybindings even if our EDITOR is set to vi
-bindkey -e
 
 # Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
 HISTSIZE=1000
@@ -35,3 +33,9 @@ zstyle ':completion:*' verbose true
 
 zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+plugins=( 
+    # other plugins...
+    zsh-autosuggestions
+)
+1

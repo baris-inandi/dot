@@ -17,7 +17,7 @@ lxappearance-gtk3
 polybar
 gnome-font-viewer
 spotify
-vscode
+visual-studio-code-bin
 go
 ranger
 trash-cli
@@ -35,3 +35,7 @@ feh
 gnome-control-center
 eog
 evince
+libnotify
+notify-send
+notify-osd
+brightnessctl

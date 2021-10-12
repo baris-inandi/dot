@@ -32,8 +32,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -184,16 +184,17 @@ bar {
 
 
 for_window [class=".*"] border pixel 0
-gaps inner 16
-gaps outer 6
+gaps inner 12
+gaps outer 2
 border_radius 10
 smart_borders on
 smart_gaps on
 
 
 # screenshots
+exec "mkdir -p ~/Pictures/Screenshots"
 bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipboard -t image/png | notify-send 'Screenshot (Clipboard)' -t 800
-bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictures/screenshots/$(date)" | notify-send 'Screenshot (Save)' -t 800
+bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
 
 # lock screen
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
@@ -201,4 +202,10 @@ exec "xautolock -detectsleep -time 5 -locker \'i3lockr --blur 60 --darken 10\' "
 exec "feh --bg-fill ~/Pictures/wallpaper.png"
 
 bindcode Mod3 --release exec "rofi -show run"
-bindsym $mod+shift+a exec "rofi -show run"
+bindsym $mod+shift+p exec "rofi -show run"
+
+# alt tab
+bindsym $mod+Tab workspace back_and_forth
+bindsym $mod+Shift+Tab workspace next
+
+exec brightnessctl m 999999
