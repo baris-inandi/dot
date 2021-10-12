@@ -1,3 +1,6 @@
+cd ~
+wait
+
 # install paru helper
 sudo pacman -Sy
 wait
