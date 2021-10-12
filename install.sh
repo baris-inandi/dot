@@ -1,7 +1,13 @@
 # install paru helper
 sudo pacman -Sy
 wait
-sudo pacman -S paru
+sudo pacman -S --needed base-devel
+wait
+git clone https://aur.archlinux.org/paru.git
+wait
+cd paru
+wait
+makepkg -si
 wait
 
 # download and install all fonts + postinstall packages
