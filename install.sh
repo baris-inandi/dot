@@ -1,16 +1,22 @@
 cd ~
 wait
 
-# install paru helper
-sudo pacman -Sy
-wait
-sudo pacman -S --needed base-devel
-wait
-git clone https://aur.archlinux.org/paru.git
-wait
-cd paru
-wait
-makepkg -si
+install_paru()
+{
+  # install paru helper
+  sudo pacman -Sy
+  wait
+  sudo pacman -S --needed base-devel
+  wait
+  git clone https://aur.archlinux.org/paru.git
+  wait
+  cd paru
+  wait
+  makepkg -si
+  wait
+}
+
+paru || install_paru
 wait
 
 # download and install all fonts + postinstall packages
