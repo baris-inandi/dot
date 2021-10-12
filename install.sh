@@ -14,9 +14,9 @@ makepkg -si
 wait
 
 # download and install all fonts + postinstall packages
-paru -S --noreview --noconfirm < ./pkg/font
+paru -S - --skipreview --noconfirm < ~/dot/pkg/postinstall
 wait
-paru -S --noreview --noconfirm < ./pkg/postinstall
+paru -S - --skipreview --noconfirm < ~/dot/pkg/font
 wait
 
 # zsh as deafult shell
