@@ -7,6 +7,10 @@ wait
 sudo pacman -S --needed base-devel
 wait
 
+# desktop manager
+systemctl enable gdm
+wait
+
 # install microcode
 # sudo pacman -S intel-ucode
 # sudo pacman -S amd-ucode
