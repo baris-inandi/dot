@@ -179,10 +179,11 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+	position top
         status_command i3status
 }
 
-
+# i3 gaps rounded
 for_window [class=".*"] border pixel 0
 gaps inner 12
 gaps outer 2
@@ -201,6 +202,7 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictur
 exec "xautolock -detectsleep -time 5 -locker \'i3lockr --blur 60 --darken 10\' " 
 exec "feh --bg-fill ~/Pictures/wallpaper.png"
 
+# rofi
 bindcode Mod3 --release exec "rofi -show run"
 bindsym $mod+shift+p exec "rofi -show run"
 
@@ -208,4 +210,14 @@ bindsym $mod+shift+p exec "rofi -show run"
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace next
 
+# brightness
 exec brightnessctl m 999999
+bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
+bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
+
+# apps
+bindsym $mod+shift+f exec 'nautilus'
+bindsym $mod+shift+a exec 'google-chrome-stable'
+
+# kill all windows
+bindsym $mod+shift+q [class=".*"] kill
