@@ -13,11 +13,12 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+
+font pango:Fira Sans Condensed Semibold 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:DejaVu Sans Mono 8
+# font pango:DejaVu Sans Mono 8
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -157,16 +158,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 4 px or 4 ppt
-        bindsym k resize grow height 4 px or 4 ppt
-        bindsym l resize shrink height 4 px or 4 ppt
-        bindsym scedilla resize grow width 4 px or 4 ppt
+        bindsym j resize shrink width 5 px or 5 ppt
+        bindsym k resize grow height 5 px or 5 ppt
+        bindsym l resize shrink height 5 px or 5 ppt
+        bindsym scedilla resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 4 px or 4 ppt
-        bindsym Down resize grow height 4 px or 4 ppt
-        bindsym Up resize shrink height 4 px or 4 ppt
-        bindsym Right resize grow width 4 px or 4 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Up resize grow height 5 px or 5 ppt
+        bindsym Down resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -179,15 +180,20 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	position top
-        status_command i3status
+	position bottom
+        status_command i3status ~/.config/i3status/config
+        colors {
+                focused_workspace  #000000 #ffffff #000000
+        }
+
+
 }
 
 # i3 gaps rounded
 for_window [class=".*"] border pixel 0
-gaps inner 12
-gaps outer 2
-border_radius 10
+gaps inner 5
+gaps outer 1
+border_radius 0
 smart_borders on
 smart_gaps on
 
