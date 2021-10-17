@@ -189,6 +189,9 @@ bar {
 
 }
 
+# notifications
+exec 'dunst'
+
 # i3 gaps rounded
 for_window [class=".*"] border pixel 0
 gaps inner 5

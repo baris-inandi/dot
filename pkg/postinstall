@@ -36,5 +36,5 @@ eog
 evince
 libnotify
 notify-send
-notify-osd
+dunst
 brightnessctl
