@@ -40,14 +40,6 @@ wait
 chsh --shell /usr/bin/fish
 wait
 
-# symlinks
-ln -f -s ~/dot/i3 ~/.config/i3/config
-ln -f -s ~/dot/i3status ~/.config/i3status/config
-ln -f -s ~/dot/kitty.conf ~/.config/kitty/kitty.conf
-ln -f -s ~/dot/.gitconfig ~/.gitconfig
-ln -f -s ~/dot/.zshrc ~/.zshrc
-wait
-
 # hosts
 sudo cp -f ~/dot/hosts /etc/hosts
 
@@ -67,6 +59,3 @@ hostnamectl set-hostname baris-arch
 # update everything
 paru
 wait
-
-# restart
-sudo reboot
