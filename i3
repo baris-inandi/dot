@@ -230,3 +230,8 @@ bindsym $mod+shift+a exec 'google-chrome-stable'
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill
+
+# media
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous

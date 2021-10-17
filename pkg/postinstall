@@ -38,3 +38,4 @@ libnotify
 notify-send
 dunst
 brightnessctl
+playerctl
