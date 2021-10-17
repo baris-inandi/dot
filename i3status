@@ -31,7 +31,7 @@ order += "load"
 order += "tztime local"
 
 wireless wlp4s0 {
-    format_up = "%quality  %essid %ip"
+    format_up = "WIFI    •  %quality quality on %essid"
     format_down = ""
 }
 
@@ -42,7 +42,7 @@ ethernet enp0s25 {
 }
 
 battery 0 {
-    format = "%status %percentage %remaining"
+    format = "BAT  •  %status %percentage %remaining"
     format_down = ""
     last_full_capacity = true
     integer_battery_capacity = true
@@ -64,31 +64,31 @@ run_watch VPN {
 }
 
 tztime local {
-    format = "%V  %A %e.%B   %H:%M:%S"
+    format = "%A %e %B  •  %H : %M : %S   | "
 }
 
 load {
-    format = " %1min"
+    format = "LOAD  %1min"
 }
 
 cpu_usage {
-    format = " %usage"
+    format = "CPU    •  %usage"
 }
 
 cpu_temperature 0 {
-	format = " %degrees°C"
+	format = "TEMP   •  %degrees°C"
 }
 
 disk "/" {
-	format = " %avail"
+	format = "DISK    •  %avail"
 	prefix_type	= custom
 	low_threshold = 20
 	threshold_type = percentage_avail
 }
 
 volume master {
-    format = "%volume  "
-    format_muted = " "
+    format = "VOL    •  %volume"
+    format_muted = "MUTE  "
     device = "default"
     mixer = "Master"
     mixer_idx = 0
