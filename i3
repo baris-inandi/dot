@@ -183,6 +183,8 @@ bar {
 	position bottom
         status_command i3status ~/.config/i3status/config
         colors {
+		background #1c1e20
+		separator #353945
                 focused_workspace  #000000 #ffffff #000000
         }
 
@@ -194,12 +196,14 @@ exec 'dunst'
 
 # i3 gaps rounded
 for_window [class=".*"] border pixel 0
-gaps inner 5
+gaps inner 6
 gaps outer 1
 border_radius 0
 smart_borders on
 smart_gaps on
 
+# audio
+exec 'start-pulseaudio-x11'
 
 # screenshots
 exec "mkdir -p ~/Pictures/Screenshots"
