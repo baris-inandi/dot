@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 
-font pango:Fira Sans Condensed Semibold 8
+font pango:Fira Sans Condensed Semibold 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -183,12 +183,12 @@ bar {
 	position bottom
         status_command i3status ~/.config/i3status/config
         colors {
-		background #1c1e20
-		separator #353945
-                focused_workspace  #000000 #ffffff #000000
+		background #2e3440
+		separator #434c5e
+        focused_workspace  #2e3440 #8fbcbb #2e3440
+        inactive_workspace #eceff4 #2e3440
+        urgent_workspace   #eceff4 #bf616a
         }
-
-
 }
 
 # notifications
@@ -196,11 +196,11 @@ exec 'dunst'
 
 # i3 gaps rounded
 for_window [class=".*"] border pixel 0
-gaps inner 6
-gaps outer 1
-border_radius 0
-smart_borders on
-smart_gaps on
+gaps inner 4
+gaps outer 2
+# border_radius 0
+# smart_borders on
+# smart_gaps on
 
 # audio
 exec 'start-pulseaudio-x11'
@@ -217,7 +217,7 @@ exec "feh --bg-fill ~/Pictures/wallpaper.png"
 
 # rofi
 bindcode Mod3 --release exec "rofi -show run"
-bindsym $mod+shift+p exec "rofi -show run"
+bindsym $mod+shift+p exec "krunner"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
@@ -229,7 +229,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # apps
-bindsym $mod+shift+f exec 'nautilus'
+bindsym $mod+shift+f exec 'dolphin'
 bindsym $mod+shift+a exec 'google-chrome-stable'
 
 # kill all windows
