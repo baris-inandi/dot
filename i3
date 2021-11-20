@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 
-font pango:Fira Sans Condensed Semibold 10
+font pango:Fira Sans Condensed Medium 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -195,8 +195,8 @@ bar {
 exec 'dunst'
 
 # i3 gaps rounded
-for_window [class=".*"] border pixel 0
-gaps inner 4
+# for_window [class=".*"] border pixel 0
+gaps inner 8
 gaps outer 2
 # border_radius 0
 # smart_borders on
@@ -240,3 +240,20 @@ bindsym $mod+shift+q [class=".*"] kill
 bindsym XF86AudioPlay exec playerctl play-pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
+
+# picom
+exec "picom -f"
+
+# 144hz
+exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
+
+# window border
+
+for_window [class=".*"] border pixel 2
+
+client.focused          #4C7899 #285577 #FFFFFF #556073   #556073
+client.focused_inactive #333333 #5F676A #FFFFFF #222731   #242933
+client.unfocused        #333333 #222222 #888888 #222731   #242933
+client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
+
+# 444d5c
