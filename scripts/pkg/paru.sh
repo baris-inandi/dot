@@ -13,3 +13,7 @@ install_paru()
 echo "Installing paru"
 install_paru
 wait
+
+# cleanup
+rm -rf ~/paru
+wait
