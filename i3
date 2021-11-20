@@ -185,7 +185,7 @@ bar {
         colors {
 		background #2e3440
 		separator #434c5e
-        focused_workspace  #2e3440 #8fbcbb #2e3440
+        focused_workspace  #2e3440 #eceff4 #2e3440
         inactive_workspace #eceff4 #2e3440
         urgent_workspace   #eceff4 #bf616a
         }
@@ -231,6 +231,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 # apps
 bindsym $mod+shift+f exec 'dolphin'
 bindsym $mod+shift+a exec 'google-chrome-stable'
+bindsym $mod+shift+m exec 'spotify'
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill
