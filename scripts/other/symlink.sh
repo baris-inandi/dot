@@ -25,4 +25,6 @@ ln -f -s ~/dot/gtksettings.ini ~/.config/gtk-3.0/settings.ini
 
 ln -f -s ~/dot/.Xresources ~/.Xresources
 
-sudo ln -f -s ~/dot/picom.conf /etc/xdg/picom.conf
+ln -f -s ~/dot/.xinitrc ~/.xinitrc
+
+ln -f -s ~/dot/betterlockscreenrc ~/.config/betterlockscreenrc

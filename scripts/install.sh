@@ -7,12 +7,20 @@ wait
 sudo pacman -S --needed base-devel
 wait
 
-# installs paru
+# install paru
 source ~/dot/scripts/pkg/paru.sh
 wait
 
 # install initial packages
 source ~/dot/scripts/pkg/pkg.sh
+wait
+
+# systemd lockscreen service
+source ~/dot/scripts/other/lock.sh
+wait
+
+# create config symlinks
+source ~/dot/scripts/other/symlinks.sh
 wait
 
 # copy default wallpaper
@@ -21,10 +29,6 @@ wait
 
 # fish as deafult shell
 chsh --shell /usr/bin/fish
-wait
-
-# create config symlinks
-source ~/dot/scripts/other/symlinks.sh
 wait
 
 # update everything
