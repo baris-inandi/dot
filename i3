@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 
-font pango:Fira Sans Condensed Medium 9
+font pango:Fira Sans Condensed Bold 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -68,10 +68,10 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # move focused window
-bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+l move up
-bindsym $mod+Shift+scedilla move right
+# bindsym $mod+Shift+j move left
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+l move up
+# bindsym $mod+Shift+scedilla move right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Shift+Left move left
@@ -215,6 +215,8 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictur
 exec "xautolock -detectsleep -time 5 -locker \'i3lockr --blur 60 --darken 10\' " 
 exec "feh --bg-fill ~/Pictures/wallpaper.png"
 
+bindsym $mod+shift+l exec "betterlockscreen -l && systemctl suspend"
+
 # rofi
 bindcode Mod3 --release exec "rofi -show run"
 bindsym $mod+shift+p exec "krunner"
@@ -234,7 +236,7 @@ bindsym $mod+shift+a exec 'google-chrome-stable'
 bindsym $mod+shift+m exec 'spotify'
 
 # kill all windows
-bindsym $mod+shift+q [class=".*"] kill
+bindsym $mod+shift+q [class=".*"] kill; workspace 1
 
 # media
 bindsym XF86AudioPlay exec playerctl play-pause
@@ -242,14 +244,14 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # picom
-exec "picom -f"
+exec_always --no-startup-id picom --experimental-backends --config ~/dot/picom.conf -b -f
 
 # 144hz
 exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
 
 # window border
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 3
 
 client.focused          #4C7899 #285577 #FFFFFF #556073   #556073
 client.focused_inactive #333333 #5F676A #FFFFFF #222731   #242933
