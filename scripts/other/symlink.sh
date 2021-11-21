@@ -18,7 +18,7 @@ mkdir -p ~/.config/micro/
 ln -f -s ~/dot/micro.json ~/.config/micro/settings.json
 
 mkdir -p ~/.config/dunst
-ln -f -s ~/dot/dunstrc ~/.config/dunst/dunstrc
+ln -f -s ~/dot/dunstrc.conf ~/.config/dunst/dunstrc
 
 mkdir -p ~/.config/gtk-3.0/
 ln -f -s ~/dot/gtksettings.ini ~/.config/gtk-3.0/settings.ini
@@ -27,4 +27,4 @@ ln -f -s ~/dot/.Xresources ~/.Xresources
 
 ln -f -s ~/dot/.xinitrc ~/.xinitrc
 
-ln -f -s ~/dot/betterlockscreenrc ~/.config/betterlockscreenrc
+ln -f -s ~/dot/betterlockscreenrc.conf ~/.config/betterlockscreenrc
