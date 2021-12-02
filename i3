@@ -213,7 +213,7 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictur
 # lock screen
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
 exec "xautolock -detectsleep -time 5 -locker \'i3lockr --blur 60 --darken 10\' " 
-exec "feh --bg-fill ~/Pictures/wallpaper.png"
+exec "feh --bg-fill ~/dot/wallpaper.png"
 
 bindsym $mod+shift+l exec "betterlockscreen -l && systemctl suspend"
 
@@ -251,7 +251,7 @@ exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
 
 # window border
 
-for_window [class=".*"] border pixel 3
+for_window [class=".*"] border pixel 2
 
 client.focused          #4C7899 #285577 #FFFFFF #556073   #556073
 client.focused_inactive #333333 #5F676A #FFFFFF #222731   #242933
