@@ -183,11 +183,11 @@ bar {
 	position bottom
         status_command i3status ~/.config/i3status/config
         colors {
-		background #2e3440
-		separator #434c5e
-        focused_workspace  #2e3440 #eceff4 #2e3440
-        inactive_workspace #eceff4 #2e3440
-        urgent_workspace   #eceff4 #bf616a
+		background #111111
+		separator #404040
+        focused_workspace  #111111 #ffffff #111111
+        inactive_workspace #111111 #111111 #ffffff
+        urgent_workspace   #ffffff #bf616a
         }
 }
 
@@ -196,11 +196,11 @@ exec 'dunst'
 
 # i3 gaps rounded
 # for_window [class=".*"] border pixel 0
-gaps inner 8
-gaps outer 2
-# border_radius 0
+gaps inner 10
+gaps outer 0
+# border_radius 8
 # smart_borders on
-# smart_gaps on
+smart_gaps on
 
 # audio
 exec 'start-pulseaudio-x11'
@@ -212,13 +212,13 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictur
 
 # lock screen
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
-exec "xautolock -detectsleep -time 5 -locker \'i3lockr --blur 60 --darken 10\' " 
+exec "xautolock -detectsleep -time 5 -locker \'betterlockscreen -l\' " 
 exec "feh --bg-fill ~/dot/wallpaper.png"
 
 bindsym $mod+shift+l exec "betterlockscreen -l && systemctl suspend"
 
 # rofi
-bindcode Mod3 --release exec "rofi -show run"
+# bindcode Mod3 --release exec "rofi -show run"
 bindsym $mod+shift+p exec "krunner"
 
 # alt tab
@@ -232,7 +232,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # apps
 bindsym $mod+shift+f exec 'dolphin'
-bindsym $mod+shift+a exec 'google-chrome-stable'
+bindsym $mod+shift+a exec 'firefox'
 bindsym $mod+shift+m exec 'spotify'
 
 # kill all windows
@@ -251,11 +251,11 @@ exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
 
 # window border
 
-for_window [class=".*"] border pixel 2
+for_window [class=".*"] border pixel 1
+for_window [class="krunner"] border pixel 0
 
-client.focused          #4C7899 #285577 #FFFFFF #556073   #556073
-client.focused_inactive #333333 #5F676A #FFFFFF #222731   #242933
-client.unfocused        #333333 #222222 #888888 #222731   #242933
+client.focused          #4C7899 #285577 #FFFFFF #556073   #606060
+client.focused_inactive #333333 #5F676A #FFFFFF #222731   #202020
+client.unfocused        #333333 #222222 #888888 #222731   #202020
 client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 
-# 444d5c
