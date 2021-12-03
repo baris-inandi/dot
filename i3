@@ -192,7 +192,7 @@ bar {
 }
 
 # notifications
-exec 'dunst'
+exec "dunst"
 
 # i3 gaps rounded
 # for_window [class=".*"] border pixel 0
@@ -203,7 +203,7 @@ gaps outer 0
 smart_gaps on
 
 # audio
-exec 'start-pulseaudio-x11'
+exec "start-pulseaudio-x11"
 
 # screenshots
 exec "mkdir -p ~/Pictures/Screenshots"
@@ -219,7 +219,7 @@ bindsym $mod+shift+l exec "betterlockscreen -l && systemctl suspend"
 
 # rofi
 # bindcode Mod3 --release exec "rofi -show run"
-bindsym $mod+shift+p exec "krunner"
+bindsym $mod+shift+p exec "krunner || rofi -show run"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
@@ -231,9 +231,9 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # apps
-bindsym $mod+shift+f exec 'dolphin'
-bindsym $mod+shift+a exec 'firefox'
-bindsym $mod+shift+m exec 'spotify'
+bindsym $mod+shift+f exec "dolphin || nautilus"
+bindsym $mod+shift+a exec "firefox || google-chrome-stable"
+bindsym $mod+shift+m exec "spotify"
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill; workspace 1
@@ -254,7 +254,7 @@ exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
 for_window [class=".*"] border pixel 1
 for_window [class="krunner"] border pixel 0
 
-client.focused          #4C7899 #285577 #FFFFFF #556073   #606060
+client.focused          #4C7899 #285577 #FFFFFF #556073   #505050
 client.focused_inactive #333333 #5F676A #FFFFFF #222731   #202020
 client.unfocused        #333333 #222222 #888888 #222731   #202020
 client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
