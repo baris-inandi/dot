@@ -20,11 +20,7 @@ source ~/dot/scripts/other/lock.sh
 wait
 
 # create config symlinks
-source ~/dot/scripts/other/symlinks.sh
-wait
-
-# copy default wallpaper
-cp -f ~/dot/wallpaper.png ~/Pictures/wallpaper.png
+source ~/dot/scripts/other/symlink.sh
 wait
 
 # fish as deafult shell
