@@ -196,11 +196,11 @@ exec "dunst"
 
 # i3 gaps rounded
 # for_window [class=".*"] border pixel 0
-gaps inner 12
+gaps inner 8
 gaps outer 0
 # border_radius 8
 # smart_borders on
-smart_gaps on
+# smart_gaps on
 
 # audio
 exec "start-pulseaudio-x11"
@@ -254,8 +254,8 @@ exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
 for_window [class=".*"] border pixel 1
 for_window [class="krunner"] border pixel 0
 
-client.focused          #4C7899 #285577 #FFFFFF #556073   #808080
-client.focused_inactive #333333 #5F676A #FFFFFF #222731   #323232
-client.unfocused        #333333 #222222 #888888 #222731   #323232
+client.focused          #4C7899 #285577 #FFFFFF #556073   #606060
+client.focused_inactive #333333 #5F676A #FFFFFF #222731   #282828
+client.unfocused        #333333 #222222 #888888 #222731   #282828
 client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 
