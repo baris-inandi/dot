@@ -1,0 +1,7 @@
+@-moz-document url(about:home),
+url(about:newtab),
+url(about:blank) {
+    body {
+        background: #151515 !important;
+    }
+}

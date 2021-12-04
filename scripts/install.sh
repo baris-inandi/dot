@@ -2,13 +2,9 @@ cd ~
 wait
 
 # init pacman
-sudo pacman -Sy
+sudo pacman -Syu
 wait
 sudo pacman -S --needed base-devel
-wait
-
-# full system update before installing rust
-sudo pacman -Syu
 wait
 
 # install paru
@@ -22,6 +18,9 @@ wait
 # systemd lockscreen service
 source ~/dot/scripts/other/lock.sh
 wait
+
+# firefox setup
+source ~/dot/scripts/other/firefox.sh
 
 # create config symlinks
 source ~/dot/scripts/other/symlink.sh
