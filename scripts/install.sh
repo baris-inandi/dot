@@ -7,6 +7,10 @@ wait
 sudo pacman -S --needed base-devel
 wait
 
+# full system update before installing rust
+sudo pacman -Syu
+wait
+
 # install paru
 source ~/dot/scripts/pkg/paru.sh
 wait
@@ -30,3 +34,6 @@ wait
 # update everything
 paru
 wait
+
+# cool ending
+neofetch
