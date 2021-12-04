@@ -6,3 +6,4 @@ gnome-font-viewer \
 gnome-control-center \
 eog \
 evince \
+geary
