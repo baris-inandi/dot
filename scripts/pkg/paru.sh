@@ -10,7 +10,7 @@ install_paru()
   cd ~
 }
 
-# install rustup before installing paru
+# install rust before installing paru
 sudo pacman -S rust
 wait
 
