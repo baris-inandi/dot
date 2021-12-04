@@ -14,14 +14,16 @@ install_paru()
 sudo pacman -S --needed rust
 wait
 
+# uncomment if using rustup instead of rust
 # configure rustup toolchain
-rustup install stable
-wait
-rustup default stable
-wait
+# rustup install stable
+# wait
+# rustup default stable
+# wait
 
 echo "Installing paru"
-install_paru
+if ! command -v paru &> /dev/null
+then install_paru fi
 wait
 
 # cleanup
