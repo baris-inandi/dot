@@ -3,7 +3,6 @@
 paru -S --skipreview --noconfirm --needed \
  ttf-ms-fonts \
  ttf-apple-emoji \
- apple-fonts \
  ttf-rubik \
  ttf-fira-sans \
  otf-ibm-plex \
