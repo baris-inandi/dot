@@ -10,6 +10,16 @@ install_paru()
   cd ~
 }
 
+# install rustup before installing paru
+sudo pacman -S rustup
+wait
+
+# configure rustup toolchain
+rustup install stable
+wait
+rustup default stable
+wait
+
 echo "Installing paru"
 install_paru
 wait
