@@ -33,7 +33,6 @@ bat \
 cowsay \
 feh \
 libnotify \
-notify-send \
 dunst \
 brightnessctl \
 playerctl \
