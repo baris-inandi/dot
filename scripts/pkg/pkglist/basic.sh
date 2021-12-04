@@ -40,4 +40,5 @@ neofetch \
 gnome-keyring \
 libsecret \
 libgnome-keyring \
-seahorse
+seahorse \
+i3status
