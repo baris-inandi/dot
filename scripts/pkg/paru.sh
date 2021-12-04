@@ -11,7 +11,7 @@ install_paru()
 }
 
 # install rust before installing paru
-sudo pacman -S rust
+sudo pacman -S --needed rust
 wait
 
 # configure rustup toolchain

@@ -1,6 +1,6 @@
 # install basic fonts
 
-paru -S --skipreview --noconfirm \
+paru -S --skipreview --noconfirm --needed \
  ttf-ms-fonts \
  ttf-apple-emoji \
  apple-fonts \
