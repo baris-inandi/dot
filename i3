@@ -196,7 +196,7 @@ exec "dunst"
 
 # i3 gaps rounded
 # for_window [class=".*"] border pixel 0
-gaps inner 8
+gaps inner 7
 gaps outer 0
 # border_radius 8
 # smart_borders on
