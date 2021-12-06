@@ -28,3 +28,6 @@ ln -f -s ~/dot/.Xresources ~/.Xresources
 ln -f -s ~/dot/.xinitrc ~/.xinitrc
 
 ln -f -s ~/dot/betterlockscreenrc.conf ~/.config/betterlockscreenrc
+
+mkdir -p ~/.config/fish
+ln -f -s ~/dot/config.fish ~/.config/fish/config.fish
