@@ -16,7 +16,7 @@ printf "${bold}${green}GITSYNC:${white} Adding all changes...\n\n${normal}"
 git add -A
 
 printf "${bold}${green}GITSYNC:${white} Committing...\n\n${normal}"
-git commit -am $cmsg
+git commit -am "$cmsg"
 
 printf "${bold}${green}GITSYNC:${white} Pushing...\n\n${normal}"
 git push
