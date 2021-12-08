@@ -31,3 +31,6 @@ ln -f -s ~/dot/betterlockscreenrc.conf ~/.config/betterlockscreenrc
 
 mkdir -p ~/.config/fish
 ln -f -s ~/dot/config.fish ~/.config/fish/config.fish
+
+mkdir -p ~/.config/rofi
+ln -f -s ~/dot/config.rasi ~/.config/rofi/config.rasi
