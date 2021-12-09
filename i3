@@ -207,8 +207,8 @@ exec "start-pulseaudio-x11"
 
 # screenshots
 exec "mkdir -p ~/Pictures/Screenshots"
-bindsym $mod+Shift+s exec --no-startup-id maim --select | xclip -selection clipboard -t image/png | notify-send 'Screenshot (Clipboard)' -t 800
-bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
+bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png | notify-send 'Screenshot (Clipboard)' -t 800
+bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
 
 # lock screen
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
