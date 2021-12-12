@@ -44,7 +44,7 @@ configuration {
     border:           1px;
     border-color: 	  #646464;
     padding:          5px;
-    width: 30%;
+    width: 420px;
 }
 #mainbox {
     border: 0;
