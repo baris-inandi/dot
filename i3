@@ -212,14 +212,14 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home
 
 # lock screen
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
-exec "xautolock -detectsleep -time 5 -locker \'betterlockscreen -l\' " 
+exec "xautolock -detectsleep -time 10 -locker \'betterlockscreen -l\' " 
 exec "feh --bg-fill ~/dot/wallpaper.png"
 
 bindsym $mod+shift+l exec "betterlockscreen -l && systemctl suspend"
 
 # rofi
 # bindcode Mod3 --release exec "rofi -show run"
-bindsym $mod+shift+p exec "krunner || rofi -show run"
+bindsym $mod+shift+p exec "rofi -show run || krunner"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
