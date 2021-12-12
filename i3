@@ -56,28 +56,28 @@ bindsym $mod+d exec --no-startup-id dmenu_run
 # bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+scedilla focus right
+bindsym $mod+J focus left
+bindsym $mod+K focus down
+bindsym $mod+I focus up
+bindsym $mod+L focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # move focused window
-# bindsym $mod+Shift+j move left
-# bindsym $mod+Shift+k move down
-# bindsym $mod+Shift+l move up
-# bindsym $mod+Shift+scedilla move right
+bindsym $mod+Shift+J move left
+bindsym $mod+Shift+K move down
+bindsym $mod+Shift+I move up
+bindsym $mod+Shift+L move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+# bindsym $mod+Shift+Left move left
+# bindsym $mod+Shift+Down move down
+# bindsym $mod+Shift+Up move up
+# bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -116,7 +116,6 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -128,19 +127,17 @@ bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1; workspace 1
-bindsym $mod+Shift+2 move container to workspace number $ws2; workspace 2	
-bindsym $mod+Shift+3 move container to workspace number $ws3; workspace 3
-bindsym $mod+Shift+4 move container to workspace number $ws4; workspace 4
-bindsym $mod+Shift+5 move container to workspace number $ws5; workspace 5
-bindsym $mod+Shift+6 move container to workspace number $ws6; workspace 6
-bindsym $mod+Shift+7 move container to workspace number $ws7; workspace 7
-bindsym $mod+Shift+8 move container to workspace number $ws8; workspace 8
-bindsym $mod+Shift+9 move container to workspace number $ws9; workspace 9
-bindsym $mod+Shift+0 move container to workspace number $ws10; workspace 10
+bindsym $mod+Shift+1 move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+Shift+2 move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+Shift+3 move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -212,10 +209,10 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home
 
 # lock screen
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
-exec "xautolock -detectsleep -time 10 -locker \'betterlockscreen -l\' " 
+exec "xautolock -detectsleep -time 10 -locker \'betterlockscreen -l\' "
 exec "feh --bg-fill ~/dot/wallpaper.png"
 
-bindsym $mod+shift+l exec "betterlockscreen -l && systemctl suspend"
+bindsym $mod+control+l exec "betterlockscreen -l && systemctl suspend"
 
 # rofi
 # bindcode Mod3 --release exec "rofi -show run"
