@@ -208,7 +208,7 @@ bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -se
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
 
 # lock screen
-exec_always --no-startup-id xidlehook --timer 900 "systemctl suspend" ""
+exec_always --no-startup-id xidlehook --timer 900 "betterlockscreen-l && systemctl suspend" ""
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
 exec "feh --bg-fill ~/dot/wallpaper.png"
 
