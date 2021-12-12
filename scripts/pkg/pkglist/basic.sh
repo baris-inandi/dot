@@ -15,7 +15,7 @@ sudo \
 unrar \
 unzip \
 wget \
-xautolock \
+xidlehook \
 firefox \
 spotify \
 visual-studio-code-bin \
