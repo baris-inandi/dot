@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 
-font pango:Fira Sans Condensed Bold 8
+font pango:JetBrains Mono Bold 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -180,10 +180,10 @@ bar {
 	position bottom
         status_command i3status ~/.config/i3status/config
         colors {
-		background #111111
+		background #151515
 		separator #404040
-        focused_workspace  #111111 #ffffff #111111
-        inactive_workspace #111111 #111111 #ffffff
+        focused_workspace  #151515 #ffffff #151515
+        inactive_workspace #151515 #151515 #ffffff
         urgent_workspace   #ffffff #bf616a
         }
 }
