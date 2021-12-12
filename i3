@@ -155,16 +155,16 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym l resize shrink height 5 px or 5 ppt
-        bindsym scedilla resize grow width 5 px or 5 ppt
+        bindsym J resize shrink width 5 px or 5 ppt
+        bindsym I resize grow height 5 px or 5 ppt
+        bindsym K resize shrink height 5 px or 5 ppt
+        bindsym L  resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Up resize grow height 5 px or 5 ppt
-        bindsym Down resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+        # bindsym Left resize shrink width 5 px or 5 ppt
+        # bindsym Up resize grow height 5 px or 5 ppt
+        # bindsym Down resize shrink height 5 px or 5 ppt
+        # bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -234,6 +234,7 @@ bindsym $mod+shift+m exec "spotify"
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill; workspace 1
+bindsym $mod+shift+w focus parent,kill
 
 # media
 bindsym XF86AudioPlay exec playerctl play-pause
