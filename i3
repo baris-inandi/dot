@@ -208,11 +208,11 @@ bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -se
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
 
 # lock screen
-exec_always --no-startup-id xidlehook --timer 900 "betterlockscreen-l && systemctl suspend" ""
+exec_always --no-startup-id xidlehook --timer 900 "sh ~/dot/scripts/user/locker.sh" ""
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
 exec "feh --bg-fill ~/dot/wallpaper.png"
 
-bindsym $mod+control+l exec "betterlockscreen -l && systemctl suspend"
+bindsym $mod+control+l exec "sh ~/dot/scripts/user/locker.sh"
 
 # rofi
 # bindcode Mod3 --release exec "rofi -show run"
@@ -257,17 +257,18 @@ client.focused_inactive #333333 #5F676A #FFFFFF #222731   #282828
 client.unfocused        #333333 #222222 #888888 #222731   #282828
 client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (p) shutdown
+set $mode_system (q) suspend, (r) reboot, (w) poweroff
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock, mode "default"
-    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-    bindsym s exec --no-startup-id systemctl suspend, mode "default"
-    bindsym h exec --no-startup-id systemctl hibernate, mode "default"
+    bindsym q exec --no-startup-id "sh ~/dot/scripts/user/locker.sh", mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym p exec --no-startup-id systemctl poweroff, mode "default"
+    bindsym w exec --no-startup-id systemctl poweroff, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
     bindsym Escape mode "default"
+    bindsym space mode "default"
 }
-bindsym $mod+Pause mode "$mode_system"
+bindsym $mod+Escape mode "$mode_system"
+
+# startup script
+exec "sh ~/dot/startup.sh"

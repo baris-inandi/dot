@@ -1,0 +1,1 @@
+betterlockscreen -l && systemctl suspend
