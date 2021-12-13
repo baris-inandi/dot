@@ -41,4 +41,5 @@ gnome-keyring \
 libsecret \
 libgnome-keyring \
 seahorse \
-i3status
+i3status \
+pm-utils
