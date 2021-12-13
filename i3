@@ -63,10 +63,10 @@ bindsym $mod+I focus up
 bindsym $mod+L focus right
 
 # alternatively, you can use the cursor keys:
-# bindsym $mod+Left focus left
-# bindsym $mod+Down focus down
-# bindsym $mod+Up focus up
-# bindsym $mod+Right focus right
+bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
+bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+J move left
@@ -75,10 +75,10 @@ bindsym $mod+Shift+I move up
 bindsym $mod+Shift+L move right
 
 # alternatively, you can use the cursor keys:
-# bindsym $mod+Shift+Left move left
-# bindsym $mod+Shift+Down move down
-# bindsym $mod+Shift+Up move up
-# bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+Left move left
+bindsym $mod+Shift+Down move down
+bindsym $mod+Shift+Up move up
+bindsym $mod+Shift+Right move right
 
 # split in horizontal orientation
 bindsym $mod+h split h
@@ -162,10 +162,10 @@ mode "resize" {
         bindsym L  resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
-        # bindsym Left resize shrink width 5 px or 5 ppt
-        # bindsym Up resize grow height 5 px or 5 ppt
-        # bindsym Down resize shrink height 5 px or 5 ppt
-        # bindsym Right resize grow width 5 px or 5 ppt
+        bindsym Left resize shrink width 5 px or 5 ppt
+        bindsym Up resize grow height 5 px or 5 ppt
+        bindsym Down resize shrink height 5 px or 5 ppt
+        bindsym Right resize grow width 5 px or 5 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
