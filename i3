@@ -10,6 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $locker_command betterlockscreen -l && systemctl suspend
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -208,11 +209,11 @@ bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -se
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
 
 # lock screen
-exec_always --no-startup-id xidlehook --timer 900 "sh ~/dot/scripts/user/locker.sh" ""
+exec_always --no-startup-id xidlehook --timer 900 $locker_command ""
 # bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
 exec "feh --bg-fill ~/dot/wallpaper.png"
 
-bindsym $mod+control+l exec "sh ~/dot/scripts/user/locker.sh"
+bindsym $mod+control+l exec $locker_command
 
 # rofi
 # bindcode Mod3 --release exec "rofi -show run"
@@ -259,7 +260,7 @@ client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 
 set $mode_system (q) suspend, (r) reboot, (w) poweroff
 mode "$mode_system" {
-    bindsym q exec --no-startup-id "sh ~/dot/scripts/user/locker.sh", mode "default"
+    bindsym q exec --no-startup-id $locker_command, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"
     bindsym w exec --no-startup-id systemctl poweroff, mode "default"
 
