@@ -1,6 +1,7 @@
 # install basic tools
 
 paru -S --skipreview --noconfirm --needed \
+  bash \
   fish \
   picom-jonaburg-git \
   betterlockscreen \

@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $locker_command "sh ~/dot/scripts/user/power.sh suspend"
+set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -262,8 +262,8 @@ client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 set $mode_system (Return) suspend, (r) reboot, (q) poweroff
 mode "$mode_system" {
     bindsym Return exec --no-startup-id $locker_command, mode "default"
-    bindsym r exec --no-startup-id "sh ~/dot/scripts/user/power.sh reboot", mode "default"
-    bindsym q exec --no-startup-id "sh ~/dot/scripts/user/power.sh off", mode "default"
+    bindsym r exec --no-startup-id "bash ~/dot/scripts/user/power.sh reboot", mode "default"
+    bindsym q exec --no-startup-id "bash ~/dot/scripts/user/power.sh off", mode "default"
 
     # back to normal: Enter or Escape
     bindsym Escape mode "default"
@@ -272,7 +272,7 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 
 # startup script
-exec "sh ~/dot/startup.sh"
+exec "bash ~/dot/startup.sh"
 
 # sync dot repo if no changes
-exec "sh ~/dot/scripts/user/dotautopull.sh"
+exec "bash ~/dot/scripts/user/dotautopull.sh"

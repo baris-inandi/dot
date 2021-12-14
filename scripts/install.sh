@@ -8,22 +8,22 @@ sudo pacman -S --needed base-devel
 wait
 
 # install paru
-source ~/dot/scripts/pkg/paru.sh
+source ~/dot/scripts/setup/pkg/paru.sh
 wait
 
 # install initial packages
-source ~/dot/scripts/pkg/pkg.sh
+source ~/dot/scripts/setup/pkg/pkg.sh
 wait
 
 # systemd lockscreen service
-source ~/dot/scripts/other/lock.sh
+source ~/dot/scripts/setup/other/lock.sh
 wait
 
 # firefox setup
-source ~/dot/scripts/other/firefox.sh
+source ~/dot/scripts/setup/other/firefox.sh
 
 # create config symlinks
-source ~/dot/scripts/other/symlink.sh
+source ~/dot/scripts/setup/other/symlink.sh
 wait
 
 # fish as deafult shell
