@@ -34,3 +34,8 @@ ln -f -s ~/dot/config/config.fish ~/.config/fish/config.fish
 
 mkdir -p ~/.config/rofi
 ln -f -s ~/dot/config/config.rasi ~/.config/rofi/config.rasi
+
+# firefox config symlinks
+ln -f -s ~/dot/config/firefox/personal/chrome/userChrome.css ~/.mozilla/firefox/personal/chrome/userChrome.css
+ln -f -s ~/dot/config/firefox/personal/chrome/userContent.css ~/.mozilla/firefox/personal/chrome/userContent.css
+ln -f -s ~/dot/config/firefox/personal/user.js ~/.mozilla/firefox/personal/user.js
