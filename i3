@@ -11,6 +11,7 @@
 
 set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
+exec "bash ~/dot/dot.sh"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -47,14 +48,6 @@ bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+q kill
-
-# start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
-# A more modern dmenu replacement is rofi:
-# bindcode $mod+40 exec "rofi -modi drun,run -show drun"
-# There also is i3-dmenu-desktop which only displays applications shipping a
-# .desktop file. It is a wrapper around dmenu, so you need that installed.
-# bindcode $mod+40 exec --no-startup-id i3-dmenu-desktop
 
 # change focus
 bindsym $mod+J focus left
@@ -100,14 +93,10 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
+# focus the parent/child container
 bindsym $mod+a focus parent
+bindsym $mod+d focus child
 
-# focus the child container
-#bindsym $mod+d focus child
-
-# Define names for default workspaces for which we configure key bindings later on.
-# We use variables to avoid repeating the names in multiple places.
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -148,14 +137,8 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-# resize window (you can also use the mouse for that)
+# resize window
 mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym J resize shrink width 5 px or 5 ppt
         bindsym I resize grow height 5 px or 5 ppt
         bindsym K resize shrink height 5 px or 5 ppt
@@ -200,9 +183,6 @@ gaps outer 0
 # smart_borders on
 # smart_gaps on
 
-# audio
-exec "start-pulseaudio-x11"
-
 # screenshots
 exec "mkdir -p ~/Pictures/Screenshots"
 bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png | notify-send 'Screenshot (Clipboard)' -t 800
@@ -210,8 +190,6 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home
 
 # lock screen
 exec_always --no-startup-id xidlehook --timer 900 $locker_command ""
-# bindsym $mod+shift+l exec "i3lockr --blur 60 --darken 10"
-exec "feh --bg-fill ~/dot/wallpaper.png"
 
 bindsym $mod+control+l exec $locker_command
 
@@ -224,7 +202,6 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace next
 
 # brightness
-exec brightnessctl s 999999
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
@@ -245,9 +222,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # picom
 exec_always --no-startup-id picom --experimental-backends --config ~/dot/picom.conf -b -f
 
-# 144hz
-exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
-
 # window border
 
 for_window [class=".*"] border pixel 1
@@ -259,20 +233,15 @@ client.focused_inactive #333333 #5F676A #FFFFFF #222731   #282828
 client.unfocused        #333333 #222222 #888888 #222731   #282828
 client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 
-set $mode_system (Return) suspend, (r) reboot, (q) poweroff
+set $mode_system (Return) suspend, (r) reboot, (q) poweroff, (e) exit
 mode "$mode_system" {
     bindsym Return exec --no-startup-id $locker_command, mode "default"
     bindsym r exec --no-startup-id "bash ~/dot/scripts/user/power.sh reboot", mode "default"
     bindsym q exec --no-startup-id "bash ~/dot/scripts/user/power.sh off", mode "default"
+    bindsym e exec exit, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Escape mode "default"
     bindsym space mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
-
-# startup script
-exec "bash ~/dot/startup.sh"
-
-# sync dot repo if no changes
-exec "bash ~/dot/scripts/user/dotautopull.sh"
