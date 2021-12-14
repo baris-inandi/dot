@@ -273,3 +273,6 @@ bindsym $mod+Escape mode "$mode_system"
 
 # startup script
 exec "sh ~/dot/startup.sh"
+
+# sync dot repo if no changes
+exec "sh ~/dot/scripts/user/ffdot.sh"
