@@ -9,28 +9,28 @@ hw_dim() {
 
 soft_dim() {
   for ((i = 85; i >= 10; i -= 5)); do
-	set_soft_brightness ".$(( 100 * $i / 100 )) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'"
-  	sleep 0.01
+    set_soft_brightness ".$((100 * $i / 100)) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'"
+    sleep 0.01
   done
 }
 
 set_soft_brightness() {
-	xrandr --output "DP-4" --brightness "$1"
+  xrandr --output "DP-4" --brightness "$1"
 }
 
 restore_brightness() {
-	brightnessctl s 999999
- 	set_soft_brightness 1
+  brightnessctl s 999999
+  set_soft_brightness 1
 }
 
 dim() {
-	max=$(brightnessctl m)
-  	typeset -i i END
-	if (( $max <= 1 )); then
-		soft_dim
-	else
-		hw_dim
-	fi
+  max=$(brightnessctl m)
+  typeset -i i END
+  if (($max <= 1)); then
+    soft_dim
+  else
+    hw_dim
+  fi
 }
 
 handle_suspend() {
@@ -40,7 +40,6 @@ handle_suspend() {
   wait
   restore_brightness
 }
-
 
 if [ "$1" = "suspend" ]; then
   dim

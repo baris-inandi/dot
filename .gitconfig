@@ -1,5 +1,5 @@
 [user]
-	name = baris-inandi
-	email = 68742481+baris-inandi@users.noreply.github.com 
+name = baris-inandi
+email = 68742481+baris-inandi@users.noreply.github.com
 [credential "https://github.com"]
-	helper = !/usr/bin/gh auth git-credential
+helper = !/usr/bin/gh auth git-credential

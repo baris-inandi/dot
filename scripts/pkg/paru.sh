@@ -1,5 +1,4 @@
-install_paru()
-{
+install_paru() {
   # install paru helper
   git clone https://aur.archlinux.org/paru.git
   wait
@@ -22,8 +21,9 @@ wait
 # wait
 
 echo "Installing paru"
-if ! command -v paru &> /dev/null
-then install_paru fi
+if ! command -v paru &>/dev/null; then
+  install_paru
+fi
 wait
 
 # cleanup

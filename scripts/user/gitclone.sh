@@ -2,8 +2,8 @@
 
 bold=$(tput bold)
 normal=$(tput sgr0)
-green=`tput setaf 2`
-white=`tput sgr0`
+green=$(tput setaf 2)
+white=$(tput sgr0)
 
 printf "\n"
 
