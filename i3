@@ -10,7 +10,7 @@
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
-set $locker_command "betterlockscreen -l && systemctl suspend"
+set $locker_command "sh ~/dot/scripts/user/power.sh suspend"
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -224,7 +224,7 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace next
 
 # brightness
-exec brightnessctl m 999999
+exec brightnessctl s 999999
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
@@ -259,14 +259,13 @@ client.focused_inactive #333333 #5F676A #FFFFFF #222731   #282828
 client.unfocused        #333333 #222222 #888888 #222731   #282828
 client.urgent           #2F343A #BF616A #FFFFFF #BF616A   #BF616A
 
-set $mode_system (q) suspend, (r) reboot, (w) poweroff
+set $mode_system (Return) suspend, (r) reboot, (q) poweroff
 mode "$mode_system" {
-    bindsym q exec --no-startup-id $locker_command, mode "default"
-    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-    bindsym w exec --no-startup-id systemctl poweroff, mode "default"
+    bindsym Return exec --no-startup-id $locker_command, mode "default"
+    bindsym r exec --no-startup-id "sh ~/dot/scripts/user/power.sh reboot", mode "default"
+    bindsym q exec --no-startup-id "sh ~/dot/scripts/user/power.sh off", mode "default"
 
     # back to normal: Enter or Escape
-    bindsym Return mode "default"
     bindsym Escape mode "default"
     bindsym space mode "default"
 }
@@ -276,4 +275,4 @@ bindsym $mod+Escape mode "$mode_system"
 exec "sh ~/dot/startup.sh"
 
 # sync dot repo if no changes
-exec "sh ~/dot/scripts/user/ffdot.sh"
+exec "sh ~/dot/scripts/user/dotautopull.sh"
