@@ -238,7 +238,7 @@ mode "$mode_system" {
     bindsym Return exec --no-startup-id $locker_command, mode "default"
     bindsym r exec --no-startup-id "bash ~/dot/scripts/user/power.sh reboot", mode "default"
     bindsym q exec --no-startup-id "bash ~/dot/scripts/user/power.sh off", mode "default"
-    bindsym e exec exit, mode "default"
+    bindsym e exec "i3-msg exit", mode "default"
 
     # back to normal: Enter or Escape
     bindsym Escape mode "default"
