@@ -16,15 +16,18 @@ source ~/dot/scripts/setup/pkg/pkg.sh
 wait
 
 # systemd lockscreen service
-source ~/dot/scripts/setup/other/lock.sh
+source ~/dot/scripts/setup/config/lock.sh
 wait
 
 # firefox setup
-source ~/dot/scripts/setup/other/firefox.sh
+source ~/dot/scripts/setup/config/firefox.sh
 
 # create config symlinks
-source ~/dot/scripts/setup/other/symlink.sh
+source ~/dot/scripts/setup/config/symlink.sh
 wait
+
+# install cpu microcode
+source ~/dot/scripts/setup/pkg/microcode.sh
 
 # fish as deafult shell
 chsh --shell /usr/bin/fish

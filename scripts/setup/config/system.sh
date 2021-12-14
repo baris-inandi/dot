@@ -1,9 +1,9 @@
 # hosts
-sudo cp -f ~/dot/hosts /etc/hosts
+sudo cp -f ~/dot/config/system/hosts /etc/hosts
 wait
 
 # configure keyboard layout
-sudo cp -f ~/dot/vconsole.conf /etc/vconsole.conf
+sudo cp -f ~/dot/config/system/vconsole.conf /etc/vconsole.conf
 wait
 
 # post install configs
