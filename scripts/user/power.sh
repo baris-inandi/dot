@@ -10,7 +10,7 @@ hw_dim() {
 soft_dim() {
   for ((i = 85; i >= 10; i -= 5)); do
     set_soft_brightness ".$((100 * $i / 100)) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'"
-    sleep 0.005
+    sleep 0.01
   done
 }
 
