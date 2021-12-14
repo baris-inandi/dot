@@ -1,14 +1,14 @@
 #!/bin/bash
 
 hw_dim() {
-  for ((i = 15; i <= 90; i += 5)); do
+  for ((i = 75; i <= 90; i += 5)); do
     brightnessctl s "$i%-"
-    sleep 0.1
+    sleep 0.15
   done
 }
 
 soft_dim() {
-  for ((i = 85; i >= 10; i -= 5)); do
+  for ((i = 80; i >= 10; i -= 5)); do
     set_soft_brightness ".$((100 * $i / 100)) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'"
     sleep 0.015
   done
