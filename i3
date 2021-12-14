@@ -252,6 +252,7 @@ exec "xrandr --output DP-4 --mode 2560x1440 --rate 144.00"
 
 for_window [class=".*"] border pixel 1
 for_window [class="krunner"] border pixel 0
+for_window [class="Dunst"] border pixel 0
 
 client.focused          #4C7899 #285577 #FFFFFF #556073   #606060
 client.focused_inactive #333333 #5F676A #FFFFFF #222731   #282828
