@@ -1,28 +1,57 @@
-END=$(brightnessctl m)
+#!/bin/bash
 
-dim() {
-  typeset -i i END
-  brightnessctl s $END
+hw_dim() {
   for ((i = 15; i <= 90; i += 5)); do
     brightnessctl s "$i%-"
-    sleep $1
+    sleep 0.15
   done
 }
 
-if [ "$1" = "suspend" ]; then
-  dim 0.15
-  wait
+soft_dim() {
+  for ((i = 85; i >= 10; i -= 5)); do
+	set_soft_brightness ".$(( 100 * $i / 100 )) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'"
+  	sleep 0.01
+  done
+}
+
+set_soft_brightness() {
+	xrandr --output "DP-4" --brightness "$1"
+}
+
+restore_brightness() {
+	brightnessctl s 999999
+ 	set_soft_brightness 1
+}
+
+dim() {
+	max=$(brightnessctl m)
+  	typeset -i i END
+	if (( $max <= 1 )); then
+		soft_dim
+	else
+		hw_dim
+	fi
+}
+
+handle_suspend() {
   betterlockscreen -l
   wait
   systemctl suspend
   wait
-  brightnessctl s 999999
+  restore_brightness
+}
+
+
+if [ "$1" = "suspend" ]; then
+  dim
+  wait
+  handle_suspend
 elif [ "$1" = "reboot" ]; then
-  dim 0.25
+  dim
   wait
   systemctl reboot
 elif [ "$1" = "off" ]; then
-  dim 0.25
+  dim
   wait
   systemctl poweroff
 fi
