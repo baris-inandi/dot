@@ -3,7 +3,7 @@
 hw_dim() {
   for ((i = 15; i <= 90; i += 5)); do
     brightnessctl s "$i%-"
-    sleep 0.15
+    sleep 0.1
   done
 }
 
