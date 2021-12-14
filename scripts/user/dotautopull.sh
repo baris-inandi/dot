@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cd ~/dot
 if [[ $(git diff) = "" ]]; then
   sleep 1
