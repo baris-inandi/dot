@@ -16,4 +16,4 @@ xrandr --output DP-4 --mode 2560x1440 --rate 144.00
 bash ~/dot/startup.sh
 
 # auto pull dot if there are no local changes.
-bash ~/dot/scripts/user/dotautopull.sh
+bash ~/dot/scripts/sync/dotautopull.sh
