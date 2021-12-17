@@ -13,9 +13,6 @@ set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 exec "bash ~/dot/dot.sh"
 
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-
 font pango:JetBrains Mono Bold 9
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
@@ -164,10 +161,10 @@ bar {
 	position bottom
         status_command i3status ~/.config/i3status/config
         colors {
-		background #151515
+		background #181818
 		separator #404040
-        focused_workspace  #151515 #ffffff #151515
-        inactive_workspace #151515 #151515 #ffffff
+        focused_workspace  #181818 #ffffff #181818
+        inactive_workspace #181818 #181818 #ffffff
         urgent_workspace   #ffffff #bf616a
         }
 }
@@ -222,7 +219,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # picom
-exec_always --no-startup-id picom --experimental-backends --config ~/dot/picom.conf -b -f
+exec_always --no-startup-id picom --experimental-backends --config ~/dot/config/picom.conf -b -f
 
 # window border
 
