@@ -1,10 +1,13 @@
 #!/bin/bash
 
 hw_dim() {
-  for ((i = 75; i <= 90; i += 5)); do
-    brightnessctl s "$i%-"
-    sleep 0.2
-  done
+  # for ((i = 75; i <= 90; i += 5)); do
+  #   brightnessctl s "$i%-"
+  #   sleep 0.2
+  # done
+
+  # brightnessctl already has a dim animation so no need for the custom animation above.
+  brightnessctl s 10
 }
 
 soft_dim() {
