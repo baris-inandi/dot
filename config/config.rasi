@@ -1,21 +1,12 @@
-/*
-Twisted - A dark theme for Rofi
-Based on Nord Color Theme (https://github.com/arcticicestudio)
-User: hakanohi
-License: GNU General Public License v3.0
-*/
-
-configuration {
-		font-family: "JetBrains Mono 9";
-}
-
 * {
-    selected-normal-foreground:  rgba ( 24, 24, 24, 100 % );
-    foreground:                  rgba (255 , 255, 255, 100 % );
+	font: "JetBrains Mono 11";
+	accent: #ffffff;
+    selected-normal-foreground:  #000000;
+    foreground:                  #ffffff;
     normal-foreground:           @foreground;
-    alternate-normal-background: rgba ( 26, 26, 26, 100 % );
+    alternate-normal-background: transparent;
     red:                         rgba ( 191, 97, 106, 100 % );
-    selected-urgent-foreground:  rgba ( 249, 249, 249, 100 % );
+    selected-urgent-foreground:  rgba ( 249, 249, 249, 10 % );
     blue:                        rgba ( 136, 192, 208, 100 % );
     urgent-foreground:           @red;
     alternate-urgent-background: rgba ( 75, 81, 96, 90 % );
@@ -23,13 +14,13 @@ configuration {
     lightbg:                     rgba ( 238, 232, 213, 100 % );
     selected-active-foreground:  rgba ( 249, 249, 249, 100 % );
     alternate-active-background: rgba ( 75, 81, 96, 89 % );
-    background:                  rgba ( 33, 33, 33, 100 % );
+    background:                  #131313;
     alternate-normal-foreground: @foreground;
-    normal-background:           @background;
+    normal-background:           transparent;
     lightfg:                     rgba ( 88, 104, 117, 100 % );
-    selected-normal-background:  rgba ( 235, 203, 139, 100 % );
+    selected-normal-background:  @accent;
     border-color:                rgba ( 10, 10, 10, 100 % );
-    spacing:                     2;
+    spacing:                     0;
     separatorcolor:              rgba ( 10, 10, 10, 100 % );
     urgent-background:           rgba ( 33, 33, 33, 17 % );
     selected-urgent-background:  rgba ( 165, 66, 66, 100 % );
@@ -43,8 +34,9 @@ configuration {
     background-color: @background;
     border:           1px;
     border-color: 	  #646464;
-    padding:          5px;
-    width: 420px;
+    padding:          20px;
+    width: 			  360px;
+    height: 		  460px;
 }
 #mainbox {
     border: 0;
@@ -60,15 +52,15 @@ configuration {
 }
 #listview {
     fixed-height: 0;
-    border:       2px 0px 0px ;
+    border:       0;
     border-color: @separatorcolor;
-    spacing:      2px ;
+    spacing:      4px ;
     scrollbar:    false;
-    padding:      2px 0px 0px ;
+    padding:      20px 0px 0px ;
 }
 #element {
     border:  0;
-    padding: 1px ;
+    padding: 5px ;
 }
 #element.normal.normal {
     background-color: @normal-background;
@@ -119,9 +111,9 @@ configuration {
     text-color:       @selected-normal-foreground;
 }
 #inputbar {
-    spacing:    2px;
+    spacing:    6px;
     text-color: @normal-foreground;
-    padding:    1px ;
+    padding:    0 ;
 }
 #case-indicator {
     spacing:    0;
@@ -140,7 +132,7 @@ configuration {
 }
 #textbox-prompt-colon {
     expand:     false;
-    str:        ":";
+    str:        "";
     margin:     0px 0.3em 0em 0em ;
     text-color: @normal-foreground;
 }
