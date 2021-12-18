@@ -1,1 +1,1 @@
-source ~/dot/scripts/install.sh
+source ~/dot/scripts/setup/install.sh
