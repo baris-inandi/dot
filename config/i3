@@ -222,9 +222,9 @@ for_window [class=".*"] border pixel 1
 for_window [class="krunner"] border pixel 0
 for_window [class="Dunst"] border pixel 0
 
-client.focused          #4C7899 #285577 #FFFFFF #556073   #606060
-client.focused_inactive #333333 #5F676A #FFFFFF #222731   #282828
-client.unfocused        #333333 #222222 #888888 #222731   #282828
+client.focused          #4C7899 #285577 #FFFFFF #556073   #646465
+client.focused_inactive #333333 #5F676A #FFFFFF #222731   #222223
+client.unfocused        #333333 #222222 #888888 #222731   #222223
 client.urgent           #2F343A $red    #FFFFFF $red      $red
 
 set $mode_system (Return) suspend, (r) reboot, (q) poweroff, (e) exit

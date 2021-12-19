@@ -57,4 +57,9 @@ elif [ "$1" = "off" ]; then
   dim
   wait
   systemctl poweroff
+elif [ "$1" = "dimtest" ]; then
+  dim
+  wait
+  sleep 0.5
+  restore_brightness
 fi
