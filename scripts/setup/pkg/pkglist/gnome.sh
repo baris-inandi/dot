@@ -6,4 +6,5 @@ paru -S --skipreview --noconfirm --needed \
   gnome-control-center \
   eog \
   evince \
-  geary
+  geary \
+  gnome-music 
