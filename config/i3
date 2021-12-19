@@ -174,7 +174,7 @@ gaps inner 7
 gaps outer 0
 # border_radius 8
 # smart_borders on
-# smart_gaps on
+smart_gaps on
 
 # screenshots
 exec "mkdir -p ~/Pictures/Screenshots"

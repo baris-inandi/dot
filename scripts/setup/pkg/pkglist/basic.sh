@@ -44,4 +44,6 @@ paru -S --skipreview --noconfirm --needed \
   libgnome-keyring \
   seahorse \
   i3status \
-  pm-utils
+  pm-utils \
+  git-delta-git \
+  nvtop
