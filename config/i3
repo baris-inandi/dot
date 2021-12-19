@@ -16,6 +16,7 @@ font pango:JetBrains Mono Bold 9
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144.00
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -190,7 +191,6 @@ bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+Shift+Tab workspace next
 
 # brightness
-# TODO: notify-send ascii blocks notification using python
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 # use to send brightness notification: exec "python ~/dot/scripts/user/brightness_notify.py"
