@@ -1,5 +1,5 @@
 if [ "$1" = "" ]; then
-	code .
+  code .
 else
-	code $1
+  code $1
 fi
