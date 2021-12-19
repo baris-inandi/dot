@@ -2,6 +2,7 @@
 
 paru -S --skipreview --noconfirm --needed \
   bash \
+  rofi \
   fish \
   picom-jonaburg-git \
   betterlockscreen \
