@@ -35,6 +35,9 @@ ln -f -s ~/dot/config/config.fish ~/.config/fish/config.fish
 mkdir -p ~/.config/rofi
 ln -f -s ~/dot/config/config.rasi ~/.config/rofi/config.rasi
 
+mkdir -p ~/.config/systemd/user
+ln -f -s ~/dot/config/eos-update.ini ~/.config/systemd/user/eos-update-notifier.timer
+
 # firefox config symlinks
 ln -f -s ~/dot/config/firefox/personal/chrome/userChrome.css ~/.mozilla/firefox/personal/chrome/userChrome.css
 ln -f -s ~/dot/config/firefox/personal/chrome/userContent.css ~/.mozilla/firefox/personal/chrome/userContent.css
