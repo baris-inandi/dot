@@ -1,6 +1,7 @@
 function gsync -a name ; bash ~/dot/scripts/user/gitsync.sh $name ; end
 function clone -a name ; bash ~/dot/scripts/user/gitclone.sh $name ; end
 function vs -a vsdir ; bash ~/dot/scripts/user/vs.sh $vsdir ; exit ; end
+function dot ; bash ~/dot/scripts/sync/dotautopull.sh ; end
 
 # web shortcuts
 function classroom ; firefox "https://classroom.google.com/u/1/h" ; exit ; end
