@@ -16,14 +16,14 @@ source ~/dot/scripts/setup/pkg/pkg.sh
 wait
 
 # systemd lockscreen service
-source ~/dot/scripts/setup/config/lock.sh
+source ~/dot/scripts/setup/lock.sh
 wait
 
 # firefox setup
-source ~/dot/scripts/setup/config/firefox.sh
+source ~/dot/scripts/setup/firefox.sh
 
 # create config symlinks
-source ~/dot/scripts/setup/config/symlink.sh
+source ~/dot/scripts/setup/symlink.sh
 wait
 
 # install cpu microcode

@@ -13,4 +13,4 @@ brightnessctl s 999999
 bash ~/dot/startup.sh
 
 # auto pull dot if there are no local changes.
-bash ~/dot/scripts/sync/dotautopull.sh
+bash ~/dot/scripts/sync/sync.sh
