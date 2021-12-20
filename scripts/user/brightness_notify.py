@@ -1,4 +1,5 @@
 import subprocess
+from os import system
 
 
 def percentage(part, whole):
@@ -13,8 +14,8 @@ def cmd(c: list):
 def main():
     current_brightness = (cmd(["brightnessctl", "g"]))
     max_brightness = (cmd(["brightnessctl", "m"]))
-    notify = round(percentage(current_brightness, max_brightness))
-    cmd(["notify-send", notify * "█", "-t", "250"])
+    notify = round(percentage(current_brightness, max_brightness)) * "█"
+    system(f"echo {notify} | dzen2 -p 1 ")
     pass
 
 
