@@ -167,20 +167,6 @@ bar {
           urgent_workspace        "#ffffff" 			$ws_red
         }
 }
-# bar {
-#   font pango:JetBrains Mono Bold 7
-#   workspace_buttons no
-# 	position top
-#         # status_command i3status -c ~/dot/config/i3status.conf
-#         status_command py3status -c ~/dot/config/i3status.conf
-#         colors {
-#           background 		          $status_bg
-#           separator		            $status_sep
-#           focused_workspace       $ws_bg 			    $ws_bg 			  $ws_fg
-#           inactive_workspace      $status_bg 		  $status_bg 		$ws_bg
-#           urgent_workspace        "#ffffff" 			$ws_red
-#         }
-# }
 
 # notifications
 exec "dunst"

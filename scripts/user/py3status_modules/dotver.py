@@ -17,6 +17,7 @@ class Py3status:
 
     def main(self):
         return {
-            'full_text': f"[running on dot {get_ver()}]",
+            'cached_until': 5,
+            'full_text': f"[running dot {get_ver()}]",
             'cached_until': self.py3.CACHE_FOREVER
         }
