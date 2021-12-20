@@ -7,7 +7,7 @@ hw_dim() {
   # done
 
   # brightnessctl already has a dim animation so no need for the custom animation above.
-  brightnessctl s 15
+  brightnessctl s 5
 }
 
 soft_dim() {
