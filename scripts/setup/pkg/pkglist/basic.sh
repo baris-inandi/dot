@@ -46,4 +46,5 @@ paru -S --skipreview --noconfirm --needed \
   i3status \
   pm-utils \
   git-delta-git \
-  nvtop
+  nvtop \
+  fzf 

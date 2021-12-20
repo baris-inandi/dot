@@ -7,7 +7,7 @@ hw_dim() {
   # done
 
   # brightnessctl already has a dim animation so no need for the custom animation above.
-  brightnessctl s 10
+  brightnessctl s 15
 }
 
 soft_dim() {
@@ -31,9 +31,12 @@ dim() {
   typeset -i i END
   if (($max <= 1)); then
     soft_dim
+    wait
   else
     hw_dim
+    wait
   fi
+  sleep 0.1
 }
 
 handle_suspend() {
@@ -41,7 +44,7 @@ handle_suspend() {
   wait
   systemctl suspend
   wait
-  sleep 0.2
+  sleep 0.1
   restore_brightness
 }
 
