@@ -38,6 +38,10 @@ ln -f -s ~/dot/config/config.rasi ~/.config/rofi/config.rasi
 mkdir -p ~/.config/systemd/user
 ln -f -s ~/dot/config/eos-update.ini ~/.config/systemd/user/eos-update-notifier.timer
 
+# py3status scripts
+mkdir -p ~/.config/py3status/modules
+ln -f -s ~/dot/scripts/user/py3status_modules/dotver.py ~/.config/py3status/modules/dotver.py
+
 # firefox config symlinks
 ln -f -s ~/dot/config/firefox/personal/chrome/userChrome.css ~/.mozilla/firefox/personal/chrome/userChrome.css
 ln -f -s ~/dot/config/firefox/personal/chrome/userContent.css ~/.mozilla/firefox/personal/chrome/userContent.css

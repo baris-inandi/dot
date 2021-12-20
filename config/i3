@@ -27,7 +27,8 @@ exec --no-startup-id xrandr --output DP-4 --mode 2560x1440 --rate 144.00
 exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
-set $refresh_i3status killall -SIGUSR1 i3status
+# set $refresh_i3status killall -SIGUSR1 i3status
+set $refresh_i3status killall -SIGUSR1 py3status
 bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_i3status
 bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
@@ -156,7 +157,8 @@ bindsym $mod+r mode "resize"
 bar {
   font pango:JetBrains Mono Bold 8
 	position bottom
-        status_command i3status -c ~/dot/config/i3status.conf
+        # status_command i3status -c ~/dot/config/i3status.conf
+        status_command py3status -c ~/dot/config/i3status.conf
         colors {
           background 		          $status_bg
           separator		            $status_sep
@@ -165,6 +167,20 @@ bar {
           urgent_workspace        "#ffffff" 			$ws_red
         }
 }
+# bar {
+#   font pango:JetBrains Mono Bold 7
+#   workspace_buttons no
+# 	position top
+#         # status_command i3status -c ~/dot/config/i3status.conf
+#         status_command py3status -c ~/dot/config/i3status.conf
+#         colors {
+#           background 		          $status_bg
+#           separator		            $status_sep
+#           focused_workspace       $ws_bg 			    $ws_bg 			  $ws_fg
+#           inactive_workspace      $status_bg 		  $status_bg 		$ws_bg
+#           urgent_workspace        "#ffffff" 			$ws_red
+#         }
+# }
 
 # notifications
 exec "dunst"

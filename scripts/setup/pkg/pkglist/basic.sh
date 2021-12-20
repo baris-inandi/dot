@@ -47,4 +47,5 @@ paru -S --skipreview --noconfirm --needed \
   pm-utils \
   git-delta-git \
   nvtop \
-  fzf 
+  fzf \
+  py3status

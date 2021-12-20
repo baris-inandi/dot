@@ -16,7 +16,6 @@ def main():
     max_brightness = (cmd(["brightnessctl", "m"]))
     notify = round(percentage(current_brightness, max_brightness)) * "█"
     system(f"echo {notify} | dzen2 -p 1 ")
-    pass
 
 
 if __name__ == '__main__':
