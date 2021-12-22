@@ -1,7 +1,11 @@
 # critial startup scripts, use startup.sh for device-specific actions.
+source ~/dot/env.sh
 
 # start pulseaudio
 start-pulseaudio-x11
+
+# run xrandr
+xrandr --output "$DISPLAY" --mode "$RESOLUTION" --rate "$FPS"
 
 # set wallpaper
 feh --bg-fill ~/dot/wallpaper.png

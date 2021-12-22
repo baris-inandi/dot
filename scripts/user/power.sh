@@ -1,4 +1,5 @@
 #!/bin/bash
+source ~/dot/env.sh
 
 hw_dim() {
   # for ((i = 75; i <= 90; i += 5)); do
@@ -18,7 +19,7 @@ soft_dim() {
 }
 
 set_soft_brightness() {
-  xrandr --output "DP-4" --brightness "$1"
+  xrandr --output "$DISPLAY" --brightness "$1"
 }
 
 restore_brightness() {
@@ -33,7 +34,8 @@ dim() {
     soft_dim
     wait
   else
-    hw_dim
+    hw_dim &
+    soft_dim
     wait
   fi
   sleep 0.1

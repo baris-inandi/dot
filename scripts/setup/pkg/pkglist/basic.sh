@@ -47,4 +47,5 @@ paru -S --skipreview --noconfirm --needed \
   pm-utils \
   git-delta-git \
   fzf \
-  py3status
+  py3status \
+  python-pipenv

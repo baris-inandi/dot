@@ -1,6 +1,9 @@
 cd ~
 wait
 
+# setup env.sh
+cp ~/dot/env.example.sh ~/dot/env.sh
+
 # init pacman
 sudo pacman -Syu
 wait
