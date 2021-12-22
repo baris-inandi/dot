@@ -1,4 +1,9 @@
 # critial startup scripts, use startup.sh for device-specific actions.
+
+# copy env.sh if it does not already exist
+cp -n ~/dot/env.example.sh ~/dot/env.sh
+
+
 source ~/dot/env.sh
 
 # start pulseaudio
@@ -12,9 +17,6 @@ feh --bg-fill ~/dot/wallpaper.png
 
 # full brightness on startup
 brightnessctl s 999999
-
-# copy env.sh
-cp -n ~/dot/env.example.sh ~/dot/env.sh
 
 # run custom startup script
 bash ~/dot/startup.sh
