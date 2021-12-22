@@ -29,8 +29,8 @@ wait
 # install cpu microcode
 source ~/dot/scripts/setup/pkg/microcode.sh
 
-# fish as deafult shell
-chsh --shell /usr/bin/fish
+# change system settings
+source ~/dot/scripts/setup/system.sh
 wait
 
 # update everything
@@ -39,3 +39,7 @@ wait
 
 # cool ending
 neofetch
+
+# fish as deafult shell
+chsh --shell /usr/bin/fish
+wait

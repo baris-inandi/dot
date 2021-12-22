@@ -9,4 +9,5 @@ wait
 # post install configs
 timectl set-timezone Europe/Istanbul
 systemctl enable systemd-timesyncd
+systemctl enable NetworkManager
 hostnamectl set-hostname baris-arch
