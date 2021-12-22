@@ -2,7 +2,7 @@ cd ~
 wait
 
 # setup env.sh
-cp ~/dot/env.example.sh ~/dot/env.sh
+cp -n ~/dot/env.example.sh ~/dot/env.sh
 
 # init pacman
 sudo pacman -Syu
@@ -42,6 +42,10 @@ wait
 
 # cool ending
 neofetch
+
+# run startup script
+source ~/dot/dot.sh
+wait
 
 # fish as deafult shell
 chsh --shell /usr/bin/fish
