@@ -3,8 +3,8 @@ set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 exec "bash ~/dot/dot.sh"
 
 set $ws_red         "#B42B51"
-set $ws_bg          "#ffffff"
-set $ws_fg          "#000000"
+set $ws_bg          "#3668EB"
+set $ws_fg          "#ffffff"
 set $status_bg      "#000000"
 set $status_sep     "#181818"
 
@@ -155,14 +155,15 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   font pango:JetBrains Mono Bold 8
+  separator_symbol " "
 	position bottom
         # status_command i3status -c ~/dot/config/i3status.conf
         status_command py3status -c ~/dot/config/i3status.conf
         colors {
           background 		          $status_bg
           separator		            $status_sep
-          focused_workspace       $ws_bg 			    $ws_bg 			  $ws_fg
-          inactive_workspace      $status_bg 		  $status_bg 		$ws_bg
+          focused_workspace       #00000000 			    $ws_bg 			  $ws_fg
+          inactive_workspace      $status_bg 		  $status_bg 		#ffffff
           urgent_workspace        "#ffffff" 			$ws_red
         }
 }
