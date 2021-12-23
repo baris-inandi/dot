@@ -6,20 +6,19 @@ hw_dim() {
   #   brightnessctl s "$i%-"
   #   sleep 0.2
   # done
-
   # brightnessctl already has a dim animation so no need for the custom animation above.
   brightnessctl s 5
 }
 
 soft_dim() {
-  for ((i = 80; i >= 10; i -= 5)); do
+  for ((i = 80; i >= 5; i -= 5)); do
     set_soft_brightness ".$((100 * $i / 100)) | sed -e 's/..$/.&/;t' -e 's/.$/.0&/'"
     sleep 0.02
   done
 }
 
 set_soft_brightness() {
-  xrandr --output "$DISPLAY" --brightness "$1"
+  xrandr --output "$DOT_DISPLAY" --brightness "$1"
 }
 
 restore_brightness() {
@@ -46,7 +45,7 @@ handle_suspend() {
   wait
   systemctl suspend
   wait
-  sleep 0.1
+  sleep 0.5
   restore_brightness
 }
 

@@ -3,14 +3,13 @@
 # copy env.sh if it does not already exist
 cp -n ~/dot/env.example.sh ~/dot/env.sh
 
-
 source ~/dot/env.sh
 
 # start pulseaudio
 start-pulseaudio-x11
 
 # run xrandr
-xrandr --output "$DISPLAY" --mode "$RESOLUTION" --rate "$FPS"
+xrandr --output "$DOT_DISPLAY" --mode "$DOT_RESOLUTION" --rate "$DOT_FPS"
 
 # set wallpaper
 feh --bg-fill ~/dot/wallpaper.png
