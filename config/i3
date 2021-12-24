@@ -2,6 +2,7 @@ set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 exec "bash ~/dot/dot.sh"
 
+set $bar_bg         "#00000000"
 set $ws_red         "#B42B51"
 set $ws_bg          "#3668EB"
 set $ws_fg          "#ffffff"
@@ -160,11 +161,11 @@ bar {
         # status_command i3status -c ~/dot/config/i3status.conf
         status_command py3status -c ~/dot/config/i3status.conf
         colors {
-          background 		          $status_bg
-          separator		            $status_sep
-          focused_workspace       #00000000 			    $ws_bg 			  $ws_fg
-          inactive_workspace      $status_bg 		  $status_bg 		#ffffff
-          urgent_workspace        "#ffffff" 			$ws_red
+          background 		      $bar_bg  
+          separator		          $status_sep
+          focused_workspace       $bar_bg 		$ws_bg		$ws_fg
+          inactive_workspace      $bar_bg 		$bar_bg 	#ffffff
+          urgent_workspace        #ffffff40		$ws_red
         }
 }
 
