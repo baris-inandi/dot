@@ -57,6 +57,7 @@ paru -S --skipreview --noconfirm --needed \
   unrar \
   unzip \
   wget \
+  curl \
   xidlehook \
   firefox \
   spotify \
@@ -118,12 +119,6 @@ paru -S --skipreview --noconfirm --needed \
   evince \
   geary \
   gnome-music-git
-
-# install oh my fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
-# install desired python modules
-pip3 install dbus-python py3status
 
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')
