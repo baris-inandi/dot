@@ -161,7 +161,7 @@ bar {
         # status_command i3status -c ~/dot/config/i3status.conf
         status_command py3status -c ~/dot/config/i3status.conf
         colors {
-          background 		      $bar_bg  
+          background 		      $bar_bg
           separator		          $status_sep
           focused_workspace       $bar_bg 		$ws_bg		$ws_fg
           inactive_workspace      $bar_bg 		$bar_bg 	#ffffff
@@ -201,10 +201,9 @@ bindsym $mod+Shift+Tab workspace next
 # brightness
 bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
-# use to send brightness notification: exec "python ~/dot/scripts/user/brightness_notify.py"
 
 # apps
-bindsym $mod+shift+f exec "dolphin || nautilus"
+bindsym $mod+shift+f exec "dolphin || nautilus -w"
 bindsym $mod+shift+a exec "firefox || google-chrome-stable"
 bindsym $mod+shift+m exec "spotify"
 

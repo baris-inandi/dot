@@ -1,4 +1,5 @@
 # dot
+
 .dotfiles!
 
-The world's most overengineered dotfile repo full with useful scripts, themes, a very elaborate installer and more!
+An overengineered dotfile repo full with useful scripts, themes, an installer and more!

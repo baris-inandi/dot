@@ -2,8 +2,7 @@ from os import path
 
 
 def main():
-    with open(path.join(path.dirname(__file__),
-                        "../setup/symlink.sh")) as f:
+    with open(path.join(path.dirname(__file__), "../setup/symlink.sh")) as f:
         lines = f.readlines()
 
     parsed_lines = []

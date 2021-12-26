@@ -23,9 +23,9 @@ ln -f -s ~/dot/config/dunstrc.conf ~/.config/dunst/dunstrc
 mkdir -p ~/.config/gtk-3.0/
 ln -f -s ~/dot/config/gtksettings.ini ~/.config/gtk-3.0/settings.ini
 
-ln -f -s ~/dot/config/X/.Xresources ~/.Xresources
+ln -f -s ~/dot/config/.Xresources ~/.Xresources
 
-ln -f -s ~/dot/config/X/.xinitrc ~/.xinitrc
+ln -f -s ~/dot/config/.xinitrc ~/.xinitrc
 
 ln -f -s ~/dot/config/betterlockscreenrc.conf ~/.config/betterlockscreenrc
 
@@ -40,7 +40,7 @@ ln -f -s ~/dot/config/eos-update.ini ~/.config/systemd/user/eos-update-notifier.
 
 # py3status scripts
 mkdir -p ~/.config/py3status/modules
-ln -f -s ~/dot/scripts/user/py3status_modules/dotver.py ~/.config/py3status/modules/dotver.py
+ln -f -s ~/dot/scripts/user/py3status_modules/* ~/.config/py3status/modules
 
 # firefox config symlinks
 ln -f -s ~/dot/config/firefox/personal/chrome/userChrome.css ~/.mozilla/firefox/personal/chrome/userChrome.css
