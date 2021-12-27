@@ -4,8 +4,8 @@ exec "bash ~/dot/dot.sh"
 
 set $bar_bg         "#151515"
 set $ws_red         "#B42B5160"
-set $ws_bg          "#3668EB"
-set $ws_fg          "#ffffff"
+set $ws_bg          "#5b9dc750"
+set $ws_fg          "#5b9dc7"
 set $status_sep     "#181818"
 
 font pango:JetBrains Mono Bold 9
@@ -154,7 +154,7 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-  font pango:JetBrains Mono Bold 8
+  font pango:JetBrains Mono Bold 8.5
   separator_symbol " "
 	position bottom
         # status_command i3status -c ~/dot/config/i3status.conf
@@ -162,7 +162,7 @@ bar {
         colors {
           background 		      $bar_bg
           separator		          $status_sep
-          focused_workspace       $bar_bg 		$ws_bg		$ws_fg
+          focused_workspace       $ws_bg 		$ws_bg		$ws_fg
           inactive_workspace      $bar_bg 		$bar_bg 	#ffffff
           urgent_workspace        #ffffff40		$ws_red
         }
