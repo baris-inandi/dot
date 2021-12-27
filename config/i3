@@ -2,11 +2,10 @@ set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 exec "bash ~/dot/dot.sh"
 
-set $bar_bg         "#00000000"
-set $ws_red         "#B42B51"
+set $bar_bg         "#151515"
+set $ws_red         "#B42B5160"
 set $ws_bg          "#3668EB"
 set $ws_fg          "#ffffff"
-set $status_bg      "#000000"
 set $status_sep     "#181818"
 
 font pango:JetBrains Mono Bold 9
@@ -20,7 +19,7 @@ font pango:JetBrains Mono Bold 9
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- "betterlockscreen -l" --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.

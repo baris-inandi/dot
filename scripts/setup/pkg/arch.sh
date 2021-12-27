@@ -46,7 +46,6 @@ paru -S --skipreview --noconfirm --needed \
   fish \
   picom-jonaburg-git \
   betterlockscreen \
-  maim \
   nano \
   micro \
   python310 \
@@ -90,6 +89,7 @@ paru -S --skipreview --noconfirm --needed \
   fzf \
   py3status \
   python-pipenv \
+  xss-lock \
   ttf-ms-fonts \
   ttf-apple-emoji \
   ttf-rubik \
