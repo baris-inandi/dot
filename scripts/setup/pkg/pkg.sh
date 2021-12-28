@@ -8,4 +8,4 @@ source ~/dot/scripts/setup/pkg/arch.sh
 curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
 
 # install desired python modules
-pip3 install dbus-python py3status
+pip3 install dbus-python py3status pipenv
