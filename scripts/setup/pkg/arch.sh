@@ -79,6 +79,7 @@ paru -S --skipreview --noconfirm --needed \
   brightnessctl \
   playerctl \
   neofetch \
+  pyenv \
   gnome-keyring \
   libsecret \
   libgnome-keyring \
