@@ -2,11 +2,19 @@ set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 exec "bash ~/dot/dot.sh"
 
-set $bar_bg         "#151515"
-set $ws_red         "#B42B5160"
-set $ws_bg          "#5b9dc750"
-set $ws_fg          "#5b9dc7"
-set $status_sep     "#181818"
+# color of the bar
+set $bar_bg                   "#151515"
+set $bar_seperator            "#181818"
+
+# urgent workspaces
+set $ws_urgent_fg             "#ff7598"
+set $ws_urgent_bg             "#B42B5140"
+set $ws_urgent_bg_border      "#B42B5150"
+
+# workspace buttons
+set $ws_fg                    "#8fd3ff"
+set $ws_bg                    "#5b9dc740"
+set $ws_bg_border             "#5b9dc750"
 
 font pango:JetBrains Mono Bold 9
 
@@ -160,11 +168,11 @@ bar {
         # status_command i3status -c ~/dot/config/i3status.conf
         status_command py3status -c ~/dot/config/i3status.conf
         colors {
-          background 		      $bar_bg
-          separator		          $status_sep
-          focused_workspace       $ws_bg 		$ws_bg		$ws_fg
-          inactive_workspace      $bar_bg 		$bar_bg 	#ffffff
-          urgent_workspace        #ffffff40		$ws_red
+          background 		          $bar_bg
+          separator		            $bar_seperator
+          focused_workspace       $ws_bg_border $ws_bg $ws_fg
+          inactive_workspace      $bar_bg $bar_bg #ffffff
+          urgent_workspace        $ws_urgent_bg_border $ws_urgent_bg $ws_urgent_fg
         }
 }
 
