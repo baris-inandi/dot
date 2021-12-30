@@ -48,6 +48,7 @@ paru -S --skipreview --noconfirm --needed \
   betterlockscreen \
   nano \
   micro \
+  translate-shell \
   python310 \
   python-pip \
   npm \
