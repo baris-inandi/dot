@@ -8,7 +8,7 @@ function mk -a dir ; mkdir $dir ; cd $dir ; end
 # web shortcuts
 function classroom ; firefox "https://classroom.google.com/u/1/h" ; exit ; end
 function github -a repo ; firefox https://github.com/baris-inandi/$repo ; end
-function monk ; firefox --kiosk --new-window https://monkeytype.com ; exit ; end
+function monk ; firefox --new-window https://monkeytype.com ; exit ; end
 
 set -gx EDITOR micro
 
