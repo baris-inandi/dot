@@ -4,6 +4,7 @@ function vs -a vsdir ; bash ~/dot/scripts/user/fish/vs.sh $vsdir ; exit ; end
 function ttt ; tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1 ; end
 function clearcache ; rm -rf ~/.cache ; mkdir ~/.cache ; echo "cache cleared." ; end
 function mk -a dir ; mkdir $dir ; cd $dir ; end
+function rmthis ; set thisdir (basename $PWD) ; cd .. ; trash $thisdir ; end
 alias vi="~/.local/bin/lvim"
 alias c="clear"
 
