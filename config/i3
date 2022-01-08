@@ -12,9 +12,9 @@ set $ws_urgent_bg             "#B42B5140"
 set $ws_urgent_bg_border      "#B42B5150"
 
 # workspace buttons
-set $ws_fg                    "#8fd3ff"
-set $ws_bg                    "#5b9dc740"
-set $ws_bg_border             "#5b9dc750"
+set $ws_fg                    "#000000"
+set $ws_bg                    "#ffffff"
+set $ws_bg_border             "#151515"
 
 font pango:JetBrains Mono Bold 9
 
