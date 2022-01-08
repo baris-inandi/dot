@@ -249,3 +249,6 @@ mode "$mode_system" {
     bindsym space mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
+
+# disable middle click paste
+exec --no-startup-id xmousepasteblock
