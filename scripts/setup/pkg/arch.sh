@@ -89,6 +89,7 @@ paru -S --skipreview --noconfirm --needed \
   pm-utils \
   git-delta-git \
   fzf \
+  exa \
   xmousepasteblock-git \
   py3status \
   python-pipenv \

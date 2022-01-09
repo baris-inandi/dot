@@ -5,6 +5,7 @@ function ttt ; tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1 
 function clearcache ; rm -rf ~/.cache ; mkdir ~/.cache ; echo "cache cleared." ; end
 function mk -a dir ; mkdir $dir ; cd $dir ; end
 function rmthis ; set thisdir (basename $PWD) ; cd .. ; trash $thisdir ; end
+function ls -a d ; bash ~/dot/scripts/user/fish/ls.sh $d ; end
 alias vi="~/.local/bin/lvim"
 alias c="clear"
 

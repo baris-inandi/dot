@@ -33,6 +33,10 @@
  * config settingsto your own liking. */
 
 
+#navigator-toolbox {
+  font-family: "JetBrainsMonoMedium Nerd Font" !important
+}
+
 :root {
 
   /*---+---+---+---+---+---+---+
