@@ -39,3 +39,5 @@ font:
         family: JetBrainsMono Nerd Font
     size: 12
 background_opacity: 1.0
+env:
+    WINIT_X11_SCALE_FACTOR: "1"
