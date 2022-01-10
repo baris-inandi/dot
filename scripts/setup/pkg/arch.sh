@@ -94,6 +94,7 @@ paru -S --skipreview --noconfirm --needed \
   py3status \
   python-pipenv \
   xss-lock \
+  catimg \
   ttf-ms-fonts \
   ttf-apple-emoji \
   ttf-rubik \

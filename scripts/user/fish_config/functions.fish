@@ -5,6 +5,17 @@ function gsync -a name
     bash ~/dot/scripts/user/fish/gitsync.sh $name
 end
 
+################################################################## SPARU
+# quick download using paru (with --skipreview and --noconfirm)
+##################################################################
+function sparu
+    if count $argv > /dev/null
+        paru -S $argv --skipreview --noconfirm --needed
+    else
+        paru --skipreview --noconfirm -Syu
+    end
+end
+
 ################################################################## CLONE
 # clones a git repository from the defaut user's github (baris-inandi)
 ##################################################################
@@ -31,9 +42,10 @@ end
 
 
 ################################################################## CLEARCACHE
-# clears .cache directory
+# clears .cache directory and runs paccache -r
 ##################################################################
 function clearcache
+    paccache -r
     rm -rf ~/.cache
     mkdir ~/.cache
     echo "cache cleared."
