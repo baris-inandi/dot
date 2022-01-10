@@ -20,6 +20,9 @@ ln -f -s ~/dot/config/micro.json ~/.config/micro/settings.json
 mkdir -p ~/.config/dunst
 ln -f -s ~/dot/config/dunstrc.conf ~/.config/dunst/dunstrc
 
+mkdir -p ~/.cspell
+ln -f -s ~/dot/config/cspell-dictionary.txt ~/.cspell/custom-dictionary-user.txt
+
 mkdir -p ~/.config/gtk-3.0/
 ln -f -s ~/dot/config/gtksettings.ini ~/.config/gtk-3.0/settings.ini
 
