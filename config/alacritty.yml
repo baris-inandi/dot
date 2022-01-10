@@ -3,7 +3,7 @@ colors:
     background: "0x151515"
     foreground: "0xd4d2d1"
   normal:
-    black: "0x151515"
+    black: "0x414040"
     red: "0xa63f50"
     green: "0x838f3d"
     yellow: "0xd79921"
@@ -12,14 +12,14 @@ colors:
     cyan: "0x689d6a"
     white: "0xd4d2d1"
   bright:
-    black: "0x505050"
-    red: "0xac4142"
-    green: "0x94a959"
-    yellow: "0xf4bf75"
-    blue: "0x6aabb5"
-    magenta: "0xaa759f"
-    cyan: "0x75b5aa"
-    white: "0xf5f5f5"
+    black: "0x414040"
+    red: "0xa63f50"
+    green: "0x838f3d"
+    yellow: "0xd79921"
+    blue: "0x4e7e7e"
+    magenta: "0xa37586"
+    cyan: "0x689d6a"
+    white: "0xd4d2d1"
 selection:
   unfocused_hollow: true
 mouse:
