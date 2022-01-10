@@ -67,7 +67,7 @@ paru -S --skipreview --noconfirm --needed \
   trash-cli \
   hollywood \
   speedtest-cli \
-  kitty \
+  alacritty \
   github-cli \
   i3-gaps \
   xclip \

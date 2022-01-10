@@ -6,8 +6,8 @@ ln -f -s ~/dot/config/i3 ~/.config/i3/config
 mkdir -p ~/.config/i3status
 ln -f -s ~/dot/config/i3status.conf ~/.config/i3status/config
 
-mkdir -p ~/.config/kitty
-ln -f -s ~/dot/config/kitty.conf ~/.config/kitty/kitty.conf
+mkdir -p ~/.config/alacritty
+ln -f -s ~/dot/config/alacritty.yml ~/.config/alacritty/alacritty.yml
 
 ln -f -s ~/dot/config/.gitconfig ~/.gitconfig
 
