@@ -88,6 +88,7 @@ paru -S --skipreview --noconfirm --needed \
   i3status \
   pm-utils \
   git-delta-git \
+  rgb-tui-bin \
   fzf \
   exa \
   xmousepasteblock-git \

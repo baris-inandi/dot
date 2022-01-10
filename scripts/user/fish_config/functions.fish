@@ -1,4 +1,4 @@
-################################################################## GSYNC
+################################################################ GSYNC
 # pulls, adds, commits, and pushes all files in a git repo
 ##################################################################
 function gsync -a name
@@ -28,8 +28,8 @@ end
 ################################################################## VS
 # opens vscode in the current directory and exits immediately
 ##################################################################
-function vs -a vsdir
-    bash ~/dot/scripts/user/fish/vs.sh $vsdir
+function vs
+    bash ~/dot/scripts/user/fish/vs.sh $argv
     exit
 end
 

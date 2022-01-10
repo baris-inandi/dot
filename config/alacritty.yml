@@ -1,43 +1,43 @@
 colors:
-    primary:
-        background: '0x151515'
-        foreground: '0xd0d0d0'
-    normal:
-        black: '0x151515'
-        red: '0xac4142'
-        green: '0x90a959'
-        yellow: '0xf4bf75'
-        blue: '0x6a9fb5'
-        magenta: '0xaa759f'
-        cyan: '0x75b5aa'
-        white: '0xd0d0d0'
-    bright:
-        black: '0x505050'
-        red: '0xac4142'
-        green: '0x90a959'
-        yellow: '0xf4bf75'
-        blue: '0x6a9fb5'
-        magenta: '0xaa759f'
-        cyan: '0x75b5aa'
-        white: '0xf5f5f5'
+  primary:
+    background: "0x151515"
+    foreground: "0xd4d2d1"
+  normal:
+    black: "0x151515"
+    red: "0xa63f50"
+    green: "0x838f3d"
+    yellow: "0xd79921"
+    blue: "0x4e7e7e"
+    magenta: "0xa37586"
+    cyan: "0x689d6a"
+    white: "0xd4d2d1"
+  bright:
+    black: "0x505050"
+    red: "0xac4142"
+    green: "0x94a959"
+    yellow: "0xf4bf75"
+    blue: "0x6aabb5"
+    magenta: "0xaa759f"
+    cyan: "0x75b5aa"
+    white: "0xf5f5f5"
 selection:
-    unfocused_hollow: true
+  unfocused_hollow: true
 mouse:
-    hide_when_typing: true
+  hide_when_typing: true
 shell:
-    program: /usr/bin/fish
+  program: /usr/bin/fish
 window:
-    padding:
-        x: 36
-        y: 36
+  padding:
+    x: 36
+    y: 36
 scrolling:
-    history: 100000
-    multiplier: 4
+  history: 100000
+  multiplier: 4
 
 font:
-    normal:
-        family: JetBrainsMono Nerd Font
-    size: 12.5
+  normal:
+    family: JetBrainsMono Nerd Font
+  size: 12.5
 background_opacity: 1.0
 env:
-    WINIT_X11_SCALE_FACTOR: "1"
+  WINIT_X11_SCALE_FACTOR: "1"
