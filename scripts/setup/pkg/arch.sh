@@ -112,6 +112,7 @@ paru -S --skipreview --noconfirm --needed \
   ttf-hack \
   ttf-inconsolata \
   ttf-jetbrains-mono \
+  nerd-fonts-jetbrains-mono \
   ttf-lato \
   ttf-liberation \
   cantarell-fonts \
