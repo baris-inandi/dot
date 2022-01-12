@@ -1,43 +1,49 @@
+background_opacity: 1
 colors:
-  primary:
-    background: "0x151515"
-    foreground: "0xd4d2d1"
-  normal:
-    black: "0x414040"
-    red: "0xa63f50"
-    green: "0x838f3d"
-    yellow: "0xd79921"
-    blue: "0x4e7e7e"
-    magenta: "0xa37586"
-    cyan: "0x689d6a"
-    white: "0xd4d2d1"
   bright:
-    black: "0x414040"
-    red: "0xa63f50"
-    green: "0x838f3d"
-    yellow: "0xd79921"
-    blue: "0x4e7e7e"
-    magenta: "0xa37586"
-    cyan: "0x689d6a"
-    white: "0xd4d2d1"
-selection:
-  unfocused_hollow: true
+    black: '0x414040'
+    blue: '0x4e7e7e'
+    cyan: '0x689d6a'
+    green: '0x838f3d'
+    magenta: '0xa37586'
+    red: '0xa63f50'
+    white: '0xd4d2d1'
+    yellow: '0xd79921'
+  normal:
+    black: '0x414040'
+    blue: '0x4e7e7e'
+    cyan: '0x689d6a'
+    green: '0x838f3d'
+    magenta: '0xa37586'
+    red: '0xa63f50'
+    white: '0xd4d2d1'
+    yellow: '0xd79921'
+  primary:
+    background: '0x151515'
+    foreground: '0xd4d2d1'
+env:
+  WINIT_X11_SCALE_FACTOR: '1'
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+  size: 12.5
+key_bindings:
+  - action: IncreaseFontSize
+    key: Asterisk
+    mods: Control
+  - action: DecreaseFontSize
+    key: Minus
+    mods: Control
 mouse:
   hide_when_typing: true
+scrolling:
+  history: 100000
+  multiplier: 4
+selection:
+  unfocused_hollow: true
 shell:
   program: /usr/bin/fish
 window:
   padding:
     x: 36
-    y: 36
-scrolling:
-  history: 100000
-  multiplier: 4
-
-font:
-  normal:
-    family: JetBrainsMono Nerd Font
-  size: 12.5
-background_opacity: 1.0
-env:
-  WINIT_X11_SCALE_FACTOR: "1"
+    'y': 36
