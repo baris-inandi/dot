@@ -4,7 +4,7 @@ alias c="clear"
 
 # web shortcuts
 function classroom
-    firefox "https://classroom.google.com/u/1/h"
+    firefox --new-window "https://classroom.google.com/u/1/h"
     exit
 end
 
