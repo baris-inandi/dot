@@ -108,6 +108,7 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws_hidden "hidden"
+set $ws_music "music"
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -134,6 +135,10 @@ bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $
 # secret workspace for self-exiting terminal windows (for background updates etc.)
 bindsym $mod+0 workspace $ws_hidden
 bindsym $mod+Shift+0 move container to workspace $ws_hidden; workspace $ws_hidden
+
+# secret workspace for self-exiting terminal windows (for background updates etc.)
+bindsym $mod+M workspace $ws_music
+bindsym $mod+Shift+M workspace $ws_music; exec "spotify"
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -217,7 +222,6 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 # apps
 bindsym $mod+shift+f exec "dolphin || nautilus -w"
 bindsym $mod+shift+a exec "firefox || google-chrome-stable"
-bindsym $mod+shift+m exec "spotify"
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill; workspace 1
