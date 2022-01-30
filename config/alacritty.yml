@@ -1,4 +1,3 @@
-background_opacity: 1
 colors:
   bright:
     black: '0x414040'
@@ -46,4 +45,4 @@ shell:
 window:
   padding:
     x: 36
-    'y': 36
+    y: 36
