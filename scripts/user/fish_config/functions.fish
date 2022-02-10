@@ -9,7 +9,7 @@ end
 # quick download using paru (with --skipreview and --noconfirm)
 ##################################################################
 function sparu
-    if count $argv > /dev/null
+    if count $argv >/dev/null
         paru -S $argv --skipreview --noconfirm --needed
     else
         paru --skipreview --noconfirm -Syu
@@ -81,4 +81,14 @@ end
 function cl -a d
     cd $d
     ls
+end
+
+################################################################## MVTHIS
+# cds into directory and calls ls immediately
+##################################################################
+function mvthis -a name
+    set thisdir (basename $PWD)
+    cd ..
+    mv $thisdir $name
+    cd $name
 end
