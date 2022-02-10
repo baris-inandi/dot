@@ -2,10 +2,10 @@
 
 bold=$(tput bold)
 normal=$(tput sgr0)
-green=$(tput setaf 2)
+color=$(tput setaf 5)
 white=$(tput sgr0)
 
 printf "\n"
 
-printf "${bold}${green}GITCLONE:${white} Cloning repo...\n\n${normal}"
+printf "${bold}${color}GITCLONE:${white} Cloning repo...\n\n${normal}"
 git clone --depth 1 https://github.com/baris-inandi/$1
