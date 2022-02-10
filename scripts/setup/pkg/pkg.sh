@@ -125,7 +125,8 @@ paru -S --skipreview --noconfirm --needed \
   eog \
   evince \
   geary \
-  gnome-music-git
+  gnome-music-git \
+  prettier
 
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')
