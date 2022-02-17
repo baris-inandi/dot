@@ -12,10 +12,6 @@ else
 fi
 
 printf "${bold}${color}GSYNC:${white} Syncing \"$cm\"\n${normal}"
-
-printf "${bold}${color}GSYNC:${white} Pulling from remote...\n${normal}"
-git pull
-
 printf "${bold}${color}GSYNC:${white} Adding all changes...\n${normal}"
 git add -A
 
