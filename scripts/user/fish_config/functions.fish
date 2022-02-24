@@ -75,6 +75,13 @@ function ls -a d
     bash ~/dot/scripts/user/fish/ls.sh $d
 end
 
+################################################################## LSX
+# treeview exa
+##################################################################
+function lsx -a d
+    exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99
+end
+
 ################################################################## CL
 # cds into directory and calls ls immediately
 ##################################################################

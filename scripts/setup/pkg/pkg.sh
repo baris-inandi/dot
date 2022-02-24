@@ -103,6 +103,7 @@ paru -S --skipreview --noconfirm --needed \
   otf-ibm-plex \
   ttf-fira-mono \
   ttf-fira-code \
+  ttf-iosevka-nerd \
   ttf-droid \
   ttf-dejavu \
   inter-font \
