@@ -24,8 +24,8 @@ env:
   WINIT_X11_SCALE_FACTOR: '1'
 font:
   normal:
-    family: Iosevka Term
-  size: 14
+    family: JetBrainsMono Medium Nerd Font
+  size: 12.5
 key_bindings:
   - action: IncreaseFontSize
     key: Asterisk
