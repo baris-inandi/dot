@@ -24,7 +24,7 @@ env:
   WINIT_X11_SCALE_FACTOR: '1'
 font:
   normal:
-    family: JetBrainsMono Medium Nerd Font
+    family: JetBrainsMono Nerd Font
   size: 12.5
 key_bindings:
   - action: IncreaseFontSize
