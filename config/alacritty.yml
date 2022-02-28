@@ -24,8 +24,8 @@ env:
   WINIT_X11_SCALE_FACTOR: '1'
 font:
   normal:
-    family: JetBrainsMono Nerd Font
-  size: 12.5
+    family: Iosevka
+  size: 14
 key_bindings:
   - action: IncreaseFontSize
     key: Asterisk
@@ -44,5 +44,5 @@ shell:
   program: /usr/bin/fish
 window:
   padding:
-    x: 36
-    y: 36
+    x: 40
+    y: 40
