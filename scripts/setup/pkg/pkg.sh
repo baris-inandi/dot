@@ -43,6 +43,7 @@ wait
 paru -S --skipreview --noconfirm --needed \
   bash \
   rofi \
+  rofi-emoji \
   fish \
   picom-jonaburg-git \
   betterlockscreen \
