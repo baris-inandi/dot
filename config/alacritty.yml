@@ -44,5 +44,5 @@ shell:
   program: /usr/bin/fish
 window:
   padding:
-    x: 40
-    y: 40
+    x: 48
+    y: 48
