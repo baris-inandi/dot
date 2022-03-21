@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 bar {
   font pango:JetBrains Mono Bold 8.5
   separator_symbol " "
-	position bottom
+	position top
         # status_command i3status -c ~/dot/config/i3status.conf
         status_command py3status -c ~/dot/config/i3status.conf
         colors {
