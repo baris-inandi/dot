@@ -50,7 +50,7 @@ paru -S --skipreview --noconfirm --needed \
   nano \
   micro \
   translate-shell \
-  python310 \
+  python \
   python-pip \
   npm \
   pfetch \
