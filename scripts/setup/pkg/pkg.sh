@@ -108,6 +108,7 @@ paru -S --skipreview --noconfirm --needed \
   ttf-droid \
   ttf-dejavu \
   inter-font \
+  ttf-roboto \
   noto-fonts \
   adobe-source-code-pro-fonts \
   awesome-terminal-fonts \
@@ -121,6 +122,7 @@ paru -S --skipreview --noconfirm --needed \
   ttf-liberation \
   cantarell-fonts \
   ttf-oldenglish5 \
+  openoffice-bin \
   lxappearance-gtk3 \
   gnome-font-viewer \
   gnome-control-center \
