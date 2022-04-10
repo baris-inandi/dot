@@ -122,7 +122,7 @@ paru -S --skipreview --noconfirm --needed \
   ttf-liberation \
   cantarell-fonts \
   ttf-oldenglish5 \
-  openoffice-bin \
+  onlyoffice-desktopeditors \
   lxappearance-gtk3 \
   gnome-font-viewer \
   gnome-control-center \
