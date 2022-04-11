@@ -126,3 +126,5 @@ end
 function dotsync
     bash ~/dot/scripts/sync/sync.sh
 end
+
+starship init fish | source
