@@ -7,14 +7,14 @@ set $bar_bg                   "#151515"
 set $bar_seperator            "#181818"
 
 # urgent workspaces
-set $ws_urgent_fg             "#ff7598"
-set $ws_urgent_bg             "#B42B5140"
-set $ws_urgent_bg_border      "#B42B5150"
+set $ws_urgent_fg             "#ffffff"
+set $ws_urgent_bg             "#B42B51"
+set $ws_urgent_bg_border      "#00000000"
 
 # workspace buttons
 set $ws_fg                    "#000000"
 set $ws_bg                    "#ffffff"
-set $ws_bg_border             "#151515"
+set $ws_bg_border             "#00000000"
 
 font pango:JetBrains Mono Bold 9
 
@@ -177,9 +177,9 @@ bar {
         # status_command i3status -c ~/dot/config/i3status.conf
         status_command py3status -c ~/dot/config/i3status.conf
         colors {
-          background 		          $bar_bg
-          separator		            $bar_seperator
-          focused_workspace       $ws_bg_border $ws_bg $ws_fg
+          background 		      $bar_bg
+          separator		          $bar_seperator
+          focused_workspace       #00000000 $ws_bg $ws_fg
           inactive_workspace      $bar_bg $bar_bg #ffffff
           urgent_workspace        $ws_urgent_bg_border $ws_urgent_bg $ws_urgent_fg
         }
