@@ -90,11 +90,11 @@ function lsx -a d
     exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99
 end
 
-################################################################## CL
+################################################################## D
 # cds into directory and calls ls immediately
 ##################################################################
-function cl -a d
-    cd $d
+function d -a dir
+    cd $dir
     ls
 end
 
@@ -106,4 +106,11 @@ function mvthis -a name
     cd ..
     mv $thisdir $name
     cd $name
+end
+
+################################################################## DOTSYNC
+# syncs dot on-demand
+##################################################################
+function dotsync
+    bash ~/dot/scripts/sync/sync.sh
 end

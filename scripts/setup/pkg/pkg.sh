@@ -70,6 +70,7 @@ paru -S --skipreview --noconfirm --needed \
   speedtest-cli \
   alacritty \
   github-cli \
+  alsa-utils \
   i3-gaps \
   xclip \
   maim \
