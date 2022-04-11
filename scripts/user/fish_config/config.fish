@@ -18,9 +18,21 @@ end
 ##################################################################
 function sparu
     if count $argv >/dev/null
-        paru -S $argv --skipreview --noconfirm --needed
+        paru -S $argv --cleanafter --removemake --useask --sudoloop --skipreview --noconfirm --needed
     else
         paru --skipreview --noconfirm -Syu
+    end
+end
+
+
+################################################################## RPARU
+# quickly remove packages using paru
+##################################################################
+function rparu
+    if count $argv >/dev/null
+        paru -R $argv --skipreview --noconfirm --sudoloop --cleanafter --removemake
+    else
+        echo "specify a package to remove"
     end
 end
 
