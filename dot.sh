@@ -5,14 +5,8 @@ cp -n ~/dot/env.example.sh ~/dot/env.sh
 
 source ~/dot/env.sh
 
-# start pulseaudio
-start-pulseaudio-x11
-
 # run xrandr
 xrandr --output "$DOT_DISPLAY" --mode "$DOT_RESOLUTION" --rate "$DOT_FPS"
-
-# set wallpaper
-feh --bg-fill ~/dot/wallpaper.png
 
 # full brightness on startup
 brightnessctl s 999999

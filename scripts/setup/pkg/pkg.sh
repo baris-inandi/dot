@@ -18,15 +18,12 @@ install_paru() {
 }
 
 # install rust before installing paru
-sudo pacman -S --needed rust
+sudo pacman -S --needed rustup
 wait
-
-# uncomment if using rustup instead of rust
-# configure rustup toolchain
-# rustup install stable
-# wait
-# rustup default stable
-# wait
+rustup install stable
+wait
+rustup default stable
+wait
 
 echo "Installing paru"
 if ! command -v paru &>/dev/null; then
@@ -35,7 +32,7 @@ fi
 wait
 
 # cleanup
-rm -rf ~/paru
+rm -rf ./paru
 wait
 
 # installs essential packages
@@ -52,10 +49,11 @@ paru -S --skipreview --noconfirm --needed \
   translate-shell \
   python \
   python-pip \
+  python-poetry \
   npm \
   pfetch \
   sudo \
-  unrar \
+  nautilus \
   unzip \
   wget \
   curl \
@@ -67,7 +65,7 @@ paru -S --skipreview --noconfirm --needed \
   ranger \
   trash-cli \
   hollywood \
-  speedtest-cli \
+  speedtest++ \
   alacritty \
   github-cli \
   alsa-utils \
@@ -87,10 +85,8 @@ paru -S --skipreview --noconfirm --needed \
   libsecret \
   libgnome-keyring \
   seahorse \
-  i3status \
   pm-utils \
   git-delta-git \
-  rgb-tui-bin \
   fzf \
   exa \
   xmousepasteblock-git \
@@ -101,38 +97,23 @@ paru -S --skipreview --noconfirm --needed \
   ttf-ms-fonts \
   ttf-apple-emoji \
   ttf-rubik \
-  ttf-fira-sans \
   otf-ibm-plex \
+  ttf-fira-sans \
   ttf-fira-mono \
   ttf-fira-code \
   ttf-iosevka-nerd \
-  ttf-droid \
-  ttf-dejavu \
   inter-font \
   ttf-roboto \
   noto-fonts \
   adobe-source-code-pro-fonts \
-  awesome-terminal-fonts \
-  ttf-cascadia-code \
-  ttf-font-awesome \
-  ttf-hack \
   ttf-inconsolata \
   ttf-jetbrains-mono \
   nerd-fonts-jetbrains-mono \
   ttf-lato \
-  ttf-liberation \
-  cantarell-fonts \
-  ttf-oldenglish5 \
   onlyoffice-bin \
-  lxappearance-gtk3 \
   ttt \
   gnome-font-viewer \
-  gnome-control-center \
-  eog \
-  evince \
-  geary \
-  gnome-music-git \
-  prettier
+  gnome-control-center
 
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')
@@ -142,8 +123,5 @@ elif [[ "$cpu_model_str" == *"intel"* ]]; then
   sudo pacman -S intel-ucode
 fi
 
-# install oh my fish
-curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish
-
 # install desired python modules
-pip3 install dbus-python py3status pipenv
+pip3 install dbus-python py3status
