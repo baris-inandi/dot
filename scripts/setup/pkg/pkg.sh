@@ -39,12 +39,11 @@ wait
 
 paru -S --skipreview --noconfirm --needed \
   bash \
+  fish \
   rofi \
   rofi-emoji \
-  fish \
   picom-jonaburg-git \
   betterlockscreen \
-  nano \
   micro \
   translate-shell \
   python \
@@ -64,7 +63,6 @@ paru -S --skipreview --noconfirm --needed \
   go \
   ranger \
   trash-cli \
-  hollywood \
   speedtest++ \
   alacritty \
   github-cli \
@@ -73,7 +71,6 @@ paru -S --skipreview --noconfirm --needed \
   xclip \
   maim \
   bat \
-  cowsay \
   feh \
   libnotify \
   dunst \
