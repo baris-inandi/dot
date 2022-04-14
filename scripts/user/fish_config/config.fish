@@ -49,9 +49,7 @@ end
 # clones a git repository from the defaut user's github (baris-inandi)
 ##################################################################
 function clone -a name
-    bash ~/dot/scripts/user/fish/gitclone.sh $name
-    wait
-    cd $name
+    python ~/dot/scripts/user/fish/gitclone.py $name
 end
 
 ################################################################## VS
