@@ -17,7 +17,6 @@ colors:
     magenta: '0x8c686a'
     cyan:    '0x86abd9'
     white:   '0xf7f8f2'
-
   primary:
     background: '0x151515'
     foreground: '0xd4d2d1'
@@ -45,5 +44,5 @@ shell:
   program: /usr/bin/fish
 window:
   padding:
-    x: 48
-    y: 48
+    x: 40
+    y: 40
