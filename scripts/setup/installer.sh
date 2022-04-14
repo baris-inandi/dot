@@ -44,18 +44,18 @@ symlink() {
 # change system settings
 system() {
   printf "\nDOT: running system()...\n\n"
-  sudo cp -f ~/dot/config/hosts /etc/hosts
+  sudo ln -f -s ~/dot/config/hosts /etc/hosts
   wait
-  sudo cp -f ~/dot/config/vconsole.conf /etc/vconsole.conf
+  sudo ln -f -s ~/dot/config/vconsole.conf /etc/vconsole.conf
   wait
-  sudo cp -f ~/dot/config/grub /etc/default/grub
+  sudo ln -f -s ~/dot/config/grub /etc/default/grub
   wait
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   wait
   timectl set-timezone Europe/Istanbul
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
-  hostnamectl set-hostname baris-arch
+  hostnamectl set-hostname arch
   wait
 }
 
