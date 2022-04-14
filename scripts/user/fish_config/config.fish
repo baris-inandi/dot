@@ -25,15 +25,21 @@ function sparu
     end
 end
 
+################################################################## CPARU
+# clear orphaned packages
+##################################################################
+function cparu
+    echo "Searching for orphaned packages..."
+    paru --skipreview --noconfirm --cleanafter -Rs $(paru -Qqtd)
+    echo "Done."
+end
+
 ################################################################## RPARU
 # quickly remove packages using paru
 ##################################################################
 function rparu
     if count $argv >/dev/null
         paru -Rs $argv --skipreview --noconfirm --cleanafter --removemake
-        echo "Searching for orphaned packages..."
-        paru --skipreview --noconfirm --cleanafter -Rs $(paru -Qqtd)
-        echo "Done."
     else
         echo "specify a package to remove"
     end
