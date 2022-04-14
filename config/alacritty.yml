@@ -8,8 +8,6 @@ colors:
     magenta: '0xfdb3b2'
     cyan:    '0x86abd9'
     white:   '0xf7f8f2'
-
-  # Bright colors
   bright:
     black:   '0x86817e'
     red:     '0xa63a3a'
@@ -28,7 +26,7 @@ env:
 font:
   normal:
     family: Iosevka
-  size: 14
+  size: 15
 key_bindings:
   - action: IncreaseFontSize
     key: Asterisk
