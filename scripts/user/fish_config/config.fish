@@ -3,6 +3,7 @@ set -gx EDITOR micro
 # aliases
 alias vi="~/.local/bin/lvim"
 alias c="clear"
+alias x="startx"
 # no greeting
 set fish_greeting
 
@@ -18,19 +19,21 @@ end
 ##################################################################
 function sparu
     if count $argv >/dev/null
-        paru -S $argv --cleanafter --removemake --useask --sudoloop --skipreview --noconfirm --needed
+        paru -S $argv --cleanafter --removemake --useask --skipreview --noconfirm --needed
     else
         paru --skipreview --noconfirm -Syu
     end
 end
-
 
 ################################################################## RPARU
 # quickly remove packages using paru
 ##################################################################
 function rparu
     if count $argv >/dev/null
-        paru -R $argv --skipreview --noconfirm --sudoloop --cleanafter --removemake
+        paru -Rs $argv --skipreview --noconfirm --cleanafter --removemake
+        echo "Searching for orphaned packages..."
+        paru --skipreview --noconfirm --cleanafter -Rs $(paru -Qqtd)
+        echo "Done."
     else
         echo "specify a package to remove"
     end

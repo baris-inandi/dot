@@ -47,6 +47,7 @@ mkdir -p ~/.config/py3status/modules
 ln -f -s ~/dot/scripts/user/py3status_modules/* ~/.config/py3status/modules
 
 # firefox config symlinks
+mkdir -p ~/.mozilla/firefox/personal/chrome
 ln -f -s ~/dot/config/firefox/personal/chrome/userChrome.css ~/.mozilla/firefox/personal/chrome/userChrome.css
 ln -f -s ~/dot/config/firefox/personal/chrome/userContent.css ~/.mozilla/firefox/personal/chrome/userContent.css
 ln -f -s ~/dot/config/firefox/personal/user.js ~/.mozilla/firefox/personal/user.js

@@ -24,7 +24,7 @@ lockscreen() {
 firefox() {
   printf "\nDOT: running firefox()...\n\n"
   if [ ! -f ~/.mozilla/firefox/.dotguard ]; then
-    rm -rf ~/.mozilla/firefox/
+    rm -rf ~/.mozilla/*
     wait
     cp -R ~/dot/config/firefox ~/.mozilla/firefox/
     wait
@@ -47,6 +47,10 @@ system() {
   sudo cp -f ~/dot/config/hosts /etc/hosts
   wait
   sudo cp -f ~/dot/config/vconsole.conf /etc/vconsole.conf
+  wait
+  sudo cp -f ~/dot/config/grub /etc/default/grub
+  wait
+  sudo grub-mkconfig -o /boot/grub/grub.cfg
   wait
   timectl set-timezone Europe/Istanbul
   systemctl enable systemd-timesyncd

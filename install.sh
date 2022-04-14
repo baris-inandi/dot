@@ -15,7 +15,7 @@ source ~/dot/env.sh
 
 pkg
 lockscreen
-firefox
+# firefox
 symlink
 system
 finalize

@@ -1,3 +1,18 @@
+#!/bin/sh
+
+xrdb ~/.Xresources
+
+# copy env.sh if it does not already exist
+cp -n ~/dot/env.example.sh ~/dot/env.sh
+
+source ~/dot/env.sh
+
+# run xrandr
+xrandr --output "$DOT_DISPLAY" --mode "$DOT_RESOLUTION" --rate "$DOT_FPS"
+
+# full brightness on startup
+brightnessctl s 999999
+
 # see https://unix.stackexchange.com/a/295652/332452
 source /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
 
@@ -7,3 +22,5 @@ export SSH_AUTH_SOCK
 
 # see https://github.com/NixOS/nixpkgs/issues/14966#issuecomment-520083836
 mkdir -p "$HOME"/.local/share/keyrings
+
+exec i3

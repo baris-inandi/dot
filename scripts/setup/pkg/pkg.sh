@@ -37,7 +37,7 @@ wait
 
 # installs essential packages
 
-paru -S --skipreview --noconfirm --needed \
+paru -S --skipreview \
   bash \
   fish \
   rofi \
@@ -57,7 +57,8 @@ paru -S --skipreview --noconfirm --needed \
   wget \
   curl \
   xidlehook \
-  firefox \
+  google-chrome-beta \
+  gnome-themes-extra \
   spotify \
   visual-studio-code-bin \
   go \
@@ -68,6 +69,7 @@ paru -S --skipreview --noconfirm --needed \
   github-cli \
   alsa-utils \
   i3-gaps \
+  i3status \
   xclip \
   maim \
   bat \
@@ -77,13 +79,12 @@ paru -S --skipreview --noconfirm --needed \
   brightnessctl \
   playerctl \
   neofetch \
-  pyenv \
   gnome-keyring \
   libsecret \
   libgnome-keyring \
   seahorse \
   pm-utils \
-  git-delta-git \
+  git-delta \
   fzf \
   exa \
   xmousepasteblock-git \
@@ -96,7 +97,6 @@ paru -S --skipreview --noconfirm --needed \
   ttf-rubik \
   otf-ibm-plex \
   ttf-fira-sans \
-  ttf-fira-mono \
   ttf-fira-code \
   ttf-iosevka-nerd \
   inter-font \
@@ -106,9 +106,9 @@ paru -S --skipreview --noconfirm --needed \
   ttf-inconsolata \
   ttf-jetbrains-mono \
   nerd-fonts-jetbrains-mono \
-  ttf-lato \
   onlyoffice-bin \
-  ttt \
+  tt \
+  htop \
   gnome-font-viewer \
   gnome-control-center
 
