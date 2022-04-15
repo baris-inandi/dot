@@ -5,7 +5,7 @@
 # install helpers, basic packages, programming languages, and fonts.
 pkg() {
   printf "\nDOT: running pkg()...\n\n"
-  source ~/dot/scripts/setup/pkg/pkg.sh
+  source ~/dot/scripts/setup/pkg.sh
   wait
 }
 
