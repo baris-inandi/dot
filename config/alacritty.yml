@@ -26,6 +26,8 @@ font:
   normal:
     family: Iosevka
   size: 15
+  offset:
+    y: 2
 key_bindings:
   - action: IncreaseFontSize
     key: Asterisk
