@@ -42,8 +42,6 @@ scrolling:
   multiplier: 4
 selection:
   unfocused_hollow: true
-shell:
-  program: /usr/bin/fish
 window:
   padding:
     x: 40

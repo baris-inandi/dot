@@ -140,7 +140,3 @@ function monk
     google-chrome-beta --new-window https://monkeytype.com
     exit
 end
-
-if status is-interactive
-  cd $HOME
-end

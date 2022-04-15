@@ -32,8 +32,8 @@ ln -f -s ~/dot/config/.xinitrc ~/.xinitrc
 
 ln -f -s ~/dot/config/betterlockscreenrc.conf ~/.config/betterlockscreenrc
 
-mkdir -p ~/.config/fish/conf.d
-ln -f -s ~/dot/config/config.fish ~/.config/fish/conf.d/config.fish
+mkdir -p ~/.config/fish/
+ln -f -s ~/dot/config/config.fish ~/.config/fish/config.fish
 
 mkdir -p ~/.config/rofi
 ln -f -s ~/dot/config/config.rasi ~/.config/rofi/config.rasi
