@@ -48,3 +48,5 @@ window:
   padding:
     x: 40
     y: 40
+mouse_bindings:
+  - { mouse: Middle, action: Quit }  
