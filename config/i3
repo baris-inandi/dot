@@ -151,21 +151,21 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 
 # resize window
 mode "resize" {
-        bindsym J resize shrink width 5 px or 5 ppt
-        bindsym I resize grow height 5 px or 5 ppt
-        bindsym K resize shrink height 5 px or 5 ppt
-        bindsym L  resize grow width 5 px or 5 ppt
+  bindsym J resize shrink width 5 px or 5 ppt
+  bindsym I resize grow height 5 px or 5 ppt
+  bindsym K resize shrink height 5 px or 5 ppt
+  bindsym L  resize grow width 5 px or 5 ppt
 
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 5 px or 5 ppt
-        bindsym Up resize grow height 5 px or 5 ppt
-        bindsym Down resize shrink height 5 px or 5 ppt
-        bindsym Right resize grow width 5 px or 5 ppt
+  # same bindings, but for the arrow keys
+  bindsym Left resize shrink width 5 px or 5 ppt
+  bindsym Up resize grow height 5 px or 5 ppt
+  bindsym Down resize shrink height 5 px or 5 ppt
+  bindsym Right resize grow width 5 px or 5 ppt
 
-        # back to normal: Enter or Escape or $mod+r
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+  # back to normal: Enter or Escape or $mod+r
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+  bindsym $mod+r mode "default"
 }
 
 bindsym $mod+r mode "resize"
@@ -173,18 +173,17 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-    tray_output none
-    separator_symbol "  "
+  tray_output none
+  separator_symbol "  "
 	position bottom
-        # status_command i3status -c ~/dot/config/i3status.conf
-        status_command py3status -c ~/dot/config/i3status.conf
-        colors {
-          background 		      $bar_bg
-          separator		          $bar_seperator
-          focused_workspace       #00000000 $ws_bg $ws_fg
-          inactive_workspace      $bar_bg $bar_bg #ffffff
-          urgent_workspace        $ws_urgent_bg_border $ws_urgent_bg $ws_urgent_fg
-        }
+  status_command py3status -c ~/dot/config/i3status.conf
+  colors {
+    background 		      $bar_bg
+    separator		          $bar_seperator
+    focused_workspace       #00000000 $ws_bg $ws_fg
+    inactive_workspace      $bar_bg $bar_bg #ffffff
+    urgent_workspace        $ws_urgent_bg_border $ws_urgent_bg $ws_urgent_fg
+  }
 }
 
 # notifications
@@ -235,7 +234,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # picom
-exec_always --no-startup-id picom --experimental-backends --config ~/dot/config/picom.conf -b -f
+exec --no-startup-id picom --experimental-backends --config ~/dot/config/picom.conf -b
 
 # window border
 
@@ -259,6 +258,8 @@ mode "$mode_system" {
     bindsym space mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
+
+bindsym $mod+c exec --no-startup-id "google-chrome-beta --new-window 'https://classroom.google.com/u/1/h'"
 
 # disable middle click paste
 exec --no-startup-id xmousepasteblock
