@@ -87,6 +87,7 @@ paru -S --skipreview \
   git-delta \
   fzf \
   exa \
+  acpi \
   xmousepasteblock-git \
   py3status \
   python-pipenv \
