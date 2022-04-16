@@ -37,7 +37,7 @@ wait
 
 # installs essential packages
 
-paru -S --skipreview \
+paru -S --skipreview --needed \
   bash \
   fish \
   rofi \
@@ -116,9 +116,9 @@ paru -S --skipreview \
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')
 if [[ "$cpu_model_str" == *"amd"* ]]; then
-  sudo pacman -S amd-ucode
+  paru -S --skipreview --noconfirm --needed amd-ucode
 elif [[ "$cpu_model_str" == *"intel"* ]]; then
-  sudo pacman -S intel-ucode
+  paru -S --skipreview --noconfirm --needed intel-ucode
 fi
 
 # install desired python modules
