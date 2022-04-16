@@ -192,7 +192,7 @@ exec "dunst"
 
 # i3 gaps rounded
 # for_window [class=".*"] border pixel 0
-gaps inner 12
+gaps inner 14
 gaps outer 0
 # border_radius 8
 # smart_borders on
@@ -222,7 +222,7 @@ bindsym XF86MonBrightnessUp exec brightnessctl s 10%+
 bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # apps
-bindsym $mod+shift+f exec "dolphin || nautilus -w"
+bindsym $mod+shift+f exec "nautilus -w || dolphin"
 bindsym $mod+shift+a exec "google-chrome-beta || firefox"
 
 # kill all windows
