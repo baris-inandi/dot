@@ -8,6 +8,7 @@ alias x="startx"
 alias dotsym="bash ~/dot/scripts/setup/symlink.sh"
 alias dotsync="bash ~/dot/scripts/sync/sync.sh"
 alias clean-symlinks="find . -xtype l -delete"
+alias m="micro"
 alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
 
 # no greeting
