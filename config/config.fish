@@ -4,7 +4,7 @@ set -gx EDITOR micro
 # aliases
 alias vi="~/.local/bin/lvim"
 alias c="clear"
-alias x="startx"
+alias x="cd; startx"
 alias dotsym="bash ~/dot/scripts/setup/symlink.sh"
 alias dotsync="bash ~/dot/scripts/sync/sync.sh"
 alias clean-symlinks="find . -xtype l -delete"
