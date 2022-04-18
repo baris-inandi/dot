@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   tray_output none
-  separator_symbol " ⟩ "
+  separator_symbol " > "
 	position bottom
   status_command py3status -c ~/dot/config/i3status.conf
   colors {

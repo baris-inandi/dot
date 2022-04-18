@@ -43,7 +43,7 @@ scrolling:
 selection:
   unfocused_hollow: true
 window:
-  opacity: 0.9
+  opacity: 0.92
   padding:
     x: 40
     y: 40
