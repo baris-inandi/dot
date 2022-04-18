@@ -4,8 +4,8 @@ exec "bash ~/dot/dot.sh"
 exec_always "feh --bg-fill ~/dot/config/wallpaper.png"
 
 # color of the bar
-set $bar_bg                   "#151515"
-set $bar_seperator            "#181818"
+set $bar_bg                   "#00000000"
+set $bar_seperator            "#323232"
 
 # urgent workspaces
 set $ws_urgent_fg             "#ffffff"
@@ -174,7 +174,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
   tray_output none
-  separator_symbol "  "
+  separator_symbol " > "
 	position bottom
   status_command py3status -c ~/dot/config/i3status.conf
   colors {
