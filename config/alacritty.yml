@@ -18,7 +18,7 @@ colors:
     cyan:    '0x86abd9'
     white:   '0xf7f8f2'
   primary:
-    background: '0x151515'
+    background: '0x191919'
     foreground: '0xd4d2d1'
 env:
   WINIT_X11_SCALE_FACTOR: '1'
