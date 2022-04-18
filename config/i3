@@ -1,7 +1,7 @@
 set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
 exec "bash ~/dot/dot.sh"
-exec "feh --bg-fill ~/dot/config/wallpaper.png"
+exec_always "feh --bg-fill ~/dot/config/wallpaper.png"
 
 # color of the bar
 set $bar_bg                   "#151515"
