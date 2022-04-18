@@ -5,7 +5,7 @@ exec_always "feh --bg-fill ~/dot/config/wallpaper.png"
 
 # color of the bar
 set $bar_bg                   "#00000000"
-set $bar_seperator            "#323232"
+set $bar_seperator            "#404040"
 
 # urgent workspaces
 set $ws_urgent_fg             "#ffffff"
