@@ -225,7 +225,7 @@ bindsym $mod+shift+f exec "nautilus -w || dolphin"
 bindsym $mod+shift+a exec "google-chrome-beta || firefox"
 
 # kill all windows
-bindsym $mod+shift+q [class=".*"] kill; workspace 1
+bindsym $mod+shift+q [class=".*"] kill; workspace $ws1
 bindsym $mod+shift+w focus parent,kill
 
 # media
