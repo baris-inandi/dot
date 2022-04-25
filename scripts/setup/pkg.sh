@@ -51,6 +51,7 @@ paru -S --skipreview --needed \
   python-poetry \
   npm \
   pfetch \
+  iw \
   sudo \
   nautilus \
   unzip \
