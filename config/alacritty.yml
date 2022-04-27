@@ -35,6 +35,7 @@ key_bindings:
   - action: DecreaseFontSize
     key: Minus
     mods: Control
+  - { key: Back, mods: Control, chars: "\u0017" }
 mouse:
   hide_when_typing: true
 scrolling:

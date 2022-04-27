@@ -55,6 +55,7 @@ paru -S --skipreview --needed \
   sudo \
   nautilus \
   unzip \
+  xdotool \
   wget \
   curl \
   xidlehook \
