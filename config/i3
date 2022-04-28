@@ -1,7 +1,7 @@
 set $mod Mod4
 set $locker_command "bash ~/dot/scripts/user/power.sh suspend"
-exec "bash ~/dot/dot.sh"
 exec_always "feh --bg-fill ~/dot/config/wallpaper.png"
+exec "bash ~/dot/dot.sh"
 
 # color of the bar
 set $bar_bg                   "#00000000"
@@ -17,7 +17,7 @@ set $ws_fg                    "#ffffff"
 set $ws_bg                    "#363636"
 set $ws_bg_border             "#606060"
 
-font pango:Iosevka Bold 11
+font pango:Iosevka Bold 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
