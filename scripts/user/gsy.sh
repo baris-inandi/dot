@@ -9,7 +9,7 @@ async() {
         notify-send "GSY" "Syncing $PWD"
         notify-send "git add -A" "$(git add -A)"
         notify-send "git commit -am $cm" "$(git commit -am $cm)"
-        notify-send "git push" "$(git push)"
+        git push
         notify-send "Synced $PWD" "Repo currently at $(git rev-parse --short HEAD)"
 
     else
