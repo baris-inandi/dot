@@ -16,7 +16,7 @@ function gpull
     bash ~/dot/scripts/user/gpull.sh &
 end
 function gsy
-    nohup "$(bash ~/dot/scripts/user/gsy.sh $argv)" >/dev/null 2>&1
+    bash ~/dot/scripts/user/gsy.sh $1 &
 end
 
 # no greeting
