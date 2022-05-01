@@ -11,16 +11,10 @@ alias clean-symlinks="find . -xtype l -delete"
 alias m="micro"
 alias tra="python ~/dot/scripts/user/tra.py"
 alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
+alias gsync="bash ~/dot/scripts/user/gitsync.sh $1"
 
 # no greeting
 set fish_greeting
-
-################################################################ GSYNC
-# pulls, adds, commits, and pushes all files in a git repo
-##################################################################
-function gsync -a name
-    bash ~/dot/scripts/user/gitsync.sh $name
-end
 
 ################################################################## SPARU
 # quick download using paru (with --skipreview and --noconfirm)
