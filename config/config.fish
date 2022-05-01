@@ -16,6 +16,7 @@ function gpull
     bash ~/dot/scripts/user/gpull.sh &
 end
 
+# test
 # no greeting
 set fish_greeting
 
