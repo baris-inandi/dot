@@ -16,5 +16,5 @@ async() {
         notify-send "GSY FATAL" "Not a git repo"
     fi
 }
-
+# test
 nohup "$(async)" >/dev/null 2>&1
