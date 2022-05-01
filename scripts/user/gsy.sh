@@ -8,7 +8,7 @@ if [ -d .git ]; then
     notify-send "git add -A" "$(git add -A)"
     notify-send "git commit -am $cm" "$(git commit -am $cm)"
     nohup notify-send "Syncing $PWD" "$(git push)" &&
-        notify-send "Synced $PWD" "Repo currently at $(git rev-parse --short HEAD)" >/dev/null 2>&1
+        notify-send "Synced $PWD" "Repo currently at $(git rev-parse --short HEAD)" >/dev/null 2>&1 #hi
 else
     notify-send "GSY FATAL" "Not a git repo"
 fi
