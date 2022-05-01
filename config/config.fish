@@ -11,7 +11,13 @@ alias clean-symlinks="find . -xtype l -delete"
 alias m="micro"
 alias tra="python ~/dot/scripts/user/tra.py"
 alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
-alias gsync="bash ~/dot/scripts/user/gitsync.sh $1"
+alias gsync="bash ~/dot/scripts/user/gsync.sh $1"
+function gpull
+    bash ~/dot/scripts/user/gpull.sh &
+end
+function gsy
+    bash ~/dot/scripts/user/gsy.sh $1 &
+end
 
 # no greeting
 set fish_greeting
