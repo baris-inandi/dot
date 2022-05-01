@@ -4,11 +4,11 @@ if [ -d .git ]; then
     else
         cm="$1"
     fi
-    notify-send "GSY" "Syncing $PWD"
-    notify-send "git add -A" "$(git add -A)"
-    notify-send "git commit -am $cm" "$(git commit -am $cm)"
-    notify-send "Syncing $PWD" "$(git push &)" &
-    notify-send "Synced $PWD" "Repo currently at $(git rev-parse --short HEAD)" >/dev/null 2>&1 &
+    notify-send -t 500 "GSY" "Syncing $PWD"
+    notify-send -t 500 "git add -A" "$(git add -A)"
+    notify-send -t 500 "git commit -am $cm" "$(git commit -am $cm)"
+    notify-send -t 500 "Syncing $PWD" "$(git push &)" &
+    notify-send -t 500 "Synced $PWD" "Repo currently at $(git rev-parse --short HEAD)" >/dev/null 2>&1 &
 else
     notify-send "GSY FATAL" "Not a git repo"
 fi
