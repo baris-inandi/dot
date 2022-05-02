@@ -141,3 +141,6 @@ function monk
     google-chrome-beta --new-window https://monkeytype.com
     exit
 end
+
+set -gx PNPM_HOME "/home/bi/.local/share/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
