@@ -50,6 +50,7 @@ paru -S --skipreview --needed \
   python-pip \
   python-poetry \
   npm \
+  pnpm \
   pfetch \
   iw \
   sudo \
@@ -126,3 +127,6 @@ fi
 
 # install desired python modules
 pip3 install dbus-python py3status
+
+# update pnpm
+sudo pnpm add -g pnpm

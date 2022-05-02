@@ -12,6 +12,8 @@ alias m="micro"
 alias tra="python ~/dot/scripts/user/tra.py"
 alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
 alias gsync="bash ~/dot/scripts/user/gsync.sh $1"
+alias npm="pnpm"
+alias npx="pnpm dlx"
 function gpull
     bash ~/dot/scripts/user/gpull.sh &
 end
