@@ -126,7 +126,7 @@ elif [[ "$cpu_model_str" == *"intel"* ]]; then
 fi
 
 # install desired python modules
-pip3 install dbus-python py3status requests
+pip3 install dbus-python py3status requests json grequests
 
 # update pnpm
 sudo pnpm add -g pnpm
