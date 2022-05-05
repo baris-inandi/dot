@@ -261,5 +261,7 @@ bindsym $mod+Escape mode "$mode_system"
 
 bindsym $mod+c exec --no-startup-id "google-chrome-beta --new-window 'https://classroom.google.com/u/1/h'"
 
+bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"
+
 # disable middle click paste
 exec --no-startup-id xmousepasteblock
