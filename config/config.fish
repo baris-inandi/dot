@@ -135,6 +135,7 @@ end
 
 function github -a repo
     google-chrome-beta https://github.com/baris-inandi/$repo
+    exit
 end
 
 function monk
