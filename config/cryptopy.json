@@ -1,5 +1,5 @@
 {
-  "tickers": ["ETH", "BNB", "CAKE", "BTC", "FTM", "AVAX", "XRP", "ATOM"],
+  "tickers": ["BTC", "ETH", "BNB", "CAKE", "FTM", "ATOM"],
   "timeout": 30,
-  "cache": 5
+  "cache": 10
 }
