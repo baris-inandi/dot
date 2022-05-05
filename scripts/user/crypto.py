@@ -4,14 +4,14 @@ import grequests
 import time
 import json
 
-TIME = 10000
 CACHE_FILE = path.join("/tmp/", ".cryptopy_cache.json")
-CACHE_TIMEOUT = 600
 
 with open(path.join(path.expanduser("~"), "dot/config/cryptopy.json")) as f:
     j = json.load(f)
     CONF_STR = str(j)
     TICKERS = j["tickers"]
+    TIME = j["timeout"] * 1000
+    CACHE_TIMEOUT = j["cache"] * 60
 
 
 def is_cached() -> bool:
