@@ -1,5 +1,4 @@
 from os import system, path, remove
-from pickle import FALSE
 import grequests
 import time
 import json
@@ -11,11 +10,10 @@ UP_SYMBOL = "🟢"
 DOWN_SYMBOL = "🔴"
 
 with open(path.join(path.expanduser("~"), "dot/config/cryptopy.json")) as f:
-    j = json.load(f)
-    CONF_STR = str(j)
-    TICKERS = j["tickers"]
-    TIME = j["timeout"] * 1000
-    CACHE_TIMEOUT = j["cache"] * 60
+    CONF = json.load(f)
+    TICKERS = CONF["tickers"]
+    TIME = CONF["timeout"] * 1000
+    CACHE_TIMEOUT = CONF["cache"] * 60
 
 
 def trailing_round(num: float, precision: int) -> str:
@@ -32,7 +30,7 @@ def is_cached() -> bool:
             j = json.load(f)
             return (
                 j["timestamp"] + CACHE_TIMEOUT > round(time.time())
-                and CONF_STR == j["conf"]
+                and str(CONF["tickers"]) == j["conf"]
             )
     except:
         return False
@@ -63,55 +61,59 @@ def main():
             out = fetch()
             with open(CACHE_FILE, "w") as f:
                 json.dump(
-                    {"timestamp": round(time.time()), "conf": CONF_STR, "cache": out}, f
+                    {
+                        "timestamp": round(time.time()),
+                        "conf": str(CONF["tickers"]),
+                        "cache": out,
+                    },
+                    f,
                 )
         for k, v in out.items():
             start = time.time()
             k = k.upper()
 
             price = float(v["buy"])
-            changeRate = float(v["changeRate"])
-            changeRateStr = trailing_round(changeRate, 2)
-            changePrice = float(v["changePrice"])
-            avgPrice = float(v["averagePrice"])
-            aboveAvg = price > avgPrice
+            change_rate = float(v["changeRate"])
+            change_rate_str = trailing_round(change_rate, 2)
+            change_price = float(v["changePrice"])
+            avg_price = float(v["averagePrice"])
+            above_avg = price > avg_price
 
             if price > 1000:
                 price = round(float(v["buy"]))
-                changePriceStr = str(round(changePrice))
-                avgPriceStr = str(round(avgPrice))
-            elif price > 100:
-                price = trailing_round(float(v["buy"]), 1)
-                changePriceStr = trailing_round(changePrice, 1)
-                avgPriceStr = trailing_round(avgPrice, 1)
-            elif price > 10:
-                price = trailing_round(float(v["buy"]), 2)
-                changePriceStr = trailing_round(changePrice, 2)
-                avgPriceStr = trailing_round(avgPrice, 2)
+                change_price_str = str(round(change_price))
+                avg_price_str = str(round(avg_price))
             else:
-                price = trailing_round(float(v["buy"]), 3)
-                changePriceStr = trailing_round(changePrice, 3)
-                avgPriceStr = trailing_round(avgPrice, 3)
+                precision = 3
+                if price > 100:
+                    precision = 1
+                elif price > 10:
+                    precision = 2
+                price = trailing_round(float(v["buy"]), precision)
+                change_price_str = trailing_round(change_price, precision)
+                avg_price_str = trailing_round(avg_price, precision)
 
-            if changePrice < 0:
-                changePriceStr = f"\\{changePriceStr}"
+            if change_price < 0:
+                change_price_str = f"\\{change_price_str}"
 
             up_down = (
-                "Short " + DOWN_SYMBOL if changePrice < 0 else "Long " + UP_SYMBOL
+                "Short " + DOWN_SYMBOL if change_price < 0 else "Long " + UP_SYMBOL
             ) + " "
             msg_header = f"{k} | {price} USD"
             msg_header = pad_str(MSG_WIDTH, msg_header, up_down)
-            msg_fmt = pad_str(MSG_WIDTH, f"{changePriceStr} USD", f"{changeRateStr}%")
+            msg_fmt = pad_str(
+                MSG_WIDTH, f"{change_price_str} USD", f"{change_rate_str}%"
+            )
             msg_fmt += "\n" + pad_str(
                 MSG_WIDTH,
-                f"{avgPriceStr} USD avg.",
-                "Above avg." if aboveAvg else "Below avg.",
+                f"{avg_price_str} USD avg.",
+                "Above avg." if above_avg else "Below avg.",
             )
             system(
                 f'notify-send "{msg_header}" "{msg_fmt}" -t {str(TIME - cumulative_time)}'
             )
             end = time.time()
-            elapsed = round((end - start) * 1000) + 2
+            elapsed = round((end - start) * 1000) + 7
             cumulative_time += elapsed
     finally:
         remove(LOCKFILE)
