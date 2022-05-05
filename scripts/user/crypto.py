@@ -5,6 +5,9 @@ import time
 import json
 
 CACHE_FILE = path.join("/tmp/", ".cryptopy_cache.json")
+MSG_WIDTH = 30
+UP_SYMBOL = "UP 🔺"
+DOWN_SYMBOL = "DOWN 🔻"
 
 with open(path.join(path.expanduser("~"), "dot/config/cryptopy.json")) as f:
     j = json.load(f)
@@ -12,6 +15,10 @@ with open(path.join(path.expanduser("~"), "dot/config/cryptopy.json")) as f:
     TICKERS = j["tickers"]
     TIME = j["timeout"] * 1000
     CACHE_TIMEOUT = j["cache"] * 60
+
+
+def pad_str(length: int, l: str, r: str):
+    return l + str(" " * int(length - len(l) - len(r))) + r
 
 
 def is_cached() -> bool:
@@ -55,10 +62,12 @@ def main():
         changePrice = round(float(v["changePrice"]), 3)
         changeRate = round(float(v["changeRate"]), 3)
         averagePrice = round(float(v["averagePrice"]), 3)
-        up_down = "🔴" if changePrice < 0 else "🟢"
-        msg_fmt = f"{up_down} \${changePrice} ({changeRate}%)"
+        up_down = (DOWN_SYMBOL if changePrice < 0 else UP_SYMBOL) + " "
+        msg_fmt = pad_str(MSG_WIDTH, f"\${changePrice}", f"({changeRate}%)")
+        msg_header = f"{k} | \\${averagePrice}"
+        msg_header = pad_str(MSG_WIDTH, msg_header, up_down)
         system(
-            f'notify-send "{k} | \\${averagePrice}" "{msg_fmt}" -t {str(TIME - cumulative_time)}'
+            f'notify-send "{msg_header}" "{msg_fmt}" -t {str(TIME - cumulative_time)}'
         )
         end = time.time()
         elapsed = round((end - start) * 1000) + 2
