@@ -14,6 +14,7 @@ alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
 alias gsync="bash ~/dot/scripts/user/gsync.sh $1"
 alias npm="pnpm"
 alias npx="pnpm dlx"
+alias wei="python ~/dot/scripts/user/wei.py"
 function gpull
     bash ~/dot/scripts/user/gpull.sh &
 end
