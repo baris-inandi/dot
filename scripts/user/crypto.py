@@ -64,8 +64,8 @@ def get_cmds() -> dict[str, str]:
             k = k.upper()
 
             price = float(v["buy"])
-            change_rate = float(v["changeRate"])
-            urgency = "critical" if abs(change_rate) > 0.1 else "normal"
+            change_rate = float(v["changeRate"]) * 100
+            urgency = "critical" if abs(change_rate) >= 5 else "normal"
             change_rate_str = trailing_round(change_rate, 2)
             change_price = float(v["changePrice"])
             avg_price = float(v["averagePrice"])
