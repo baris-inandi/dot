@@ -16,7 +16,8 @@ def main():
             print(int(num) / 10**18)
     except Exception as e:
         print(f'Wei: Cannot parse input:\n"{num}"')
-        print("1 ETH = 1000000000000000000 wei")
+    finally:
+        print("[1 ETH = 1000000000000000000 wei]")
 
 
 if __name__ == "__main__":
