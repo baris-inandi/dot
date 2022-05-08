@@ -3,14 +3,13 @@
 """
 
 import clipboard
-import sys
+from sys import argv
 
 
 def main():
     try:
-        args = sys.argv[1:]
-        if len(args) > 0:
-            num = sys.argv[0]
+        if len(argv) > 1:
+            num = argv[1]
             print(int(num) / 10**18)
         else:
             num = clipboard.paste()
