@@ -15,6 +15,7 @@ alias gsync="bash ~/dot/scripts/user/gsync.sh $1"
 alias npm="pnpm"
 alias npx="pnpm dlx"
 alias wei="python ~/dot/scripts/user/wei.py"
+alias py="python ~/dot/scripts/user/pyeval.py"
 function gpull
     bash ~/dot/scripts/user/gpull.sh &
 end
