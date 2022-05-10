@@ -96,6 +96,7 @@ paru -S --skipreview --needed \
   python-pipenv \
   xss-lock \
   catimg \
+  jq \
   nvidia-settings \
   ttf-ms-fonts \
   ttf-apple-emoji \
