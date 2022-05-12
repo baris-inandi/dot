@@ -16,6 +16,7 @@ alias npm="pnpm"
 alias npx="pnpm dlx"
 alias wei="python ~/dot/scripts/user/wei.py"
 alias py="python ~/dot/scripts/user/pyeval.py"
+alias eth="echo 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 function gpull
     bash ~/dot/scripts/user/gpull.sh &
 end
