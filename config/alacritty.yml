@@ -25,7 +25,7 @@ env:
 font:
   normal:
     family: Iosevka
-  size: 16
+  size: 15
   offset:
     y: 2
 key_bindings:
