@@ -2,7 +2,6 @@
 set -gx EDITOR micro
 
 # aliases
-alias vi="~/.local/bin/lvim"
 alias c="clear"
 alias x="cd; startx"
 alias dotsym="bash ~/dot/scripts/setup/symlink.sh"

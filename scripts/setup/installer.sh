@@ -56,6 +56,8 @@ system() {
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
   hostnamectl set-hostname arch
+  fish_config prompt choose nim
+  fish_config theme choose "Tomorrow Night"
   wait
 }
 
