@@ -267,3 +267,6 @@ bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"
 
 # disable middle click paste
 exec --no-startup-id xmousepasteblock
+
+# for browser popups
+for_window [window_role="pop-up"] floating enable, move position center
