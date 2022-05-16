@@ -16,12 +16,16 @@ alias npx="pnpm dlx"
 alias wei="python ~/dot/scripts/user/wei.py"
 alias py="python ~/dot/scripts/user/pyeval.py"
 alias eth="echo 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
-function gpull
-    bash ~/dot/scripts/user/gpull.sh &
-end
 
 # no greeting
 set fish_greeting
+
+################################################################## GPULL
+# async git pull
+##################################################################
+function gpull
+    bash ~/dot/scripts/user/gpull.sh &
+end
 
 ################################################################## SPARU
 # quick download using paru (with --skipreview and --noconfirm)
@@ -34,15 +38,6 @@ function sparu
     end
 end
 
-################################################################## CPARU
-# clear orphaned packages
-##################################################################
-function cparu
-    echo "Searching for orphaned packages..."
-    paru --skipreview --noconfirm --cleanafter -Rs $(paru -Qqtd)
-    echo "Done."
-end
-
 ################################################################## RPARU
 # quickly remove packages using paru
 ##################################################################
@@ -50,7 +45,8 @@ function rparu
     if count $argv >/dev/null
         paru -Rs $argv --skipreview --noconfirm --cleanafter --removemake
     else
-        echo "specify a package to remove"
+        paru --skipreview --noconfirm --cleanafter -Rs $(paru -Qqtd)
+        echo "Done."
     end
 end
 
