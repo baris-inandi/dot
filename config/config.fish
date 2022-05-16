@@ -131,17 +131,17 @@ end
 # web shortcuts for fish
 
 function classroom
-    google-chrome-beta --new-window "https://classroom.google.com/u/1/h"
+    google-chrome-unstable --new-window "https://classroom.google.com/u/1/h"
     exit
 end
 
 function github -a repo
-    google-chrome-beta https://github.com/baris-inandi/$repo
+    google-chrome-unstable https://github.com/baris-inandi/$repo
     exit
 end
 
 function monk
-    google-chrome-beta --new-window https://monkeytype.com
+    google-chrome-unstable --new-window https://monkeytype.com
     exit
 end
 
