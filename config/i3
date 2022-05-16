@@ -234,7 +234,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # picom
-exec --no-startup-id picom --experimental-backends --config ~/dot/config/picom.conf -b
+exec_always --no-startup-id picom --experimental-backends --config ~/dot/config/picom.conf -b
 
 # window border
 
