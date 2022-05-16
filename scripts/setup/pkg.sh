@@ -50,7 +50,6 @@ paru -S --skipreview --needed \
   python-pip \
   python-poetry \
   npm \
-  pnpm \
   pfetch \
   iw \
   sudo \
@@ -60,7 +59,7 @@ paru -S --skipreview --needed \
   wget \
   curl \
   xidlehook \
-  google-chrome-beta \
+  google-chrome-dev \
   gnome-themes-extra \
   spotify \
   visual-studio-code-bin \
@@ -128,7 +127,7 @@ elif [[ "$cpu_model_str" == *"intel"* ]]; then
 fi
 
 # install desired python modules
-pip3 install dbus-python py3status requests json grequests clipboard
+pip3 install dbus-python py3status requests grequests clipboard
 
-# update pnpm
-sudo pnpm add -g pnpm
+# install pnpm
+sudo npm i -g pnpm

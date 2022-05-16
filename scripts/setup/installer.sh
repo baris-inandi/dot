@@ -56,8 +56,8 @@ system() {
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
   hostnamectl set-hostname arch
-  fish_config prompt choose nim
-  fish_config theme choose "Tomorrow Night"
+  fish -c "fish_config prompt choose nim"
+  fish -c "fish_config theme choose Tomorrow\ Night"
   wait
 }
 
@@ -65,6 +65,8 @@ system() {
 # restart i3 to load all configs
 finalize() {
   printf "\nDOT: running finalize()...\n\n"
+  # pacman cleanup
+  fish -c "cparu"
   i3-msg restart
   # cool ending
   neofetch

@@ -222,7 +222,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # apps
 bindsym $mod+shift+f exec "nautilus -w || dolphin"
-bindsym $mod+shift+a exec "google-chrome-beta || firefox"
+bindsym $mod+shift+a exec "google-chrome-unstable || firefox"
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill; workspace $ws1
@@ -260,7 +260,7 @@ mode "$mode_system" {
 bindsym $mod+Escape mode "$mode_system"
 
 # browser launcher
-bindsym $mod+c exec --no-startup-id "google-chrome-beta --new-window 'https://classroom.google.com/u/1/h'"
+bindsym $mod+c exec --no-startup-id "google-chrome-unstable --new-window 'https://classroom.google.com/u/1/h'"
 
 # crypto summary
 bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"
