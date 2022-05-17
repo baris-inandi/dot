@@ -1,11 +1,11 @@
 * {
-  font: "Roboto 11";
-  accent: #323232;
+  font: "JetBrains Mono 10";
+  accent: #363636;
   selected-normal-foreground: #ffffff;
-  foreground: #000000;
+  foreground: #ffffff;
   normal-foreground: @foreground;
   alternate-normal-background: transparent;
-  red: rgba (191, 97, 106, 100 %);
+  red: rgba (51, 5, 8, 100 %);
   selected-urgent-foreground: rgba (249, 249, 249, 10 %);
   blue: rgba (136, 192, 208, 100 %);
   urgent-foreground: @red;
@@ -14,13 +14,14 @@
   lightbg: rgba (238, 232, 213, 100 %);
   selected-active-foreground: rgba (249, 249, 249, 100 %);
   alternate-active-background: rgba (75, 81, 96, 89 %);
-  background: #fafafa;
+  background: #101010;
   alternate-normal-foreground: @foreground;
   normal-background: transparent;
+  lightfg: rgba (88, 104, 117, 100 %);
   selected-normal-background: @accent;
-  border-color: rgba (0, 0, 0, 100 %);
+  border-color: rgba (10, 10, 10, 100 %);
   spacing: 0;
-  separatorcolor: rgba (10, 255, 10, 100 %);
+  separatorcolor: rgba (10, 10, 10, 100 %);
   urgent-background: rgba (33, 33, 33, 17 %);
   selected-urgent-background: rgba (165, 66, 66, 100 %);
   alternate-urgent-foreground: @urgent-foreground;
@@ -31,13 +32,13 @@
 }
 
 #window {
-  border-radius: 10px;
   background-color: @background;
-  border: 2px;
-  border-color: #323232;
+  border: 1px;
+  border-radius: 5px;
+  border-color: #363636;
   padding: 20px;
-  width: 300px;
-  height: 400px;
+  width: 320px;
+  height: 500px;
 }
 
 #mainbox {
@@ -61,12 +62,16 @@
   border-color: @separatorcolor;
   spacing: 4px;
   scrollbar: false;
-  padding: 20px 0px 0px;
+  padding: 24px 0px 0px;
 }
 
 #element {
   border: 0;
-  padding: 5px;
+  padding: 8px 16px;
+}
+
+#element.selected {
+  border-radius: 4px;
 }
 
 #element.normal.normal {
@@ -82,10 +87,6 @@
 #element.normal.active {
   background-color: @active-background;
   text-color: @active-foreground;
-}
-
-#element.selected {
-  border-radius: 6px;
 }
 
 #element.selected.normal {
@@ -134,7 +135,7 @@
 }
 
 #inputbar {
-  spacing: 8px;
+  spacing: 6px;
   text-color: @normal-foreground;
   padding: 0;
 }
@@ -161,6 +162,6 @@
 #textbox-prompt-colon {
   expand: false;
   str: "";
-  margin: 0px 0.3em 0em 0em;
+  margin: 0 0.2em 0 0;
   text-color: @normal-foreground;
 }

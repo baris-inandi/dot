@@ -154,7 +154,7 @@ mode "resize" {
   bindsym J resize shrink width 5 px or 5 ppt
   bindsym I resize grow height 5 px or 5 ppt
   bindsym K resize shrink height 5 px or 5 ppt
-  bindsym L  resize grow width 5 px or 5 ppt
+  bindsym L resize grow width 5 px or 5 ppt
 
   # same bindings, but for the arrow keys
   bindsym Left resize shrink width 5 px or 5 ppt
@@ -167,20 +167,25 @@ mode "resize" {
   bindsym Escape mode "default"
   bindsym $mod+r mode "default"
 }
+bindsym $mod+r mode "resize"
 
-mode "rofi" {
-  bindsym A exec --no-startup-id "rofi -show emoji"
-  bindsym B exec --no-startup-id "rofi -show drun"
-  bindsym C exec --no-startup-id "rofi-spotify -st"
-  bindsym C exec --no-startup-id "rofi-spotify"
-  bindsym $mod+r mode "default"
+set $mode_web "(C) Classroom (Y) YouTube (P) Moodle (G) GitHub (N/M) Gmail"
+mode $mode_web {
+  bindsym C exec --no-startup-id exec google-chrome-unstable -new-tab 'https://classroom.google.com/u/1/h/'; mode "default"
+  bindsym N exec --no-startup-id exec google-chrome-unstable -new-tab 'https://mail.google.com/mail/0/'; mode "default"
+  bindsym M exec --no-startup-id exec google-chrome-unstable -new-tab 'https://mail.google.com/mail/1/'; mode "default"
+  bindsym P exec --no-startup-id exec google-chrome-unstable -new-tab 'https://moodle.koc.k12.tr/'; mode "default"
+  bindsym Y exec --no-startup-id exec google-chrome-unstable -new-tab 'https://youtube.com/'; mode "default"
+  bindsym G exec --no-startup-id exec google-chrome-unstable -new-tab 'https://github.com/baris-inandi/'; mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
-  bindsym $mod+r mode "default"
+  bindsym $mod+o mode "default"
 }
+bindsym $mod+o mode $mode_web
 
-bindsym $mod+r mode "resize"
+bindsym $mod+asterisk workspace prev
+bindsym $mod+minus workspace next
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -220,9 +225,9 @@ exec_always --no-startup-id xidlehook --timer 1200 $locker_command ""
 bindsym $mod+control+l exec $locker_command
 
 # rofi
-bindsym $mod+shift+p exec "rofi -show run || krunner"
-bindsym $mod+p exec "rofi -show window"
+bindsym $mod+shift+p exec "rofi-spotify -st"
 bindsym $mod+period exec "rofi -show emoji -modi emoji"
+bindsym $mod+p  exec --no-startup-id "rofi -show drun"; mode "default"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
