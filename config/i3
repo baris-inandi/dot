@@ -177,6 +177,8 @@ mode $mode_web {
   bindsym P exec --no-startup-id exec google-chrome-unstable -new-tab 'https://moodle.koc.k12.tr/'; mode "default"
   bindsym Y exec --no-startup-id exec google-chrome-unstable -new-tab 'https://youtube.com/'; mode "default"
   bindsym G exec --no-startup-id exec google-chrome-unstable -new-tab 'https://github.com/baris-inandi/'; mode "default"
+  bindsym I exec --no-startup-id exec google-chrome-unstable -new-tab 'https://instagram.com/'; mode "default"
+  bindsym J exec --no-startup-id exec google-chrome-unstable -new-tab 'https://web.whatsapp.com/'; mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
