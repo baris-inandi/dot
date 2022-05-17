@@ -169,7 +169,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-set $mode_web "(C) Classroom (Y) YouTube (P) Moodle (G) GitHub (N/M) Gmail"
+set $mode_web "(C) Classroom (Y) YouTube (P) Moodle (G) GitHub (N/M) Gmail (J) Whatsapp (I) Instagram"
 mode $mode_web {
   bindsym C exec --no-startup-id exec google-chrome-unstable -new-tab 'https://classroom.google.com/u/1/h/'; mode "default"
   bindsym N exec --no-startup-id exec google-chrome-unstable -new-tab 'https://mail.google.com/mail/0/'; mode "default"
