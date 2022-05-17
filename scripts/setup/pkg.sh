@@ -76,7 +76,6 @@ paru -S --skipreview --needed \
   maim \
   bat \
   feh \
-  ferdi-bin \
   libnotify \
   dunst \
   brightnessctl \

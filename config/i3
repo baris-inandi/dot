@@ -169,7 +169,7 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-set $mode_web "(C) Classroom (Y) YouTube (P) Moodle (G) GitHub (N/M) Gmail (J) Whatsapp (I) Instagram"
+set $mode_web "(C) GC (Y) YT (P) MDL (G) GH (N/M) GML (J) WTSP (I) IG (U) TG"
 mode $mode_web {
   bindsym C exec --no-startup-id exec google-chrome-unstable -new-tab 'https://classroom.google.com/u/1/h/'; mode "default"
   bindsym N exec --no-startup-id exec google-chrome-unstable -new-tab 'https://mail.google.com/mail/0/'; mode "default"
@@ -179,6 +179,7 @@ mode $mode_web {
   bindsym G exec --no-startup-id exec google-chrome-unstable -new-tab 'https://github.com/baris-inandi/'; mode "default"
   bindsym I exec --no-startup-id exec google-chrome-unstable -new-tab 'https://instagram.com/'; mode "default"
   bindsym J exec --no-startup-id exec google-chrome-unstable -new-tab 'https://web.whatsapp.com/'; mode "default"
+  bindsym U exec --no-startup-id exec google-chrome-unstable -new-tab 'https://web.telegram.org/'; mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
