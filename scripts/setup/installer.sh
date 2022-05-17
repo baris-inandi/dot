@@ -66,7 +66,7 @@ system() {
 finalize() {
   printf "\nDOT: running finalize()...\n\n"
   # pacman cleanup
-  fish -c "cparu"
+  fish -c "rparu"
   i3-msg restart
   # cool ending
   neofetch
