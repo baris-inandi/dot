@@ -95,10 +95,6 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent/child container
-bindsym $mod+a focus parent
-bindsym $mod+d focus child
-
 set $ws1 " 1 "
 set $ws2 " 2 "
 set $ws3 " 3 "
@@ -151,6 +147,10 @@ bindsym $mod+Shift+e exec "i3-msg exit"
 
 # resize window
 mode "resize" {
+  # focus the parent/child container
+  bindsym A focus parent
+  bindsym D focus child
+
   bindsym J resize shrink width 5 px or 5 ppt
   bindsym I resize grow height 5 px or 5 ppt
   bindsym K resize shrink height 5 px or 5 ppt
@@ -183,9 +183,9 @@ mode $mode_web {
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
-  bindsym $mod+o mode "default"
+  bindsym $mod+d mode "default"
 }
-bindsym $mod+o mode $mode_web
+bindsym $mod+d mode $mode_web
 
 bindsym $mod+asterisk workspace prev
 bindsym $mod+minus workspace next
@@ -242,7 +242,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 
 # apps
 bindsym $mod+shift+f exec "nautilus -w || dolphin"
-bindsym $mod+shift+a exec "google-chrome-unstable || firefox"
+bindsym $mod+Shift+a exec "google-chrome-unstable || firefox"
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill; workspace $ws1
