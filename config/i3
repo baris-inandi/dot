@@ -230,7 +230,7 @@ bindsym $mod+control+l exec $locker_command
 # rofi
 bindsym $mod+shift+p exec "rofi-spotify -st"
 bindsym $mod+period exec "rofi -show emoji -modi emoji"
-bindsym $mod+p  exec --no-startup-id "rofi -show drun"; mode "default"
+bindsym $mod+p  exec --no-startup-id "rofi -show run"; mode "default"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
