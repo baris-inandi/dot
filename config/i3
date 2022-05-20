@@ -228,9 +228,11 @@ exec_always --no-startup-id xidlehook --timer 1200 $locker_command ""
 bindsym $mod+control+l exec $locker_command
 
 # rofi
-bindsym $mod+shift+p exec "rofi-spotify -st"
-bindsym $mod+period exec "rofi -show emoji -modi emoji"
+bindsym $mod+shift+p exec --no-startup-id "rofi-spotify -st"
+bindsym $mod+period exec --no-startup-id "rofimoji -s neutral -r emoji --max-recent 4"
+bindsym $mod+u exec --no-startup-id "rofi -show filebrowser"
 bindsym $mod+p  exec --no-startup-id "rofi -show run"; mode "default"
+bindsym $mod+Ö exec --no-startup-id "rofi-code"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
