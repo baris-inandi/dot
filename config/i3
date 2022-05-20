@@ -138,7 +138,6 @@ bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $
 bindsym $mod+0 workspace $ws_hidden
 bindsym $mod+Shift+0 move container to workspace $ws_hidden; workspace $ws_hidden
 bindsym $mod+M exec --no-startup-id "bash ~/dot/scripts/user/spotify.sh"
-bindsym $mod+Shift+M exec "killall spotify"
 bindsym $mod+Z exec --no-startup-id "bash ~/dot/scripts/user/blank-workspace.sh"
 
 # reload the configuration file
@@ -228,11 +227,11 @@ exec_always --no-startup-id xidlehook --timer 1200 $locker_command ""
 bindsym $mod+control+l exec $locker_command
 
 # rofi
-bindsym $mod+shift+p exec --no-startup-id "rofi-spotify -st"
+bindsym $mod+shift+m exec --no-startup-id "rofi-spotify -st"
 bindsym $mod+period exec --no-startup-id "rofimoji -s neutral -r emoji --max-recent 4"
 bindsym $mod+u exec --no-startup-id "rofi -show filebrowser"
 bindsym $mod+p  exec --no-startup-id "rofi -show run"; mode "default"
-bindsym $mod+Ö exec --no-startup-id "rofi-code"
+bindsym $mod+c exec --no-startup-id "rofi-code"
 
 # alt tab
 bindsym $mod+Tab workspace back_and_forth
@@ -280,9 +279,6 @@ mode "$mode_system" {
     bindsym space mode "default"
 }
 bindsym $mod+Escape mode "$mode_system"
-
-# browser launcher
-bindsym $mod+c exec --no-startup-id "google-chrome-unstable --new-window 'https://classroom.google.com/u/1/h'"
 
 # crypto summary
 bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"

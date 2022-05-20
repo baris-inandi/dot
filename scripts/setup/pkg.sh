@@ -42,6 +42,7 @@ paru -S --skipreview --needed \
   fish \
   rofi \
   rofimoji \
+  rofi-code-git \
   picom-jonaburg-git \
   betterlockscreen \
   micro \
