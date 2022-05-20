@@ -1,27 +1,27 @@
 colors:
   normal:
-    black:   '0x86817e'
-    red:     '0xd75756'
-    green:   '0x688c7d'
-    yellow:  '0xffb365'
-    blue:    '0x68778c'
-    magenta: '0xfdb3b2'
-    cyan:    '0x86abd9'
-    white:   '0xf7f8f2'
+    black: "0x86817e"
+    red: "0xd75756"
+    green: "0x688c7d"
+    yellow: "0xffb365"
+    blue: "0x68778c"
+    magenta: "0xfdb3b2"
+    cyan: "0x86abd9"
+    white: "0xf7f8f2"
   bright:
-    black:   '0x86817e'
-    red:     '0xa63a3a'
-    green:   '0x688c7d'
-    yellow:  '0xffb365'
-    blue:    '0x68778c'
-    magenta: '0x8c686a'
-    cyan:    '0x86abd9'
-    white:   '0xf7f8f2'
+    black: "0x86817e"
+    red: "0xa63a3a"
+    green: "0x688c7d"
+    yellow: "0xffb365"
+    blue: "0x68778c"
+    magenta: "0x8c686a"
+    cyan: "0x86abd9"
+    white: "0xf7f8f2"
   primary:
-    background: '0x151515'
-    foreground: '0xd4d2d1'
+    background: "0x151515"
+    foreground: "0xd4d2d1"
 env:
-  WINIT_X11_SCALE_FACTOR: '1'
+  WINIT_X11_SCALE_FACTOR: "1"
 font:
   normal:
     family: Iosevka
@@ -49,4 +49,4 @@ window:
     x: 40
     y: 40
 mouse_bindings:
-  - { mouse: Middle, action: Quit }  
+  - { mouse: Middle, action: Quit }
