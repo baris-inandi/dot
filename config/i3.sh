@@ -166,6 +166,7 @@ mode "resize" {
   bindsym Escape mode "default"
   bindsym $mod+r mode "default"
 }
+
 bindsym $mod+r mode "resize"
 
 set $mode_web "(C) GC (Y) YT (P) MDL (G) GH (N/M) GML (J) WTSP (I) IG (U) TG"
@@ -216,8 +217,6 @@ gaps outer 0
 # smart_borders on
 smart_gaps on
 
-# screenshots
-exec "mkdir -p ~/Pictures/Screenshots"
 bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png | notify-send 'Screenshot (Clipboard)' -t 800
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "/home/$USER/Pictures/Screenshots/$(date).png" | notify-send 'Screenshot (Save)' -t 800
 
