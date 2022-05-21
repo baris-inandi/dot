@@ -177,7 +177,7 @@ mode $mode_web {
   bindsym P exec --no-startup-id bash ~/dot/scripts/user/web.sh "Moodle"  "https://moodle.koc.k12.tr/"
   bindsym Y exec --no-startup-id bash ~/dot/scripts/user/web.sh "YouTube" "https://youtube.com/"
   bindsym G exec --no-startup-id bash ~/dot/scripts/user/web.sh "GitHub" "https://github.com/baris-inandi/"
-  bindsym I exec --no-startup-id bash ~/dot/scripts/user/web.sh "Instagram" "https://instagram.com/"
+  bindsym I exec --no-startup-id bash ~/dot/scripts/user/web.sh "Instagram" "https://instagram.com/direct/inbox/"
   bindsym J exec --no-startup-id bash ~/dot/scripts/user/web.sh "Whatsapp Web" "https://web.whatsapp.com/"
   bindsym U exec --no-startup-id bash ~/dot/scripts/user/web.sh "Telegram Web" "https://web.telegram.org/"
 

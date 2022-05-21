@@ -15,10 +15,33 @@ alias npm="pnpm"
 alias npx="pnpm dlx"
 alias wei="python ~/dot/scripts/user/wei.py"
 alias py="python ~/dot/scripts/user/pyeval.py"
-alias eth="echo 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
+alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 
 # no greeting
 set fish_greeting
+
+################################################################## P
+# Repeat previous command
+##################################################################
+function p
+    set idx 1
+    set prefix "sudo "
+    if [ "$argv" != su ]
+        set prefix ""
+    end
+    while true
+        set cmd "$history[$idx]"
+        set cmd_base "$(echo "$cmd" | head -n1 | cut -d " " -f1)"
+        if [ "$cmd_base" != "$_" ]
+            set prefixed_cmd "$prefix$cmd"
+            echo "Running command: \"$prefixed_cmd\""
+            eval "$prefixed_cmd"
+            break
+        else
+            set idx (math $idx + 1)
+        end
+    end
+end
 
 ################################################################## GPULL
 # async git pull
