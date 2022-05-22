@@ -90,7 +90,7 @@ bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle; [tiling] border pixel 1; [floating] border pixel 3
 
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
