@@ -16,6 +16,7 @@ alias npx="pnpm dlx"
 alias wei="python ~/dot/scripts/user/wei.py"
 alias py="python ~/dot/scripts/user/pyeval.py"
 alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
+alias htop="btop"
 
 # no greeting
 set fish_greeting

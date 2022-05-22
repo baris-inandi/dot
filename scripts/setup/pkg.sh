@@ -114,7 +114,7 @@ paru -S --skipreview --needed \
   nerd-fonts-jetbrains-mono \
   onlyoffice-bin \
   tt \
-  htop \
+  btop \
   gnome-font-viewer \
   gitui \
   gnome-control-center
