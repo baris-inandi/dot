@@ -253,6 +253,7 @@ bindsym XF86MonBrightnessDown exec brightnessctl s 10%-
 # apps
 bindsym $mod+shift+f exec "nautilus -w || dolphin"
 bindsym $mod+shift+a exec "google-chrome-unstable || firefox"
+bindsym $mod+shift+n exec "google-chrome-unstable -incognito"
 
 # kill all windows
 bindsym $mod+shift+q [class=".*"] kill; workspace $ws1
