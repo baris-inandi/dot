@@ -17,6 +17,7 @@ alias wei="python ~/dot/scripts/user/wei.py"
 alias py="python ~/dot/scripts/user/pyeval.py"
 alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 alias htop="btop"
+alias fparu="paru --skipreview --noconfirm --needed --ignore=linux,linux-headers,grub -Syu"
 
 # no greeting
 set fish_greeting
@@ -56,9 +57,9 @@ end
 ##################################################################
 function sparu
     if count $argv >/dev/null
-        paru -S $argv --cleanafter --removemake --useask --skipreview --noconfirm --needed
+        paru -S $argv --removemake --useask --skipreview --noconfirm --needed
     else
-        paru --skipreview --noconfirm -Syu
+        paru --skipreview --noconfirm --needed -Syu
     end
 end
 
