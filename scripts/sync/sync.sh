@@ -11,6 +11,7 @@ if [[ $(git diff) = "" ]]; then
   # see if data before and after are the same
   # notify user if git pull updated any dotfiles
   if [[ "$old_hash" != "$new_hash" ]]; then
+    bash ~/dot/scripts/setup/symlink.sh
     notify-send "Updated dot" "The system has auto-updated dotfiles. dot is currently at $new_hash"
   fi
 fi

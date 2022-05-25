@@ -1,7 +1,7 @@
 # symlinks
 
 mkdir -p ~/.config/i3
-ln -f -s ~/dot/config/i3.sh ~/.config/i3/config
+ln -f -s ~/dot/config/i3/config.i3 ~/.config/i3/config
 
 mkdir -p ~/.config/i3status
 ln -f -s ~/dot/config/i3status.conf ~/.config/i3status/config
