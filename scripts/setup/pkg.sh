@@ -117,6 +117,7 @@ paru -S --skipreview --needed \
   btop \
   gnome-font-viewer \
   gitui \
+  tdrop \
   gnome-control-center
 
 # install cpu microcodes
