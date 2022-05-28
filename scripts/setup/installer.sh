@@ -50,6 +50,7 @@ system() {
   wait
   sudo ln -f -s ~/dot/config/grub /etc/default/grub
   wait
+  sudo ln -f -s ~/dot/config/pam-login /etc/pam.d/login
   sudo grub-mkconfig -o /boot/grub/grub.cfg
   wait
   timectl set-timezone Europe/Istanbul
