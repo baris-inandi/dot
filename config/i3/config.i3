@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Iosevka Semibold 10
+font pango:Iosevka Medium 10
 
 set $power_suspend "bash ~/dot/scripts/user/power.sh suspend"
 set $power_reboot "bash ~/dot/scripts/user/power.sh reboot"
@@ -13,7 +13,7 @@ set $cmd_browser "google-chrome-unstable || firefox"
 set $cmd_private_browser "google-chrome-unstable -incognito || firefox --private-window"
 set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.conf -b"
 
-set $color_bar_bg #00000000
+set $color_bar_bg #151515
 set $color_bar_separator #505050
 set $color_ws_urgent_fg #ffffff
 set $color_ws_urgent_bg #B42B51
