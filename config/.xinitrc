@@ -1,6 +1,6 @@
 #!/bin/sh
 
-xrdb ~/.Xresources
+xrdb -merge ~/.Xresources
 
 # copy env.sh if it does not already exist
 cp -n ~/dot/env.example.sh ~/dot/env.sh
