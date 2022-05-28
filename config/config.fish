@@ -135,12 +135,21 @@ end
 # cds into directory and calls ls immediately
 ##################################################################
 function d -a dir
+    if not test -d $dir
+        echo (set_color red)ERROR:(set_color normal) Directory non-existent
+        return 1
+    end
     cd $dir
-    ls
+    if [ "$PWD" = "$HOME" ]
+        echo (set_color cyan)d:(set_color normal) Home directory
+    else
+        echo (set_color cyan)d:(set_color normal) $PWD
+        ls
+    end
 end
 
 ################################################################## MVTHIS
-# cds into directory and calls ls immediately
+# moves current directory
 ##################################################################
 function mvthis -a name
     set thisdir (basename $PWD)
