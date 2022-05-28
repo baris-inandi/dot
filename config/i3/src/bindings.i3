@@ -62,7 +62,7 @@ bindsym $mod+Shift+0 move container to workspace $ws_hidden; workspace $ws_hidde
 bindsym $mod+M exec --no-startup-id "bash ~/dot/scripts/user/spotify.sh"
 bindsym $mod+Z exec --no-startup-id "bash ~/dot/scripts/user/blank-workspace.sh"
 bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r exec --no-startup-id "killall dunst && i3-msg restart && xrdb .Xresources"
+bindsym $mod+Shift+r exec --no-startup-id $cmd_restart
 bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"
 bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png | notify-send "Screenshot" "Save to clipboard" -t 1000
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "~/Pictures/Screenshots/$(date +%U%u%y%H%M%S).png" | notify-send "Screenshot" "Save to pictures" -t 1000

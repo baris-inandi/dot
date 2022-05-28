@@ -12,6 +12,7 @@ set $cmd_file_manager "nautilus -w || dolphin"
 set $cmd_browser "google-chrome-unstable || firefox"
 set $cmd_private_browser "google-chrome-unstable -incognito || firefox --private-window"
 set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.conf -b"
+set $cmd_restart "killall dunst && i3-msg restart && xrdb .Xresources"
 
 set $color_bar_bg #00000000
 set $color_bar_separator #505050
