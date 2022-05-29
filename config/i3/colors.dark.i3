@@ -1,0 +1,9 @@
+set $color_bar_bg #00000000
+set $color_bar_separator #505050
+set $color_ws_urgent_fg #ffffff
+set $color_ws_urgent_bg #B42B51
+set $color_ws_urgent_border #00000000
+set $color_ws_fg #ffffff
+set $color_ws_bg #505052
+set $color_ws_border #777777
+set $color_ws_inactive_fg #eeeeee

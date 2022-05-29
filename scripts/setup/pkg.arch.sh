@@ -104,7 +104,7 @@ paru -S --skipreview --needed \
   otf-ibm-plex \
   ttf-fira-sans \
   ttf-fira-code \
-  ttc-iosevka-ss07 \
+  ttc-iosevka-ss12 \
   inter-font \
   ttf-roboto \
   noto-fonts \

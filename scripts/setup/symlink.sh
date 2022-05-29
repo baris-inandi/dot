@@ -1,24 +1,38 @@
-# symlinks
+t=$(cat ~/.config/dot-theme)
+
+#### Themed symlinks ####
+
+mkdir -p ~/.config/alacritty
+ln -f -s ~/dot/config/alacritty.yml ~/.config/alacritty/alacritty.yml
+ln -f -s ~/dot/config/alacritty-colors.$t.yml ~/.config/alacritty/colors.yml
+
+mkdir -p ~/.config/micro/colorschemes
+ln -f -s ~/dot/config/dot.$t.micro ~/.config/micro/colorschemes/dot.micro
+
+mkdir -p ~/.config/dunst
+ln -f -s ~/dot/config/dunstrc.$t.conf ~/.config/dunst/dunstrc
+
+mkdir -p ~/.config/i3
+ln -f -s ~/dot/config/i3/colors.$t.i3 ~/.config/i3/colors
+
+ln -f -s ~/dot/config/wallpaper.$t.png ~/.config/wallpaper.png
+
+mkdir -p ~/.config/i3status
+ln -f -s ~/dot/config/i3status.$t.conf ~/.config/i3status/config
+
+if [ "$1" == "--themed-only" ]; then
+  return
+fi
+
+#### Non-themed symlinks ####
 
 mkdir -p ~/.config/i3
 ln -f -s ~/dot/config/i3/config.i3 ~/.config/i3/config
 
-mkdir -p ~/.config/i3status
-ln -f -s ~/dot/config/i3status.conf ~/.config/i3status/config
-
-mkdir -p ~/.config/alacritty
-ln -f -s ~/dot/config/alacritty.yml ~/.config/alacritty/alacritty.yml
-
 ln -f -s ~/dot/config/.gitconfig ~/.gitconfig
-
-mkdir -p ~/.config/micro/colorschemes
-ln -f -s ~/dot/config/theme.micro ~/.config/micro/colorschemes/theme.micro
 
 mkdir -p ~/.config/micro/
 ln -f -s ~/dot/config/micro.json ~/.config/micro/settings.json
-
-mkdir -p ~/.config/dunst
-ln -f -s ~/dot/config/dunstrc.conf ~/.config/dunst/dunstrc
 
 mkdir -p ~/.cspell
 ln -f -s ~/dot/config/cspell-dictionary.txt ~/.cspell/custom-dictionary-user.txt

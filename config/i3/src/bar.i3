@@ -2,7 +2,7 @@ bar {
   tray_output none
   separator_symbol "  "
 	position bottom
-  status_command py3status -c ~/dot/config/i3status.conf
+  status_command py3status
   colors {
     background $color_bar_bg
     separator $color_bar_separator

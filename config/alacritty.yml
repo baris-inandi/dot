@@ -1,12 +1,10 @@
-colors:
-  primary:
-    background: "0x151515"
-    foreground: "0xd4d2d1"
+import:
+  - ~/.config/alacritty/colors.yml
 env:
   WINIT_X11_SCALE_FACTOR: "1"
 font:
   normal:
-    family: Iosevka SS07
+    family: Iosevka SS12
   size: 14
   offset:
     y: 2
@@ -28,7 +26,6 @@ scrolling:
 selection:
   unfocused_hollow: true
 window:
-  opacity: 0.92
   padding:
     x: 40
     y: 40
