@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Iosevka SS10 Medium 10
+font pango:Iosevka SS07 Medium 10
 
 include ~/.config/i3/colors
 
@@ -10,7 +10,7 @@ set $power_shutdown "bash ~/dot/scripts/user/power.sh off"
 set $preferred_terminal alacritty
 
 set $cmd_terminal "alacritty || i3-sensible-terminal"
-set $cmd_file_manager "nautilus -w || dolphin"
+set $cmd_file_manager "nemo | nautilus -w"
 set $cmd_browser "google-chrome-unstable || firefox"
 set $cmd_private_browser "google-chrome-unstable -incognito || firefox --private-window"
 set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.conf -b"

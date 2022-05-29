@@ -54,7 +54,7 @@ paru -S --skipreview --needed \
   pfetch \
   iw \
   sudo \
-  nautilus \
+  nemo \
   unzip \
   xdotool \
   wget \
@@ -104,7 +104,7 @@ paru -S --skipreview --needed \
   otf-ibm-plex \
   ttf-fira-sans \
   ttf-fira-code \
-  ttc-iosevka-ss10 \
+  ttc-iosevka-ss07 \
   inter-font \
   ttf-roboto \
   noto-fonts \
