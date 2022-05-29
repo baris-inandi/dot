@@ -14,3 +14,6 @@ source ~/dot/scripts/setup/symlink.sh --themed-only
 
 # apply theme
 i3-msg restart
+killall dunst
+wait
+dunst
