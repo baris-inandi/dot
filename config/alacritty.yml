@@ -9,7 +9,7 @@ font:
     family: Iosevka SS07
   size: 14
   offset:
-    y: 1
+    y: 2
 key_bindings:
   - action: IncreaseFontSize
     key: Asterisk
@@ -17,7 +17,9 @@ key_bindings:
   - action: DecreaseFontSize
     key: Minus
     mods: Control
-  - { key: Back, mods: Control, chars: "\u0017" }
+  - chars: "\u0017"
+    key: Back
+    mods: Control
 mouse:
   hide_when_typing: true
 scrolling:
@@ -31,4 +33,5 @@ window:
     x: 40
     y: 40
 mouse_bindings:
-  - { mouse: Middle, action: Quit }
+  - action: Quit
+    mouse: Middle
