@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Iosevka SS12 Medium 10
+font pango:Iosevka SS10 Medium 10
 
 include ~/.config/i3/colors
 
@@ -17,7 +17,7 @@ set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.c
 
 set $resize_amount_horizontal 6
 set $resize_amount_vertical 4
-set $gaps_inner 12
+set $gaps_inner 16
 set $gaps_outer 0
 
 set $refresh_status killall -SIGUSR1 py3status

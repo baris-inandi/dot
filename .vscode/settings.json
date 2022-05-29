@@ -5,5 +5,13 @@
   "python.linting.enabled": true,
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "python.formatting.provider": "black",
-  "cSpell.words": ["AVAX", "cmds", "cryptopy", "grequests", "Iosevka", "Popen"]
+  "cSpell.words": [
+    "AVAX",
+    "cmds",
+    "cryptopy",
+    "grequests",
+    "Iosevka",
+    "Popen",
+    "rgba"
+  ]
 }

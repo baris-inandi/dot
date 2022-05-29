@@ -1,27 +1,27 @@
 colors:
-  # Default colors
+  name: Codeschool (light)
+  author: Chris Kempson
   primary:
-    background: '0xffffff'
-    foreground: '0x516d7b'
-
-  # Normal colors
+    background: "#ffffff"
+    foreground: "#2a343a"
+  cursor:
+    text: "#b5d8f6"
+    cursor: "#2a343a"
   normal:
-    black:   '0x161b1d'
-    red:     '0xd22d72'
-    green:   '0x568c3b'
-    yellow:  '0x8a8a0f'
-    blue:    '0x257fad'
-    magenta: '0x5d5db1'
-    cyan:    '0x2d8f6f'
-    white:   '0x7ea2b4'
-
-  # Bright colors
+    black: "#232c31"
+    red: "#2a5491"
+    green: "#237986"
+    yellow: "#a03b1e"
+    blue: "#484d79"
+    magenta: "#c59820"
+    cyan: "#b02f30"
+    white: "#9ea7a6"
   bright:
-    black:   '0x5a7b8c'
-    red:     '0xd22d72'
-    green:   '0x568c3b'
-    yellow:  '0x8a8a0f'
-    blue:    '0x257fad'
-    magenta: '0x5d5db1'
-    cyan:    '0x2d8f6f'
-    white:   '0xebf8ff'
+    black: "#3f4944"
+    red: "#2a5491"
+    green: "#237986"
+    yellow: "#a03b1e"
+    blue: "#484d79"
+    magenta: "#c59820"
+    cyan: "#b02f30"
+    white: "#b5d8f6"
