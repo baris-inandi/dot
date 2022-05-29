@@ -6,7 +6,7 @@ env:
   WINIT_X11_SCALE_FACTOR: "1"
 font:
   normal:
-    family: Iosevka
+    family: Iosevka SS07
   size: 14
   offset:
     y: 1

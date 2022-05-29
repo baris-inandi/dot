@@ -18,9 +18,23 @@ alias py="python ~/dot/scripts/user/pyeval.py"
 alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 alias htop="btop"
 alias fparu="paru --skipreview --noconfirm --needed --ignore=linux,linux-headers,grub -Syu"
+alias qparu="paru -Qs $argv"
 
 # no greeting
 set fish_greeting
+
+################################################################## RQPARU
+# Remove Queried packages using paru
+##################################################################
+function rqparu
+    set targets (paru -Qqs $argv)
+    if test -n "$targets"
+        paru -Rs $targets --skipreview --cleanafter --removemake
+    else
+        echo "Query returned no results."
+        return 1
+    end
+end
 
 ################################################################## P
 # Repeat previous command

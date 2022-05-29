@@ -1,5 +1,5 @@
 set $mod Mod4
-font pango:Iosevka Medium 10
+font pango:Iosevka SS07 Medium 10
 
 set $power_suspend "bash ~/dot/scripts/user/power.sh suspend"
 set $power_reboot "bash ~/dot/scripts/user/power.sh reboot"
