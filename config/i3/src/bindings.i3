@@ -70,7 +70,7 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "$HOME
 bindsym $mod+shift+m exec --no-startup-id "rofi-spotify -st"
 bindsym $mod+period exec --no-startup-id "rofimoji -s neutral -r emoji --max-recent 4"
 bindsym $mod+p  exec --no-startup-id "rofi -show run"
-bindsym $mod+s exec --no-startup-id "rofi-code"
+bindsym $mod+s exec --no-startup-id "rofi-code --code code-insiders"
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+asterisk workspace prev
 bindsym $mod+minus workspace next

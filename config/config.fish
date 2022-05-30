@@ -20,6 +20,7 @@ alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 alias htop="btop"
 alias fparu="paru --skipreview --noconfirm --needed --ignore=linux,linux-headers,grub -Syu"
 alias qparu="paru -Qs $argv"
+alias code="code-insiders"
 
 # no greeting
 set fish_greeting
@@ -101,7 +102,11 @@ end
 # opens vscode in the current directory and exits immediately
 ##################################################################
 function vs
-    bash ~/dot/scripts/user/vs.sh $argv
+    if count $argv >/dev/null
+        code $argv
+    else
+        code .
+    end
     exit
 end
 

@@ -63,7 +63,7 @@ paru -S --skipreview --needed \
   google-chrome-dev \
   gnome-themes-extra \
   spotify \
-  visual-studio-code-bin \
+  visual-studio-code-insiders-bin \
   go \
   ranger \
   trash-cli \
