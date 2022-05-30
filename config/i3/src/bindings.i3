@@ -22,20 +22,20 @@ bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
-bindsym $mod+Shift+J move left
-bindsym $mod+Shift+K move down
-bindsym $mod+Shift+I move up
-bindsym $mod+Shift+L move right
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $mod+Shift+J move left $move_amount_horizontal
+bindsym $mod+Shift+K move down $move_amount_vertical
+bindsym $mod+Shift+I move up $move_amount_vertical
+bindsym $mod+Shift+L move right $move_amount_horizontal
+bindsym $mod+Shift+Left move left $move_amount_horizontal
+bindsym $mod+Shift+Down move down $move_amount_vertical
+bindsym $mod+Shift+Up move up $move_amount_vertical
+bindsym $mod+Shift+Right move right $move_amount_horizontal
 bindsym $mod+h split h
 bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-bindsym $mod+Shift+space floating toggle
+bindsym $mod+Shift+space floating toggle, move position center
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
 bindsym $mod+d focus child
@@ -57,6 +57,7 @@ bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $
 bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+c move position center
 bindsym $mod+0 workspace $ws_hidden
 bindsym $mod+Shift+0 move container to workspace $ws_hidden; workspace $ws_hidden
 bindsym $mod+M exec --no-startup-id "bash ~/dot/scripts/user/spotify.sh"
@@ -69,7 +70,7 @@ bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "$HOME
 bindsym $mod+shift+m exec --no-startup-id "rofi-spotify -st"
 bindsym $mod+period exec --no-startup-id "rofimoji -s neutral -r emoji --max-recent 4"
 bindsym $mod+p  exec --no-startup-id "rofi -show run"
-bindsym $mod+c exec --no-startup-id "rofi-code"
+bindsym $mod+s exec --no-startup-id "rofi-code"
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+asterisk workspace prev
 bindsym $mod+minus workspace next
