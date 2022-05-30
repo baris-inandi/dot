@@ -22,4 +22,5 @@ mode $mode_resize {
   bindsym q mode "default"
   bindsym $mod+r mode "default"
   bindsym $mod+c move position center, mode "default"
+  bindsym c move position center, mode "default"
 }
