@@ -12,6 +12,7 @@
     "grequests",
     "Iosevka",
     "Popen",
-    "rgba"
+    "rgba",
+    "uidensity"
   ]
 }
