@@ -28,8 +28,8 @@ set $gaps_outer 0
 set $refresh_status killall -SIGUSR1 py3status
 
 set $mode_resize "Resize"
-set $mode_web "(C) GC (Y) YT (P) MDL (G) GH (N/M) GML (J) WTSP (I) IG (U) TG"
-set $mode_web_window "[WINDOWED] (C) GC (Y) YT (P) MDL (G) GH (N/M) GML (J) WTSP (I) IG (U) TG"
+set $mode_web "Browser"
+set $mode_web_window "Browser (Windowed)"
 set $mode_system "(⤷) Suspend, (r) Reboot, (q) Shutdown, (e) Exit"
 
 set $ws_hidden "Hidden"
