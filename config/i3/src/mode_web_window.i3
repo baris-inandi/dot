@@ -8,6 +8,7 @@ mode $mode_web_window {
   bindsym I exec --no-startup-id bash ~/dot/scripts/user/web.sh "Instagram" "https://instagram.com/direct/inbox/" -new-window
   bindsym J exec --no-startup-id bash ~/dot/scripts/user/web.sh "Whatsapp Web" "https://web.whatsapp.com/" -new-window
   bindsym U exec --no-startup-id bash ~/dot/scripts/user/web.sh "Telegram Web" "https://web.telegram.org/" -new-window
+  bindsym D exec --no-startup-id bash ~/dot/scripts/user/web.sh "Discord" "https://discord.com/app/" -new-window
 
   bindsym O mode $mode_web
 
