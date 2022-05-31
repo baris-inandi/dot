@@ -1,2 +1,2 @@
 for_window [class="i3scratchpad"] fullscreen enable
-bindsym $mod+u exec --no-startup-id "tdrop $preferred_terminal -o window.padding.x=80 window.padding.y=80 font.size=15 --class SP_Terminal,i3scratchpad"
+bindsym $mod+Shift+Return exec --no-startup-id "tdrop $preferred_terminal -o window.padding.x=80 window.padding.y=80 font.size=15 --class SP_Terminal,i3scratchpad"
