@@ -26,3 +26,15 @@ mkdir -p "$HOME"/.local/share/keyrings
 bash ~/dot/scripts/setup/symlink.sh
 
 exec i3
+
+# create files/dirs
+mkdir -p ~/Pictures/Screenshots
+mkdir -p ~/Downloads
+mkdir -p ~/Desktop
+touch ~/dot/startup.sh
+
+# auto pull dot if there are no local changes.
+bash ~/dot/scripts/sync/sync.sh
+
+# run custom startup script
+bash ~/dot/startup.sh
