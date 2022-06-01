@@ -48,6 +48,7 @@ paru -S --skipreview --needed \
   micro \
   translate-shell \
   python \
+  lua \
   python-pip \
   python-poetry \
   npm \
@@ -74,6 +75,7 @@ paru -S --skipreview --needed \
   i3-gaps \
   i3status \
   xclip \
+  xsel \
   maim \
   bat \
   feh \

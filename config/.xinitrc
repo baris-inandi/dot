@@ -27,6 +27,10 @@ bash ~/dot/scripts/setup/symlink.sh
 
 exec i3
 
+# start utility applications
+xmousepasteblock
+dunst
+
 # create files/dirs
 mkdir -p ~/Pictures/Screenshots
 mkdir -p ~/Downloads
