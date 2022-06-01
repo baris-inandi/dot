@@ -17,7 +17,7 @@ set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.c
 
 set $resize_amount_horizontal 6
 set $resize_amount_vertical 4
-set $resize_amount_horizontal_px 100
+set $resize_amount_horizontal_px 160
 set $resize_amount_vertical_px 90
 
 set $move_amount_vertical 45
