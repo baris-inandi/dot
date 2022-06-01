@@ -49,6 +49,7 @@ paru -S --skipreview --needed \
   translate-shell \
   python \
   lua \
+  luajit \
   python-pip \
   python-poetry \
   npm \
