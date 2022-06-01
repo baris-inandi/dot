@@ -32,9 +32,6 @@ set $mode_web "Browser"
 set $mode_web_window "Browser (Windowed)"
 set $mode_system "(⤷) Suspend, (r) Reboot, (q) Shutdown, (e) Exit"
 
-set $ws_hidden "Hidden"
-set $ws_music "Spotify"
-
 set $ws1 " 1 "
 set $ws2 " 2 "
 set $ws3 " 3 "

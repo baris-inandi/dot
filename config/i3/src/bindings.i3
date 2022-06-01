@@ -58,8 +58,6 @@ bindsym $mod+Shift+7 move container to workspace number $ws7; workspace number $
 bindsym $mod+Shift+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+c move position center
-bindsym $mod+0 workspace $ws_hidden
-bindsym $mod+Shift+0 move container to workspace $ws_hidden; workspace $ws_hidden
 bindsym $mod+M exec --no-startup-id "bash ~/dot/scripts/user/spotify.sh"
 bindsym $mod+Z exec --no-startup-id "bash ~/dot/scripts/user/blank-workspace.sh"
 bindsym $mod+Shift+c reload

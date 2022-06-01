@@ -6,7 +6,7 @@ launch() {
       google-chrome-unstable $1 -new-window
     fi
   else
-    google-chrome-unstable $1 $2
+    google-chrome-unstable $1 $2--visible
   fi
 }
 
