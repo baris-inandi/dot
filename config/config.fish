@@ -9,18 +9,20 @@ alias dotsync="bash ~/dot/scripts/sync/sync.sh"
 alias dotpush="cd ~/dot/; gsync"
 alias clean-symlinks="find . -xtype l -delete"
 alias m="micro"
-alias tra="python ~/dot/scripts/user/tra.py"
+alias tra="luajit ~/dot/scripts/user/tra.lua"
 alias ttt="tt -blockcursor -notheme -showwpm -bold -words 200en -highlight1"
 alias gsync="bash ~/dot/scripts/user/gsync.sh $1"
 alias npm="pnpm"
 alias npx="pnpm dlx"
 alias wei="luajit ~/dot/scripts/user/wei.lua"
-alias py="python ~/dot/scripts/user/pyeval.py"
 alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 alias htop="btop"
 alias fparu="paru --skipreview --noconfirm --needed --ignore=linux,linux-headers,grub -Syu"
 alias qparu="paru -Qs $argv"
 alias code="code-insiders"
+alias clone="luajit ~/dot/scripts/user/gitclone.lua"
+alias ls="bash ~/dot/scripts/user/ls.sh $argv"
+alias lsx="exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99 $argv"
 
 # no greeting
 set fish_greeting
@@ -91,13 +93,6 @@ function rparu
     end
 end
 
-################################################################## CLONE
-# clones a git repository from the defaut user's github (baris-inandi)
-##################################################################
-function clone -a name
-    python ~/dot/scripts/user/gitclone.py $name
-end
-
 ################################################################## VS
 # opens vscode in the current directory and exits immediately
 ##################################################################
@@ -137,20 +132,6 @@ function rmthis
     trash $thisdir
 end
 
-################################################################## LS
-# replaces ls with exa, falls back to ls
-##################################################################
-function ls -a d
-    bash ~/dot/scripts/user/ls.sh $d
-end
-
-################################################################## LSX
-# treeview exa
-##################################################################
-function lsx -a d
-    exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99 $d
-end
-
 ################################################################## D
 # cds into directory and calls ls immediately
 ##################################################################
@@ -176,23 +157,6 @@ function mvthis -a name
     cd ..
     mv $thisdir $name
     cd $name
-end
-
-# web shortcuts for fish
-
-function classroom
-    google-chrome-unstable --new-window "https://classroom.google.com/u/1/h"
-    exit
-end
-
-function github -a repo
-    google-chrome-unstable https://github.com/baris-inandi/$repo
-    exit
-end
-
-function monk
-    google-chrome-unstable --new-window https://monkeytype.com
-    exit
 end
 
 set -gx PNPM_HOME "/home/bi/.local/share/pnpm"
