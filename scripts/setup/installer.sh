@@ -48,17 +48,13 @@ system() {
   wait
   sudo ln -f -s ~/dot/config/vconsole.conf /etc/vconsole.conf
   wait
-  sudo ln -f -s ~/dot/config/grub /etc/default/grub
-  wait
   sudo ln -f -s ~/dot/config/pam-login /etc/pam.d/login
-  sudo grub-mkconfig -o /boot/grub/grub.cfg
   wait
   timectl set-timezone Europe/Istanbul
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
   hostnamectl set-hostname arch
-  fish -c "fish_config prompt choose nim"
-  fish -c "fish_config theme choose Tomorrow\ Night"
+  echo "dark" >~/.config/dot-theme
   wait
 }
 
