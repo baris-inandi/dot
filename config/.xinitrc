@@ -28,7 +28,6 @@ bash ~/dot/scripts/setup/symlink.sh
 exec i3
 
 # start utility applications
-xmousepasteblock
 dunst
 
 # create files/dirs
