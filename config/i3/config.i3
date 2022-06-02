@@ -20,7 +20,7 @@ set $cmd_private_browser "google-chrome-unstable -incognito || firefox --private
 set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.conf -b"
 
 set $resize_amount_horizontal 6
-set $resize_amount_vertical 5
+set $resize_amount_vertical 7
 set $resize_amount_horizontal_px 160
 set $resize_amount_vertical_px 90
 
