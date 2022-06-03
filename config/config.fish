@@ -24,6 +24,7 @@ alias clone="luajit ~/dot/scripts/user/gitclone.lua"
 alias ls="bash ~/dot/scripts/user/ls.sh $argv"
 alias lsx="exa --group-directories-first --icons -laFh --git --no-filesize --no-permissions --no-user --no-time --tree --level 99 $argv"
 alias cu="checkupdates"
+alias root="cd /"
 
 # no greeting
 set fish_greeting
