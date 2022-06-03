@@ -55,7 +55,7 @@ system() {
   systemctl enable NetworkManager
   hostnamectl set-hostname arch
   echo "dark" >~/.config/dot-theme
-  wait
+  source ~/dot/scripts/setup/silence_boot.sh
 }
 
 # ════════════════════════════════════════════════════════════════════

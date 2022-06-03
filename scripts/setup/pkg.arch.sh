@@ -85,6 +85,7 @@ paru -S --skipreview --needed \
   brightnessctl \
   playerctl \
   neofetch \
+  pacman-contrib \
   gnome-keyring \
   libsecret \
   libgnome-keyring \

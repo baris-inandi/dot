@@ -27,8 +27,8 @@ selection:
   unfocused_hollow: true
 window:
   padding:
-    x: 40
-    y: 40
+    x: 36
+    y: 36
 mouse_bindings:
   - action: Quit
     mouse: Middle
