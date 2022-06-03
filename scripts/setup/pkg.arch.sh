@@ -101,6 +101,7 @@ paru -S --skipreview --needed \
   xss-lock \
   catimg \
   jq \
+  man \
   nvidia-settings \
   ttf-ms-fonts \
   ttf-apple-emoji \
