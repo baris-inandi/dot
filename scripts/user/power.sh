@@ -45,7 +45,6 @@ handle_suspend() {
   wait
   systemctl suspend
   wait
-  sleep 0.5
   restore_brightness
 }
 
