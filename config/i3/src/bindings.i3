@@ -65,7 +65,6 @@ bindsym $mod+Shift+r restart, exec --no-startup-id "xrdb -merge ~/.Xresources"
 bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"
 bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png | notify-send "Screenshot" "Save to clipboard" -t 1000
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "$HOME/Pictures/Screenshots/$(date +%U%u%y%H%M%S).png" | notify-send "Screenshot" "Save to pictures" -t 1000
-bindsym $mod+shift+m exec --no-startup-id "rofi-spotify -st"
 bindsym $mod+period exec --no-startup-id "rofimoji -s neutral -r emoji --max-recent 4"
 bindsym $mod+p  exec --no-startup-id "rofi -show run"
 bindsym $mod+s exec --no-startup-id "rofi-code --code code-insiders"
