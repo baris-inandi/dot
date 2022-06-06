@@ -59,6 +59,7 @@ paru -S --skipreview --needed \
   sudo \
   nemo \
   unzip \
+  gparted \
   xdotool \
   wget \
   curl \
