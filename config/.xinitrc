@@ -28,6 +28,7 @@ bash ~/dot/scripts/setup/symlink.sh
 exec i3
 
 # start utility applications
+/usr/lib/xfce-polkit/xfce-polkit
 dunst
 
 # create files/dirs

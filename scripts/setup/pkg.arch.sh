@@ -47,6 +47,7 @@ paru -S --skipreview --needed \
   betterlockscreen \
   micro \
   translate-shell \
+  xfce-polkit \
   python \
   lua \
   luajit \
