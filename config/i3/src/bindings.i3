@@ -38,7 +38,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle, move position center
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
-bindsym $mod+d focus child
+bindsym $mod+s focus child
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -66,8 +66,7 @@ bindsym $mod+g exec --no-startup-id "python ~/dot/scripts/user/crypto.py"
 bindsym $mod+Shift+s exec --no-startup-id maim --select --hidecursor | xclip -selection clipboard -t image/png | notify-send "Screenshot" "Save to clipboard" -t 1000
 bindsym $mod+Ctrl+Shift+s exec --no-startup-id maim --select --hidecursor "$HOME/Pictures/Screenshots/$(date +%U%u%y%H%M%S).png" | notify-send "Screenshot" "Save to pictures" -t 1000
 bindsym $mod+period exec --no-startup-id "rofimoji -s neutral -r emoji --max-recent 4"
-bindsym $mod+p  exec --no-startup-id "rofi -show run"
-bindsym $mod+s exec --no-startup-id "rofi-code --code code-insiders"
+bindsym $mod+d  exec --no-startup-id "rofi -show drun -show-icons -hover-select"
 bindsym $mod+Tab workspace back_and_forth
 bindsym $mod+asterisk workspace prev
 bindsym $mod+minus workspace next

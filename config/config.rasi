@@ -1,6 +1,6 @@
 * {
-  font: "Iosevka SS07 12";
-  accent: #363636;
+  font: "Iosevka SS07 14";
+  accent: #191919;
   selected-normal-foreground: #ffffff;
   foreground: #ffffff;
   normal-foreground: @foreground;
@@ -14,7 +14,7 @@
   lightbg: rgba (238, 232, 213, 100 %);
   selected-active-foreground: rgba (249, 249, 249, 100 %);
   alternate-active-background: rgba (75, 81, 96, 89 %);
-  background: #101010;
+  background: #090909;
   alternate-normal-foreground: @foreground;
   normal-background: transparent;
   lightfg: rgba (88, 104, 117, 100 %);
@@ -35,10 +35,10 @@
   background-color: @background;
   border: 1px;
   border-radius: 5px;
-  border-color: #363636;
-  padding: 20px;
-  width: 320px;
-  height: 500px;
+  border-color: #404143;
+  padding: 32px;
+  width: 400px;
+  height: 660px;
 }
 
 #mainbox {
@@ -60,18 +60,20 @@
   fixed-height: 0;
   border: 0;
   border-color: @separatorcolor;
-  spacing: 4px;
+  spacing: 10px;
   scrollbar: false;
   padding: 24px 0px 0px;
 }
 
 #element {
-  border: 0;
-  padding: 8px 16px;
+  border: 1px;
+  spacing: 10px;
+  padding: 9px 14px;
+  border-radius: 4px;
 }
 
 #element.selected {
-  border-radius: 4px;
+  border-color: rgba(255, 255, 255, 6%);
 }
 
 #element.normal.normal {

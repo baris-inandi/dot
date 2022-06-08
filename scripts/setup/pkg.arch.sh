@@ -42,7 +42,6 @@ paru -S --skipreview --needed \
   fish \
   rofi \
   rofimoji \
-  rofi-code-git \
   picom-jonaburg-git \
   betterlockscreen \
   micro \
@@ -60,6 +59,7 @@ paru -S --skipreview --needed \
   nemo \
   unzip \
   gparted \
+  papirus-icon-theme \
   xdotool \
   wget \
   curl \
