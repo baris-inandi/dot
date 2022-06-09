@@ -50,6 +50,7 @@ system() {
   wait
   sudo ln -f -s ~/dot/config/pam-login /etc/pam.d/login
   wait
+  sudo ln -f -s ~/dot/config/pacman.conf /etc/pacman.conf
   timectl set-timezone Europe/Istanbul
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
@@ -67,9 +68,6 @@ finalize() {
   i3-msg restart
   # cool ending
   neofetch
-  # run startup script
-  source ~/dot/dot.sh
-  wait
   # fish as deafult shell
   chsh --shell /usr/bin/fish
   wait

@@ -1,5 +1,8 @@
 # the arch package install script
 
+# symlink pacman configs
+sudo ln -f -s ~/dot/config/pacman.conf /etc/pacman.conf
+
 # init pacman
 sudo pacman -Syu
 wait
@@ -14,6 +17,9 @@ install_paru() {
   wait
   makepkg -si
   wait
+  # configure paru
+  mkdir -p ~/.config/paru/
+  ln -f -s ~/dot/config/paru.conf ~/.config/paru/paru.conf
   cd ~
 }
 
@@ -36,96 +42,7 @@ rm -rf ./paru
 wait
 
 # installs essential packages
-
-paru -S --skipreview --needed \
-  bash \
-  fish \
-  rofi \
-  rofimoji \
-  picom-jonaburg-git \
-  betterlockscreen \
-  micro \
-  translate-shell \
-  xfce-polkit \
-  python \
-  lua \
-  luajit \
-  python-pip \
-  python-poetry \
-  npm \
-  pfetch \
-  iw \
-  sudo \
-  nemo \
-  unzip \
-  gparted \
-  papirus-icon-theme \
-  xdotool \
-  wget \
-  curl \
-  xidlehook \
-  google-chrome-dev \
-  gnome-themes-extra \
-  spotify \
-  visual-studio-code-insiders-bin \
-  go \
-  ranger \
-  trash-cli \
-  speedtest++ \
-  alacritty \
-  github-cli \
-  alsa-utils \
-  i3-gaps \
-  i3status \
-  xclip \
-  xsel \
-  maim \
-  bat \
-  feh \
-  libnotify \
-  dunst \
-  brightnessctl \
-  playerctl \
-  neofetch \
-  pacman-contrib \
-  gnome-keyring \
-  libsecret \
-  libgnome-keyring \
-  seahorse \
-  pm-utils \
-  git-delta \
-  fzf \
-  exa \
-  acpi \
-  xmousepasteblock-git \
-  py3status \
-  python-pipenv \
-  xss-lock \
-  catimg \
-  jq \
-  man \
-  nvidia-settings \
-  ttf-ms-fonts \
-  ttf-apple-emoji \
-  ttf-rubik \
-  otf-ibm-plex \
-  ttf-fira-sans \
-  ttf-fira-code \
-  ttc-iosevka-ss07 \
-  inter-font \
-  ttf-roboto \
-  noto-fonts \
-  adobe-source-code-pro-fonts \
-  ttf-inconsolata \
-  ttf-jetbrains-mono \
-  nerd-fonts-jetbrains-mono \
-  onlyoffice-bin \
-  tt \
-  btop \
-  gnome-font-viewer \
-  gitui \
-  tdrop \
-  gnome-control-center
+paru -S --skipreview --needed - < ~/dot/pkglist
 
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')

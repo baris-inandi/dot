@@ -54,7 +54,6 @@ ln -f -s ~/dot/config/config.rasi ~/.config/rofi/config.rasi
 
 mkdir -p ~/.config/paru/
 ln -f -s ~/dot/config/paru.conf ~/.config/paru/paru.conf
-ln -f -s ~/dot/config/pacman.conf ~/.config/paru/pacman.conf
 
 # firefox config symlinks
 mkdir -p ~/.mozilla/firefox/personal/chrome
