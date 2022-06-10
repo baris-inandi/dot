@@ -1,5 +1,5 @@
 # this file includes:
-# pkg() lockscreen() firefox() symlink() system() finalize()
+# pkg() theme() lockscreen() firefox() symlink() system() finalize()
 
 # ════════════════════════════════════════════════════════════════════
 # install helpers, basic packages, programming languages, and fonts.
@@ -7,6 +7,24 @@ pkg() {
   printf "\nDOT: running pkg()...\n\n"
   source ~/dot/scripts/setup/pkg.arch.sh
   wait
+}
+
+# ════════════════════════════════════════════════════════════════════
+# install themes
+theme() {
+  printf "\nDOT: running theme()...\n\n"
+  # Graphite GTK theme
+  rm -rf ~/.cache/dot-insaller-theme
+  mkdir ~/.cache/dot-insaller-theme
+  cd ~/.cache/dot-insaller-theme
+  git clone --depth 1 https://github.com/vinceliuice/Graphite-gtk-theme.git graphite
+  cd graphite
+  bash install.sh --tweaks rimless normal darker -s compact
+  rm -rf ~/.cache/dot-insaller-theme
+  cd ~
+  # Papirus folders
+  paru -S --needed --skipreview papirus-folders
+  papirus-folders -C black
 }
 
 # ════════════════════════════════════════════════════════════════════
@@ -55,7 +73,8 @@ system() {
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
   hostnamectl set-hostname arch
-  echo "dark" >~/.config/dot-theme
+  touch ~/.config/dot-theme
+  bash ~/dot/scripts/user/toggle-theme.sh
   source ~/dot/scripts/setup/silence_boot.sh
 }
 

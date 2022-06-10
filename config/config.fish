@@ -26,6 +26,7 @@ alias lsx="exa --group-directories-first --icons -laFh --git --no-filesize --no-
 alias cu="checkupdates"
 alias root="cd /"
 alias burn="luajit ~/dot/scripts/user/burn.lua"
+alias ncdu="gdu"
 
 # no greeting
 set fish_greeting

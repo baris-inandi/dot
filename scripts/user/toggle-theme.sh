@@ -16,4 +16,4 @@ source ~/dot/scripts/setup/symlink.sh --themed-only
 i3-msg restart
 killall dunst
 wait
-dunst
+dunst &

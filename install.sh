@@ -7,8 +7,8 @@ install() {
   wait
 
   pkg
+  theme
   lockscreen
-  # firefox
   symlink
   system
   finalize
