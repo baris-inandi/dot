@@ -42,7 +42,7 @@ rm -rf ./paru
 wait
 
 # installs essential packages
-paru -S --skipreview --needed - < ~/dot/pkglist
+paru -S --skipreview --needed - <~/dot/pkglist
 
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')
