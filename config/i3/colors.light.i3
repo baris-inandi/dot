@@ -9,8 +9,8 @@ set $color_ws_fg #000000
 set $color_ws_bg #9eb8db
 set $color_ws_border #9eb8db
 
-set $color_ws_inactive_fg #2a323d
+set $color_ws_inactive_fg #333e4d
 
 set $color_client_active #ffffff #bbbbbb #000000 #000000 #000000
-set $color_client_inactive #333333 #aaaaaa #000000 #bbbbbb #bbbbbb
+set $color_client_inactive #333e4d #aaaaaa #000000 #bbbbbb #bbbbbb
 set $color_client_urgent #bbbbbb #B42B51 #000000 #B42B51 #B42B51

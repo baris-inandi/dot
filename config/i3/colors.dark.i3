@@ -13,4 +13,4 @@ set $color_ws_inactive_fg #eeeeee
 
 set $color_client_active #555555 #303133 #ffffff #707275 #707275
 set $color_client_inactive #00000000 #151515 #707275 #303133 #303133
-set $color_client_urgent #303133 #ffa99e #FFFFFF #ffa99e #ffa99e
+set $color_client_urgent #303133 #FF7A66 #FFFFFF #FF7A66 #FF7A66
