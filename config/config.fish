@@ -27,6 +27,7 @@ alias cu="checkupdates"
 alias root="cd /"
 alias burn="luajit ~/dot/scripts/user/burn.lua"
 alias ncdu="gdu"
+alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
 
 # no greeting
 set fish_greeting
