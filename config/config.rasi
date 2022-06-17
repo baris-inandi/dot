@@ -1,5 +1,5 @@
 * {
-  font: "Iosevka SS07 14";
+  font: "Iosevka 14";
   accent: #191919;
   selected-normal-foreground: #ffffff;
   foreground: #ffffff;

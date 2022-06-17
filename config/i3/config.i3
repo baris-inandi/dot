@@ -1,7 +1,7 @@
 # i3 config file (v4)
 
 set $mod Mod4
-font pango:Iosevka SS07 Medium 10
+font pango:Iosevka Medium 10
 
 floating_minimum_size 320x180
 
