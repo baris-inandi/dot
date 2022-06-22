@@ -7,7 +7,7 @@ font:
     family: Iosevka
   size: 14
   offset:
-    y: 2
+    y: 4
 key_bindings:
   - action: IncreaseFontSize
     key: Asterisk
@@ -27,8 +27,8 @@ selection:
   unfocused_hollow: true
 window:
   padding:
-    x: 36
-    y: 36
+    x: 40
+    y: 40
 mouse_bindings:
   - action: Quit
     mouse: Middle
