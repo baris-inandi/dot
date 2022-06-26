@@ -27,7 +27,7 @@ set $resize_amount_vertical_px 90
 set $move_amount_vertical 45
 set $move_amount_horizontal 60
 set $gaps_inner 16
-set $gaps_outer 0
+set $gaps_outer 2
 
 set $refresh_status killall -SIGUSR1 py3status
 
