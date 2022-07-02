@@ -1,7 +1,7 @@
 import:
   - ~/.config/alacritty/colors.yml
 env:
-  WINIT_X11_SCALE_FACTOR: "1.35"
+  WINIT_X11_SCALE_FACTOR: "1.33"
 font:
   normal:
     family: Iosevka
