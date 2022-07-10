@@ -8,7 +8,7 @@ cp -n ~/dot/env.example.sh ~/dot/env.sh
 source ~/dot/env.sh
 
 # run xrandr
-xrandr --output "$DOT_DISPLAY" --mode "$DOT_RESOLUTION" --rate "$DOT_FPS"
+python3 ~/dot/scripts/user/render.py || xrandr --auto
 
 # full brightness on startup
 brightnessctl s 999999

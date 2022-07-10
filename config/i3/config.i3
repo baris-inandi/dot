@@ -13,8 +13,8 @@ set $power_shutdown "bash ~/dot/scripts/user/power.sh off"
 
 set $preferred_terminal alacritty
 
-set $cmd_terminal "alacritty || i3-sensible-terminal"
-set $cmd_file_manager "nemo | nautilus -w"
+set $cmd_terminal "alacritty || kitty || i3-sensible-terminal || xterm"
+set $cmd_file_manager "nemo || nautilus -w"
 set $cmd_browser "google-chrome-unstable || firefox"
 set $cmd_private_browser "google-chrome-unstable -incognito || firefox --private-window"
 set $cmd_compositor "picom --experimental-backends --config ~/dot/config/picom.conf -b"

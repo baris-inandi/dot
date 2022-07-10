@@ -1,0 +1,10 @@
+{
+  "displays": [
+    {
+      "output": "eDP-1",
+      "resolution": "1440x900",
+      "primary": true,
+      "fps": 60
+    }
+  ]
+}

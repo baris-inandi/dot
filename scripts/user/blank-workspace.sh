@@ -2,8 +2,5 @@ current_ws=$(i3-msg -t get_workspaces |
   jq '.[] | select(.focused==true).name' |
   cut -d"\"" -f2)
 
-if [ "$current_ws" = "⠀" ]; then
-  i3-msg "workspace back_and_forth"
-else
-  i3-msg "workspace ⠀"
-fi
+r=$(shuf -i 100-999 -n 1)
+i3-msg "workspace --no-auto-back-and-forth $r"

@@ -1,0 +1,19 @@
+{
+  "displays": [
+    {
+      "output": "DP-0",
+      "resolution": "3840x2160",
+      "primary": true,
+      "fps": 119.88
+    },
+    {
+      "output": "DP-4",
+      "resolution": "3840x2160",
+      "fps": 119.88,
+      "position": {
+        "side": "left-of",
+        "of": "DP-0"
+      }
+    }
+  ]
+}

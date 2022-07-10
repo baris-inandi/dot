@@ -1,5 +1,5 @@
 * {
-  font: "Iosevka 14";
+  font: "Iosevka 16";
   accent: #191919;
   selected-normal-foreground: #ffffff;
   foreground: #ffffff;
@@ -37,8 +37,8 @@
   border-radius: 5px;
   border-color: #404143;
   padding: 32px;
-  width: 400px;
-  height: 660px;
+  width: 420px;
+  height: 690px;
 }
 
 #mainbox {
