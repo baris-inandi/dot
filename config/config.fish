@@ -168,3 +168,4 @@ end
 
 set -gx PNPM_HOME "/home/bi/.local/share/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
+thefuck --alias | source
