@@ -3,7 +3,7 @@
 xrdb -merge ~/.Xresources
 
 # run xrandr
-python3 ~/dot/scripts/user/render.py || xrandr --auto
+python3 ~/dot/scripts/user/render.py --nocomp
 
 # full brightness on startup
 brightnessctl s 999999

@@ -1,0 +1,17 @@
+{
+  "displays": [
+    {
+      "rotation": "right",
+      "output": "DP-0",
+      "resolution": "3840x2160",
+      "fps": 119.88
+    },
+    {
+      "output": "DP-4",
+      "resolution": "3840x2160",
+      "fps": 119.88,
+      "primary": true,
+      "posxy": "2160x1480"
+    }
+  ]
+}

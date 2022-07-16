@@ -28,7 +28,8 @@ alias root="cd /"
 alias burn="luajit ~/dot/scripts/user/burn.lua"
 alias ncdu="gdu"
 alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
-alias dotrender="python3 ~/dot/scripts/user/render.py || xrandr --auto"
+alias dotrender="python3 ~/dot/scripts/user/render.py"
+alias dotpicom="picom --experimental-backends --config ~/dot/config/picom.conf -b"
 
 # no greeting
 set fish_greeting
