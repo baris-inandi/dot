@@ -1,3 +1,4 @@
+flutter
 bash
 fish
 rofi
@@ -5,7 +6,6 @@ rofimoji
 picom-jonaburg-git
 betterlockscreen
 micro
-translate-shell
 xfce-polkit
 python
 lua
@@ -90,3 +90,4 @@ gnome-control-center
 gdu
 nemo-fileroller
 skim
+paruz

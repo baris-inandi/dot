@@ -2,11 +2,6 @@
 
 xrdb -merge ~/.Xresources
 
-# copy env.sh if it does not already exist
-cp -n ~/dot/env.example.sh ~/dot/env.sh
-
-source ~/dot/env.sh
-
 # run xrandr
 python3 ~/dot/scripts/user/render.py || xrandr --auto
 

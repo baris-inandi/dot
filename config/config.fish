@@ -28,6 +28,7 @@ alias root="cd /"
 alias burn="luajit ~/dot/scripts/user/burn.lua"
 alias ncdu="gdu"
 alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
+alias dotrender="python3 ~/dot/scripts/user/render.py || xrandr --auto"
 
 # no greeting
 set fish_greeting
