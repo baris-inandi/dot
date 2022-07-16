@@ -1,6 +1,7 @@
 # default editor
 set -gx EDITOR micro
 set -gx BROWSER google-chrome-unstable
+set -gx CHROME_EXECUTABLE google-chrome-unstable
 
 # aliases
 alias c="clear"
