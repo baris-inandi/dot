@@ -16,6 +16,8 @@ target_hooks="HOOKS=(base systemd autodetect keyboard sd-vconsole block filesyst
 mkinitcpio_old=$(cat /etc/mkinitcpio.conf)
 if [[ $prev_hooks ]]; then
   if [[ $target_hooks != $prev_hooks ]]; then
+  	echo $target_hooks
+  	echo $prev_hooks
     sudo sed -i "s/$prev_hooks/$target_hooks/" /etc/mkinitcpio.conf
   else
     echo "Hooks already configured, skipping"

@@ -6,8 +6,8 @@ set $color_ws_urgent_bg #FF7A66
 set $color_ws_urgent_border #FF7A66
 
 set $color_ws_fg #ffffff
-set $color_ws_bg #454547
-set $color_ws_border #454547
+set $color_ws_bg #666667
+set $color_ws_border #777778
 
 set $color_ws_inactive_fg #eeeeee
 

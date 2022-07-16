@@ -18,8 +18,9 @@ class Displays:
         cmd = "xrandr " + cmd      
         print(cmd)
         system(cmd)
-        if not argv[1] == "--nocomp":
-            system("picom --experimental-backends --config ~/dot/config/picom.conf -b")
+        if len(argv) > 1:
+            if not argv[1] == "--nocomp":
+                system("picom --experimental-backends --config ~/dot/config/picom.conf -b")
 
     class Display:
     
@@ -60,5 +61,6 @@ class Displays:
 try:
     d = Displays(RENDER_JSON)
     d.exec()
-except Exception:
+except Exception as e:
+    print(e)
     system("xrandr --auto")
