@@ -7,6 +7,8 @@ bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl s 10%-
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause
 bindsym XF86AudioNext exec --no-startup-id playerctl next
 bindsym XF86AudioPrev exec --no-startup-id playerctl previous
+bindsym XF86KbdBrightnessDown exec --no-startup-id brightnessctl --device=smc::kbd_backlight set 25%-
+bindsym XF86KbdBrightnessUp exec --no-startup-id brightnessctl --device=smc::kbd_backlight set +25%
 bindsym $mod+Return exec --no-startup-id $cmd_terminal
 bindsym $mod+q kill
 bindsym $mod+shift+q [class=".*"] kill; workspace $ws1
