@@ -4,6 +4,7 @@ set -gx BROWSER google-chrome-unstable
 set -gx CHROME_EXECUTABLE google-chrome-unstable
 
 # aliases
+alias xt="exit"
 alias c="clear"
 alias x="cd; startx"
 alias dotsym="bash ~/dot/scripts/setup/symlink.sh"
