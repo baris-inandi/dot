@@ -1,5 +1,5 @@
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 5%+ && $refresh_status
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 5%- && $refresh_status
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer set Master 10%+ && $refresh_status
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer set Master 10%- && $refresh_status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_status
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl s 10%+

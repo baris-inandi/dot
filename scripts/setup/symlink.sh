@@ -52,9 +52,6 @@ ln -f -s ~/dot/config/config.fish ~/.config/fish/config.fish
 mkdir -p ~/.config/rofi
 ln -f -s ~/dot/config/config.rasi ~/.config/rofi/config.rasi
 
-mkdir -p ~/.config/paru/
-ln -f -s ~/dot/config/paru.conf ~/.config/paru/paru.conf
-
 # firefox config symlinks
 mkdir -p ~/.mozilla/firefox/personal/chrome
 ln -f -s ~/dot/config/firefox/personal/chrome/userChrome.css ~/.mozilla/firefox/personal/chrome/userChrome.css

@@ -1,6 +1,8 @@
 # the arch package install script
 
-# symlink pacman configs
+# set up config files
+mkdir -p ~/.config/paru/
+cp ~/dot/config/paru.conf ~/.config/paru/paru.conf
 sudo ln -f -s ~/dot/config/pacman.conf /etc/pacman.conf
 
 # init pacman
@@ -17,9 +19,6 @@ install_paru() {
   wait
   makepkg -si
   wait
-  # configure paru
-  mkdir -p ~/.config/paru/
-  ln -f -s ~/dot/config/paru.conf ~/.config/paru/paru.conf
   cd ~
 }
 
@@ -51,6 +50,8 @@ if [[ "$cpu_model_str" == *"amd"* ]]; then
 elif [[ "$cpu_model_str" == *"intel"* ]]; then
   paru -S --skipreview --noconfirm --needed intel-ucode
 fi
+
+rm -rf ~/.config/paru/paru.conf
 
 # install desired python modules
 pip3 install dbus-python py3status requests grequests clipboard
