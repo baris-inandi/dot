@@ -1,15 +1,8 @@
 # the arch package install script
 
-# set up config files
-mkdir -p ~/.config/paru/
-cp ~/dot/config/paru.conf ~/.config/paru/paru.conf
-sudo ln -f -s ~/dot/config/pacman.conf /etc/pacman.conf
-
 # init pacman
 sudo pacman -Syu
-wait
 sudo pacman -S --needed base-devel
-wait
 
 install_paru() {
   # install paru helper
@@ -40,18 +33,17 @@ wait
 rm -rf ./paru
 wait
 
-# installs essential packages
-paru -S --skipreview --needed - <~/dot/pkglist
+paru -S --skipreview --needed fe
+sudo fe cf
+fe in -f ~/dot/pkglist
 
 # install cpu microcodes
 cpu_model_str=$(cat /proc/cpuinfo | grep 'model name' | uniq | tr '[:upper:]' '[:lower:]')
 if [[ "$cpu_model_str" == *"amd"* ]]; then
-  paru -S --skipreview --noconfirm --needed amd-ucode
+  fe in amd-ucode
 elif [[ "$cpu_model_str" == *"intel"* ]]; then
-  paru -S --skipreview --noconfirm --needed intel-ucode
+  fe in intel-ucode
 fi
-
-rm -rf ~/.config/paru/paru.conf
 
 # install desired python modules
 pip3 install dbus-python py3status requests grequests clipboard
