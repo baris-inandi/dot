@@ -33,7 +33,6 @@ alias ncdu="gdu"
 alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
 alias dotrender="python3 ~/dot/scripts/user/render.py"
 alias dotpicom="picom --experimental-backends --config ~/dot/config/picom.conf -b"
-alias aurclone="git clone ssh://aur@aur.archlinux.org/$1.git"
 
 # no greeting
 set fish_greeting
@@ -168,6 +167,13 @@ function mvthis -a name
     cd ..
     mv $thisdir $name
     cd $name
+end
+
+################################################################## AURCLONE
+# clones and aur repo
+##################################################################
+function aurclone -a name
+    git clone ssh://aur@aur.archlinux.org/$name.git
 end
 
 set -gx PNPM_HOME "/home/bi/.local/share/pnpm"
