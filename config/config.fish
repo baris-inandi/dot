@@ -20,8 +20,6 @@ alias npx="pnpm dlx"
 alias wei="luajit ~/dot/scripts/user/wei.lua"
 alias eth="echo -n 0x92e937B42208c355CAA7C7aE4699613B6C3C2EbD | xclip -sel clip"
 alias htop="btop"
-alias fparu="paru --skipreview --noconfirm --needed --ignore=linux,linux-headers -Syu"
-alias qparu="paru -Qs $argv"
 alias code="code-insiders"
 alias clone="luajit ~/dot/scripts/user/gitclone.lua"
 alias ls="bash ~/dot/scripts/user/ls.sh $argv"
@@ -36,19 +34,6 @@ alias dotpicom="picom --experimental-backends --config ~/dot/config/picom.conf -
 
 # no greeting
 set fish_greeting
-
-################################################################## RQPARU
-# Remove Queried packages using paru
-##################################################################
-function rqparu
-    set targets (paru -Qqs $argv)
-    if test -n "$targets"
-        paru -Rs $targets --skipreview --cleanafter --removemake
-    else
-        echo "Query returned no results."
-        return 1
-    end
-end
 
 ################################################################## P
 # Repeat previous command
@@ -78,29 +63,6 @@ end
 ##################################################################
 function gpull
     bash ~/dot/scripts/user/gpull.sh &
-end
-
-################################################################## SPARU
-# quick download using paru (with --skipreview and --noconfirm)
-##################################################################
-function sparu
-    if count $argv >/dev/null
-        paru -S $argv --removemake --useask --skipreview --noconfirm --needed
-    else
-        paru --skipreview --noconfirm --needed -Syu
-    end
-end
-
-################################################################## RPARU
-# quickly remove packages using paru
-##################################################################
-function rparu
-    if count $argv >/dev/null
-        paru -Rs $argv --skipreview --noconfirm --cleanafter --removemake
-    else
-        paru --skipreview --noconfirm --cleanafter -Rs $(paru -Qqtd)
-        echo "Done."
-    end
 end
 
 ################################################################## VS
