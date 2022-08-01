@@ -33,6 +33,7 @@ alias ncdu="gdu"
 alias mm="m (sk --preview='bat {} --color=always --theme Visual\ Studio\ Dark+')"
 alias dotrender="python3 ~/dot/scripts/user/render.py"
 alias dotpicom="picom --experimental-backends --config ~/dot/config/picom.conf -b"
+alias aurclone="git clone ssh://aur@aur.archlinux.org/$1.git"
 
 # no greeting
 set fish_greeting

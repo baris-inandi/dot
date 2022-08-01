@@ -68,6 +68,8 @@ system() {
   wait
   sudo ln -f -s ~/dot/config/pam-login /etc/pam.d/login
   wait
+  ln -f -s ~/dot/config/pacman.conf /etc/pacman.conf
+  wait
   timectl set-timezone Europe/Istanbul
   systemctl enable systemd-timesyncd
   systemctl enable NetworkManager
