@@ -2,8 +2,6 @@ t=$(cat ~/.config/dot-theme)
 
 render=$(python3 ~/dot/scripts/user/render.py)
 
-eval "$render --brightness 0"
-
 if [ "$t" == "dark" ]; then
   t="light"
 else
@@ -12,6 +10,8 @@ fi
 
 # save preference
 echo $t >~/.config/dot-theme
+
+eval "$render --brightness 0"
 
 # symlink dotfiles
 source ~/dot/scripts/setup/symlink.sh --themed-only
@@ -22,5 +22,5 @@ killall dunst
 wait
 dunst &
 
-sleep 0.2
+sleep 0.33
 eval "$render --brightness 1"
