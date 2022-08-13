@@ -1,5 +1,9 @@
 t=$(cat ~/.config/dot-theme)
 
+render=$(python3 ~/dot/scripts/user/render.py)
+
+eval "$render --brightness 0"
+
 if [ "$t" == "dark" ]; then
   t="light"
 else
@@ -17,3 +21,6 @@ i3-msg restart
 killall dunst
 wait
 dunst &
+
+sleep 0.2
+eval "$render --brightness 1"
