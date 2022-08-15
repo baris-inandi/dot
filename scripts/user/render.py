@@ -4,26 +4,27 @@ from sys import argv
 
 RENDER_JSON = "~/dot/render/render.json"
 
-class Displays:
 
+class Displays:
     def __init__(self, pragma_path):
         with open(path.expanduser(pragma_path)) as f:
             data = json.load(f)
         self.inner = [self.Display(d) for d in data["displays"]]
-        
+
     def exec(self):
         cmd = ""
         for d in self.inner:
             cmd += d.generate_flags()
-        cmd = "xrandr " + cmd      
+        cmd = "xrandr " + cmd
         print(cmd)
         system(cmd)
         if len(argv) > 1:
             if not argv[1] == "--nocomp":
-                system("picom --experimental-backends --config ~/dot/config/picom.conf -b")
+                system(
+                    "picom --experimental-backends --config ~/dot/config/picom.conf -b"
+                )
 
     class Display:
-    
         def __init__(self, display: dict):
             self.output = display["output"]
             self.resolution = display["resolution"]
@@ -46,6 +47,7 @@ class Displays:
                     self.position = position
                 else:
                     self.position = None
+            self.scale = display["scale"]
             except Exception:
                 self.position = None
 
@@ -57,6 +59,7 @@ class Displays:
             if self.posxy:
                 posxy = f"--pos {self.posxy}"
             return f"--output {self.output} --mode {self.resolution} --rate {self.fps} --rotate {self.rotation}{pos} {'--primary' if self.primary else ''} {posxy}"
+
 
 try:
     d = Displays(RENDER_JSON)

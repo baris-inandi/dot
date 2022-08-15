@@ -12,6 +12,7 @@
     "grequests",
     "Iosevka",
     "Popen",
+    "posxy",
     "rgba",
     "uidensity",
     "xrandr"
