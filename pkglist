@@ -1,4 +1,3 @@
-flutter
 bash
 fish
 rofi
@@ -92,3 +91,5 @@ gdu
 nemo-fileroller
 skim
 paruz
+jdk-openjdk
+gradle
