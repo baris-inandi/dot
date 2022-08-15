@@ -6,6 +6,7 @@
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "python.formatting.provider": "black",
   "cSpell.words": [
+    "alacritty",
     "AVAX",
     "cmds",
     "cryptopy",
@@ -15,6 +16,7 @@
     "posxy",
     "rgba",
     "uidensity",
-    "xrandr"
+    "xrandr",
+    "xresources"
   ]
 }

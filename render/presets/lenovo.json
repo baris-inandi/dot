@@ -1,0 +1,11 @@
+{
+  "scale": 1.00,
+  "displays": [
+    {
+      "output": "eDP1",
+      "resolution": "1920x1080",
+      "primary": true,
+      "fps": 60.01
+    }
+  ]
+}

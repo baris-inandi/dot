@@ -10,19 +10,36 @@ class Displays:
         with open(path.expanduser(pragma_path)) as f:
             data = json.load(f)
         self.inner = [self.Display(d) for d in data["displays"]]
+        self.scale = data["scale"]
 
     def exec(self):
+        self.apply_scale()
+        if "--scale-only" in argv:
+            return
         cmd = ""
         for d in self.inner:
             cmd += d.generate_flags()
         cmd = "xrandr " + cmd
         print(cmd)
         system(cmd)
-        if len(argv) > 1:
-            if not argv[1] == "--nocomp":
-                system(
-                    "picom --experimental-backends --config ~/dot/config/picom.conf -b"
-                )
+        if not "--nocomp" in argv:
+            system("picom --experimental-backends --config ~/dot/config/picom.conf -b")
+
+    def apply_scale(self):
+        xresources = path.expanduser("~/dot/config/.Xresources.template")
+        alacritty_scale = path.expanduser("~/dot/config/alacritty-scale.template.yml")
+        with open(xresources) as f:
+            xresources_content = f.read()
+        with open(alacritty_scale) as f:
+            alacritty_scale_content = f.read()
+        xresources_content = xresources_content.replace(
+            "$1", str(int(self.scale * 100))
+        )
+        alacritty_scale_content = alacritty_scale_content.replace("$1", str(self.scale))
+        with open(path.expanduser("~/.Xresources"), "w+") as f:
+            f.write(xresources_content)
+        with open(path.expanduser("~/.config/alacritty/scale.yml"), "w+") as f:
+            f.write(alacritty_scale_content)
 
     class Display:
         def __init__(self, display: dict):
@@ -47,7 +64,6 @@ class Displays:
                     self.position = position
                 else:
                     self.position = None
-            self.scale = display["scale"]
             except Exception:
                 self.position = None
 

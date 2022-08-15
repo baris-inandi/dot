@@ -2,9 +2,6 @@
 
 xrdb -merge ~/.Xresources
 
-# run xrandr
-python3 ~/dot/scripts/user/render.py --nocomp
-
 # full brightness on startup
 brightnessctl s 999999
 
@@ -20,9 +17,10 @@ mkdir -p "$HOME"/.local/share/keyrings
 
 bash ~/dot/scripts/setup/symlink.sh
 
+python3 ~/dot/scripts/user/render.py
 exec i3
 
-# start utility applications
+# start utilities
 dunst
 
 # create files/dirs

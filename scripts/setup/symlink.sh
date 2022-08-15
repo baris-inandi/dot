@@ -40,8 +40,6 @@ ln -f -s ~/dot/config/cspell-dictionary.txt ~/.cspell/custom-dictionary-user.txt
 mkdir -p ~/.config/gtk-3.0/
 ln -f -s ~/dot/config/gtksettings.ini ~/.config/gtk-3.0/settings.ini
 
-ln -f -s ~/dot/config/.Xresources ~/.Xresources
-
 ln -f -s ~/dot/config/.xinitrc ~/.xinitrc
 
 ln -f -s ~/dot/config/betterlockscreenrc.conf ~/.config/betterlockscreenrc
