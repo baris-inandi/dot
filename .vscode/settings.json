@@ -12,9 +12,12 @@
     "cryptopy",
     "grequests",
     "Iosevka",
+    "nemo",
+    "picom",
     "Popen",
     "posxy",
     "rgba",
+    "SIGUSR",
     "uidensity",
     "xrandr",
     "xresources"

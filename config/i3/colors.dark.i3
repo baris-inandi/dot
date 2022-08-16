@@ -1,5 +1,7 @@
 set $color_bar_bg #00000000
 set $color_bar_separator #505050
+set $color_bar_inactive_fg #808080
+set $color_bar_fg #ffffff
 
 set $color_ws_urgent_fg #000000
 set $color_ws_urgent_bg #FF7A66
