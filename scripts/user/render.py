@@ -74,7 +74,11 @@ class Displays:
                 pos = f" --{self.position['side']} {self.position['of']}"
             if self.posxy:
                 posxy = f"--pos {self.posxy}"
-            return f"--output {self.output} --mode {self.resolution} --rate {self.fps} --rotate {self.rotation}{pos} {'--primary' if self.primary else ''} {posxy}"
+            if "--black" in argv:
+                brightness = "--brightness 0"
+            else:
+                brightness = "--brightness 1"
+            return f"--output {self.output} --mode {self.resolution} {brightness} --rate {self.fps} --rotate {self.rotation}{pos} {'--primary' if self.primary else ''} {posxy}"
 
 
 try:
