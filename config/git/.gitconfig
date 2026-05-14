@@ -1,18 +1,18 @@
 [user]
 name = Baris Inandioglu
 email = 68742481+baris-inandi@users.noreply.github.com
-[credential "https://github.com"]
-helper = !gh auth token
+
 [core]
 ignorecase = false
 pager = delta
+
 [interactive]
 diffFilter = delta --color-only --features=interactive
+
 [delta]
 side-by-side = true
 features = decorations
-[delta "interactive"]
-keep-plus-minus-markers = false
+
 [delta "decorations"]
 commit-decoration-style = blue ol
 commit-style = raw
@@ -21,5 +21,14 @@ hunk-header-decoration-style = blue box
 hunk-header-file-style = red
 hunk-header-line-number-style = "#067a00"
 hunk-header-style = file line-number syntax
+
 [credential]
-helper = manager-core
+helper = manager
+
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential

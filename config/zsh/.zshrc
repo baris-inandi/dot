@@ -92,14 +92,19 @@ function mvthis {
     cd "$1"
 }
 
-################################################################## brew-update
-# Updates entire macos setup
-##################################################################
-function brew-update {
+function brupdate {
     sudo echo "Starting full system update..."
     brew update
     brew upgrade --display-times
-    brew upgrade --cask --greedy --display-times
+
+    if [[ "$1" == "--greedy" ]]; then
+        echo "Upgrading packages greedily."
+        brew upgrade --cask --display-times --greedy
+    else
+        echo "Upgrading packages non-greedily."
+        brew upgrade --cask --display-times
+    fi
+
     brew cleanup --prune=all -v
     brew doctor
     echo "Everything is up to date."
