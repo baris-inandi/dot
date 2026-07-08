@@ -1,0 +1,21 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+right_format = '$time'
+
+[character]
+success_symbol = '[>](bold green)'
+error_symbol = '[>](bold red)'
+vimcmd_symbol = '[<](bold green)'
+
+[line_break]
+disabled = true
+
+[time]
+disabled = false
+format = '[$time]($style)'
+time_format = '%H:%M:%S'
+style = 'bold yellow'
+
+[package]
+disabled = true
