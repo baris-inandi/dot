@@ -16,7 +16,7 @@ sudo echo starting installation for $TARGET
 
 # base will always run
 bash ./setup/base/packages.sh
-bash ./setup/base/packages.sh
+bash ./setup/base/symlink.sh
 
 # OS-specific config
 bash ./setup/$TARGET/packages.sh
