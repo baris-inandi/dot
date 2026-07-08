@@ -15,4 +15,4 @@ sudo xbps-install -y nvidia nvidia-dkms nvidia-firmware nvidia-gtklibs nvidia-li
 sudo xbps-install -y nerd-fonts-ttf xorg alacritty awesome firefox
 
 # quality-of-life stuff
-sudo xbps-install -y btop github-cli delta fastfetch bat lsd skim trash-cli
+sudo xbps-install -y btop github-cli delta fastfetch bat lsd skim trash-cli starship
