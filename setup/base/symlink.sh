@@ -14,3 +14,4 @@ symlink ~/dot/config/micro/micro.json ~/.config/micro/settings.json
 symlink ~/dot/config/micro/dot.micro ~/.config/micro/colorschemes/dot.micro
 symlink ~/dot/config/lsd/lsd.yml ~/.config/lsd/config.yaml
 symlink ~/dot/config/alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
+symlink ~/dot/config/zed/settings.json ~/.config/zed/settings.json
