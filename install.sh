@@ -24,6 +24,6 @@ bash ./setup/$TARGET/symlink.sh
 
 source ~/.zshrc
 
-fastfetch | neofetch
+fastfetch
 echo
 echo Done!
