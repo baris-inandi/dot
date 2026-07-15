@@ -5,13 +5,14 @@ source ~/dot/scripts/color.sh
 cmd_base="git clone"
 acc_uname="baris-inandi"
 arg="$1"
+outdir="$2"
 
 # Print usage if no argument or option-like argument
 if [[ -z "$arg" || "$arg" == -* ]]; then
-    echo "Usage:"
-    echo "  clone <url>"
-    echo "  clone <repo>"
-    echo "  clone <user/repo>"
+    echo "clone usage:"
+    echo "  clone <url> <output-dir>"
+    echo "  clone <user/repo> <output-dir>"
+    echo "  clone <repo> <output-dir>"
     exit 0
 fi
 
@@ -25,6 +26,11 @@ elif [[ "$arg" == */* ]]; then
 else
     # Is just repo → clone from personal account
     cmd="${cmd_base} https://github.com/${acc_uname}/${arg}"
+fi
+
+# Append output directory if specified
+if [[ -n "$outdir" ]]; then
+    cmd="${cmd} ${outdir}"
 fi
 
 printf "${bold}${blue}CLONING: $cmd\n${normal}${white}"
