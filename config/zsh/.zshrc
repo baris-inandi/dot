@@ -16,14 +16,16 @@ PATH+="$HOME/.flutter-sdk/bin"
 
 export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
 
-# aliases
+# git aliases
+alias gsync="bash ~/dot/scripts/gsync.sh $@"
+alias greset="git add . && git reset --hard"
+alias branchout="bash ~/dot/scripts/branchout.sh $@"
+alias giff="git diff"
+alias clone="bash ~/dot/scripts/gitclone.sh $@"
+# utility aliases
 alias xt="exit"
 alias c="clear"
 alias m="micro"
-alias gsync="bash ~/dot/scripts/gsync.sh $@"
-alias greset="git add . && git reset --hard"
-alias giff="git diff"
-alias clone="bash ~/dot/scripts/gitclone.sh $@"
 alias ls="lsd -la $argv --config-file ~/dot/config/lsd/lsd.yml"
 alias root="cd /"
 alias mm="$EDITOR (sk --preview='bat {} --color=always')"
