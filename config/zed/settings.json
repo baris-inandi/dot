@@ -7,6 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "buffer_font_weight": 300.0,
+  "when_closing_with_no_tabs": "keep_window_open",
+  "code_lens": "on",
   "diff_view_style": "split",
   "search": {
     "center_on_match": true,
@@ -73,7 +76,7 @@
   "rounded_selection": true,
   "use_system_prompts": false,
   "buffer_line_height": {
-    "custom": 1.5,
+    "custom": 1.4,
   },
   "zoomed_padding": true,
   "active_pane_modifiers": {
@@ -117,7 +120,7 @@
     "light": "VSCode Icons for Zed (Dark NestJS)",
     "dark": "VSCode Icons for Zed (Dark NestJS)",
   },
-  "ui_font_size": 14.0,
+  "ui_font_size": 13.0,
   "buffer_font_size": 13.0,
   "buffer_font_family": "Biosevka Nerd Font",
   "terminal": {
@@ -138,6 +141,7 @@
     },
   },
   "inlay_hints": {
+    "show_parameter_hints": true,
     "edit_debounce_ms": 500,
     "enabled": true,
     "show_background": true,
