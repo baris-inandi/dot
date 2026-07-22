@@ -7,9 +7,9 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "format_on_save": "on",
   "buffer_font_weight": 300.0,
   "when_closing_with_no_tabs": "keep_window_open",
-  "code_lens": "on",
   "diff_view_style": "split",
   "search": {
     "center_on_match": true,
